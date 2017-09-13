@@ -8,6 +8,17 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 
+//script
+var gulpWebpack = require('gulp-webpack'),
+    webpack = require('webpack'),
+    webpackConfig = require('./webpack.config.js');
+
+gulp.task('scripts', function(){
+    return gulp.src('src/scripts/app.js')
+            .pipe(gulpWebpack(webpackConfig, webpack))
+            .pipe(gulp.dest('dest/scripts/'))
+})
+
 gulp.task('pug', function(){
     return gulp.src(['src/html/**/*.pug', '!src/html/template.pug'])
             .pipe(plumber({
@@ -45,20 +56,22 @@ gulp.task('sass', function(){
 gulp.task('watch', function(){
     gulp.watch('src/html/**/*.pug', gulp.parallel('pug'));
     gulp.watch('src/css/main.scss', gulp.parallel('sass'));
+    gulp.watch('src/scripts/app.js', gulp.parallel('scripts'));
 });
 
-function server(){
+gulp.task('serve', function(){
     browserSync.init({
         server: {
             baseDir: './'
         }
     });
-    // browserSync.watch('dest/**/*.*', browserSync.reload);
-};
+    browserSync.watch('dest/**/*.*', browserSync.reload);
+})
 
 gulp.task('default', gulp.series(
-    gulp.parallel('pug', 'sass'),
-    gulp.parallel( 'watch', server)
+    gulp.parallel('pug', 'sass', 'scripts'),
+    gulp.parallel( 'watch', 'serve')
 ));
 
-exports.server = server;
+exports.server = 'serve';
+exports.scripts = 'scripts';
