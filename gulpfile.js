@@ -5,8 +5,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    sourcemaps = require('gulp-sourcemaps');
-var browserSync = require('browser-sync').create();
+    sourcemaps = require('gulp-sourcemaps'),
+    browserSync = require('browser-sync').create();
 
 //script
 var gulpWebpack = require('gulp-webpack'),
@@ -33,6 +33,11 @@ gulp.task('pug', function(){
             .pipe(gulp.dest('dest/html/'));
 });
 
+gulp.task('image', function(){
+    return gulp.src('src/image/**/*.*')
+            .pipe(gulp.dest('dest/image/'));
+})
+
 gulp.task('sass', function(){
     return gulp.src('src/**/main.scss')
             .pipe(plumber({
@@ -53,25 +58,26 @@ gulp.task('sass', function(){
             .pipe(gulp.dest('dest/'));
 });
 
+gulp.task('serve', function(){
+    browserSync.init({
+        server: {
+            baseDir: './dest/html/pages/'
+        }
+    });
+    browserSync.watch('dest/**/*.*', browserSync.reload);
+});
+
 gulp.task('watch', function(){
     gulp.watch('src/html/**/*.pug', gulp.parallel('pug'));
     gulp.watch('src/css/main.scss', gulp.parallel('sass'));
     gulp.watch('src/scripts/app.js', gulp.parallel('scripts'));
 });
 
-gulp.task('serve', function(){
-    browserSync.init({
-        server: {
-            baseDir: './'
-        }
-    });
-    browserSync.watch('dest/**/*.*', browserSync.reload);
-})
-
 gulp.task('default', gulp.series(
-    gulp.parallel('pug', 'sass', 'scripts'),
+    gulp.parallel('pug', 'sass', 'scripts', 'image'),
     gulp.parallel( 'watch', 'serve')
 ));
 
 exports.server = 'serve';
 exports.scripts = 'scripts';
+exports.image = 'image';
