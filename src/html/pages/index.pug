@@ -4,6 +4,18 @@ block  var
     - var title = "Добро пожаловать!"
     
 block content
-    .login
-        video.login__video
+    section.section.welcome
+        .welcome__autorize.autorize
+        .welcome__center
+            .author
+                .author__img
+                .author__name Руслан Мустафин
+                .author__description Личный сайт веб-разработчика
+            ul.social
+                each item in ['vk', 'git', 'fb']
+                    li.social__item
+                        a(class='social__link social__link_#{item}')
+            ul.welcome__buttons.navigation
+                each item in ['Мои работы', 'Обо мне', 'Блок']
+                    li.navigation__button #{item}
     

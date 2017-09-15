@@ -3,8 +3,8 @@ html,body,ul,p,h1,h2,h3,h4,h5,h6 {
     padding: 0;
 }
 
-html, body {
-  height: 100%;
+body {
+  width: 100%;
 }
 
 ul {
@@ -28,4 +28,8 @@ a {
   content: '';
   display: block;
   clear: both;
+}
+
+.section {
+  width: 100%;
 }
