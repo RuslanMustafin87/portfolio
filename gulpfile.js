@@ -15,7 +15,7 @@ var gulpWebpack = require('gulp-webpack'),
     webpackConfig = require('./webpack.config.js');
 
 gulp.task('scripts', function(){
-    return gulp.src('src/scripts/*.js')
+    return gulp.src('src/scripts/app.js')
             .pipe(gulpWebpack(webpackConfig, webpack))
             .pipe(gulp.dest('dest/'))
 })
@@ -50,7 +50,7 @@ gulp.task('sass', function(){
                 })})
             )
             .pipe(sourcemaps.init())
-            .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(sass())
             .pipe(sourcemaps.write())
             .pipe(rename({suffix: '.min'}))
             .pipe(autoprefixer({
@@ -58,6 +58,11 @@ gulp.task('sass', function(){
             }))
             .pipe(gulp.dest('dest/'));
 });
+
+gulp.task('font', function(){
+    return gulp.src('src/css/fonts/**/*.{woff2,woff}')
+            .pipe(gulp.dest('dest/fonts/'));
+})
 
 gulp.task('clean', function(){
     return del('dest/**');
@@ -75,13 +80,14 @@ gulp.task('serve', function(){
 gulp.task('watch', function(){
     gulp.watch('src/html/**/*.pug', gulp.parallel('pug'));
     gulp.watch('src/css/**/*.scss', gulp.parallel('sass'));
-    gulp.watch('src/scripts/app.js', gulp.parallel('scripts'));
+    gulp.watch('src/scripts/**/*.js', gulp.parallel('scripts'));
     gulp.watch('src/image/**/*.*', gulp.parallel('image'));
+    gulp.watch('src/css/fonts/**/*.*', gulp.parallel('font'));
 });
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('pug', 'sass', 'scripts', 'image'),
+    gulp.parallel('pug', 'sass', 'scripts', 'image', 'font'),
     gulp.parallel( 'watch', 'serve')
 ));
 

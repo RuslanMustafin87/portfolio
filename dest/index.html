@@ -12,33 +12,37 @@
     <div class="wrapper">
       <section class="section welcome">
         <div class="welcome__autorize autorize">Авторизироватся</div>
-        <div class="welcome__center">
-          <div class="welcome__user author">
-            <div class="author__img"></div>
-            <div class="author__name">Руслан Мустафин</div>
-            <div class="author__description">Личный сайт веб-разработчика</div>
+        <div class="welcome__center" id="welcome__author">
+          <div class="welcome__center-top">
+            <div class="welcome__user author">
+              <div class="author__img"></div>
+              <div class="author__name">Руслан Мустафин</div>
+              <div class="author__description">Личный сайт веб-разработчика</div>
+              <ul class="social clearfix">
+                <li class="social__item"><a class="social__link social__link_vk">
+                    <svg width="25" height="25">
+                      <use class="social__icon" xlink:href="image/icon/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link social__link_git">
+                    <svg width="25" height="25">
+                      <use class="social__icon" xlink:href="image/icon/sprite.svg#git"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link social__link_in">
+                    <svg width="25" height="25">
+                      <use class="social__icon" xlink:href="image/icon/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
           </div>
-          <ul class="social">
-            <li class="social__item"><a class="social__link social__link_vk">
-                <svg width="55" height="55">
-                  <use class="icon" xlink:href="image/icon/sprite.svg#vk" width="55" height="55"></use>
-                </svg></a></li>
-            <li class="social__item"><a class="social__link social__link_git">
-                <svg width="55" height="55">
-                  <use class="icon" xlink:href="image/icon/sprite.svg#git" width="55" height="55"></use>
-                </svg></a></li>
-            <li class="social__item"><a class="social__link social__link_fb">
-                <svg width="55" height="55">
-                  <use class="icon" xlink:href="image/icon/sprite.svg#fb" width="55" height="55"></use>
-                </svg></a></li>
-          </ul>
           <ul class="welcome__buttons navigation">
-            <li class="navigation__button">Мои работы</li>
-            <li class="navigation__button">Обо мне</li>
-            <li class="navigation__button">Блок</li>
+            <li class="navigation__button"><a class="navigation__link" href="mywork.html">Мои работы</a></li>
+            <li class="navigation__button"><a class="navigation__link" href="about.html">Обо мне</a></li>
+            <li class="navigation__button"><a class="navigation__link" href="blog.html">Блог</a></li>
           </ul>
         </div>
+        <div class="welcome__center" id="welcome__login"></div>
       </section>
     </div>
+    <script src="bundle.js"></script>
   </body>
 </html>
