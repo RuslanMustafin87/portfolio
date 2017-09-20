@@ -6,22 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Добро пожаловать!</title>
     <link rel="stylesheet" href="../main.min.css"/>
-    <link rel="icon" type="image/png" href="fav_night.png"/>
+    <link rel="icon" type="image/png" href="image/icon/fav_night.png"/>
   </head>
   <body>
     <div class="wrapper">
       <section class="section welcome">
-        <div class="welcome__autorize autorize"></div>
+        <div class="welcome__autorize autorize">Авторизироватся</div>
         <div class="welcome__center">
-          <div class="author">
+          <div class="welcome__user author">
             <div class="author__img"></div>
             <div class="author__name">Руслан Мустафин</div>
             <div class="author__description">Личный сайт веб-разработчика</div>
           </div>
           <ul class="social">
-            <li class="social__item"><a class="social__link social__link_#{item}"></a></li>
-            <li class="social__item"><a class="social__link social__link_#{item}"></a></li>
-            <li class="social__item"><a class="social__link social__link_#{item}"></a></li>
+            <li class="social__item"><a class="social__link social__link_vk">
+                <svg width="55" height="55">
+                  <use class="icon" xlink:href="image/icon/sprite.svg#vk" width="55" height="55"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link social__link_git">
+                <svg width="55" height="55">
+                  <use class="icon" xlink:href="image/icon/sprite.svg#git" width="55" height="55"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link social__link_fb">
+                <svg width="55" height="55">
+                  <use class="icon" xlink:href="image/icon/sprite.svg#fb" width="55" height="55"></use>
+                </svg></a></li>
           </ul>
           <ul class="welcome__buttons navigation">
             <li class="navigation__button">Мои работы</li>

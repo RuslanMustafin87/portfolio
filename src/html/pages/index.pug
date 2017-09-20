@@ -5,16 +5,18 @@ block  var
     
 block content
     section.section.welcome
-        .welcome__autorize.autorize
+        .welcome__autorize.autorize Авторизироватся
         .welcome__center
-            .author
+            .welcome__user.author
                 .author__img
                 .author__name Руслан Мустафин
                 .author__description Личный сайт веб-разработчика
             ul.social
                 each item in ['vk', 'git', 'fb']
                     li.social__item
-                        a(class='social__link social__link_#{item}')
+                        a(class='social__link social__link_' + item)
+                            svg(width='55' height='55')
+                               use(xlink:href="image/icon/sprite.svg#" + item class="icon" width="55" height="55")
             ul.welcome__buttons.navigation
                 each item in ['Мои работы', 'Обо мне', 'Блок']
                     li.navigation__button #{item}
