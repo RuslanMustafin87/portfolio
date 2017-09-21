@@ -6,7 +6,7 @@ block  var
 block content
     section.section.welcome
         .welcome__autorize.autorize Авторизироватся
-        .welcome__center#welcome__author
+        .welcome__center.welcome__author
             .welcome__center-top
                 .welcome__user.author
                     .author__img
@@ -22,4 +22,8 @@ block content
                 li.navigation__button: a(href='mywork.html' class='navigation__link') Мои работы
                 li.navigation__button: a(href='about.html' class='navigation__link') Обо мне
                 li.navigation__button: a(href='blog.html' class='navigation__link') Блог
-        .welcome__center#welcome__login
+        .welcome__center.welcome__login
+            .welcome__center-top
+                form.form(action="")
+                    h1.title
+                

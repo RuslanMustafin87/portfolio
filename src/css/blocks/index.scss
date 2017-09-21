@@ -30,7 +30,7 @@
     right: 100px;
 }
 
-#welcome__login {
+.welcome__login {
     display: none;
 }
 
@@ -44,6 +44,7 @@
     left: 0;
     right: 0;
     margin: auto;
+    box-sizing: border-box;
 }
 
 .welcome__center-top {
@@ -148,6 +149,16 @@
 .navigation__link {
     color: #fff;
     display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome__center-top {
+    padding: 40px 20px 40px 20px;
+    box-sizing: border-box;
+}
+
+.form {
     width: 100%;
     height: 100%;
 }
