@@ -95,3 +95,4 @@ exports.server = 'serve';
 exports.scripts = 'scripts';
 exports.image = 'image';
 exports.clean = 'clean';
+exports.sass = 'sass';

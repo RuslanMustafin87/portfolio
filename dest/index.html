@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Добро пожаловать!</title>
-    <link rel="stylesheet" href="../main.min.css"/>
+    <link rel="stylesheet" href="main.min.css"/>
     <link rel="icon" type="image/png" href="image/icon/fav_night.png"/>
   </head>
   <body>
     <div class="wrapper">
       <section class="section welcome">
         <div class="welcome__autorize autorize">Авторизироватся</div>
-        <div class="welcome__center welcome__author">
+        <div class="welcome__center welcome__center_author">
           <div class="welcome__center-top">
             <div class="welcome__user author">
               <div class="author__img"></div>
@@ -40,12 +40,21 @@
             <li class="navigation__button"><a class="navigation__link" href="blog.html">Блог</a></li>
           </ul>
         </div>
-        <div class="welcome__center welcome__login">
+        <div class="welcome__center welcome__center_login">
           <div class="welcome__center-top">
             <form class="form" action="">
-              <h1 class="title"></h1>
+              <h1 class="form__title title">Авторизуйтесь</h1>
+              <input class="form__login" type="text" name="login"/>
+              <input class="form__password" type="password" name="password"/>
+              <input class="form__check" type="checkbox" name="capcha"/>
+              <input class="form__radio" type="radio" name="human"/>
+              <input class="form__radio" type="radio" name="human"/>
             </form>
           </div>
+          <ul class="welcome__buttons navigation">
+            <li class="navigation__button"><a class="navigation__link" href="mywork.html">Мои работы</a></li>
+            <li class="navigation__button"><a class="navigation__link" href="about.html">Обо мне</a></li>
+          </ul>
         </div>
       </section>
     </div>

@@ -1,0 +1,21 @@
+.title {
+    color: #fff;
+    font-family: 'Sansus Webissimo';
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.navigation__button {
+    display: inline-block;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    background-color: #0548be;
+    border-right: 2px solid #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: $color_hover;
+    }
+}

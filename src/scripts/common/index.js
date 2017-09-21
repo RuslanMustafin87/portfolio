@@ -1,6 +1,6 @@
 const welAutorize = document.querySelector('.autorize');
-const welLogin = document.querySelector('.welcome__login');
-const welAuthor = document.querySelector('.welcome__author');
+const welLogin = document.querySelector('.welcome__center_login');
+const welAuthor = document.querySelector('.welcome__center_author');
 
 welAutorize.addEventListener('click', function(){
     welAuthor.style.display = 'none';
