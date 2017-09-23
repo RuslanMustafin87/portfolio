@@ -3,9 +3,21 @@ const welLogin = document.querySelector('.welcome__center_login');
 const welAuthor = document.querySelector('.welcome__center_author');
 
 welAutorize.addEventListener('click', function(){
-    welAuthor.style.display = 'none';
-    welLogin.style.display = 'block';
-    welAutorize.style.display = 'none';
-})
+    welAuthor.style.transitionDelay = '0s';
+    welAuthor.style.transform = 'perspective(600px) rotateY(90deg)';
+    welLogin.style.transitionDelay = '0.3s';
+    welLogin.style.transform = 'perspective(600px) rotateY(0deg)';
+    welAutorize.style.opacity = '0';
+});
 
-// module.exports = fn;
+const toMain = document.querySelector('#toMain');
+
+    toMain.addEventListener('click', function(){
+        welLogin.style.transitionDelay = '0s';
+        welLogin.style.transform = 'perspective(600px) rotateY(-90deg)';
+        welAuthor.style.transitionDelay = '0.3s';
+        welAuthor.style.transform = 'perspective(600px) rotateY(0deg)';
+        welAutorize.style.opacity = '1';
+    })
+
+// module.exports = fn

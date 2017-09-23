@@ -20,7 +20,7 @@ gulp.task('scripts', function(){
             .pipe(gulp.dest('dest/'))
 })
 
-gulp.task('pug', function(){
+gulp.task('html', function(){
     return gulp.src(['src/html/pages/*.pug', '!src/html/template.pug'])
             .pipe(plumber({
                 errorHandler: notify.onError(function(error) {
@@ -78,7 +78,7 @@ gulp.task('serve', function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch('src/html/**/*.pug', gulp.parallel('pug'));
+    gulp.watch('src/html/**/*.pug', gulp.parallel('html'));
     gulp.watch('src/css/**/*.scss', gulp.parallel('sass'));
     gulp.watch('src/scripts/**/*.js', gulp.parallel('scripts'));
     gulp.watch('src/image/**/*.*', gulp.parallel('image'));
@@ -87,7 +87,7 @@ gulp.task('watch', function(){
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('pug', 'sass', 'scripts', 'image', 'font'),
+    gulp.parallel('html', 'sass', 'scripts', 'image', 'font'),
     gulp.parallel( 'watch', 'serve')
 ));
 
@@ -96,3 +96,4 @@ exports.scripts = 'scripts';
 exports.image = 'image';
 exports.clean = 'clean';
 exports.sass = 'sass';
+exports.html = 'html';
