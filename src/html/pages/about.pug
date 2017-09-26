@@ -5,7 +5,8 @@ block  var
     
 block content
     main.main.main-about
-        section.hero
+
+        section.section.hero
             .about__hamburger.hamburger-menu
                 img.hamburger-menu__img(src="image/icon/hamburger.svg", alt="")
             ul.about__social.social.clearfix
@@ -22,10 +23,16 @@ block content
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="hero__traingle")
                 polygon(class = "left" points="0,0   0,86   500.8,86   500.8,75.5" fill="#f2f0e8")
                 polygon(class = "right" points="1000,0   1000,86   500,86   500,75.5" fill="#eae8e2")
-            svg(xmlns="http://www.w3.org/2000/svg" )
-                polygon(class = "left" points="0,0   250,50   250,100   0,100" fill="#f2f0e8")
-        section.section.about-me
+        section.section.about-me.clearfix
             .about-me__left
-                img.about__img(src="image/stars2.svg", alt="")
-                .about-mr__left-tite.title
-
+                .about-me__left-left
+                    img.about-me__img(src="image/stars2.svg", alt="")
+                    h1.about-me__left-title.title.title_color-gray.title_font-size-63.title_text-transform-uppercase Обо мне
+                .about-me__left-right
+                    .about-me__pic
+                    h2.about-me__left-title-h2.title.title_color-gray.title_font-size-35.title_text-transform-uppercase Кто я
+                    .about-me__line.line
+                    .about-me__text
+                        p  Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                          |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .about-me__right
