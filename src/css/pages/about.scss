@@ -139,3 +139,76 @@
     transform:  translate(-50%, -10%) rotate(200deg);
     z-index: 1;
 }
+
+.about-me__right-title-h2 {
+    margin: auto;
+}
+
+.about-me__right {
+    padding: 0 40px;
+}
+
+.about-me__skills {
+    margin-top: 55px;
+}
+
+.about-me__skill-item {
+    text-align: left;
+    margin-top: 40px;
+}
+
+$skill_stroke_dash: 314.15;
+$skill_html_stroke_dash: 282.735;
+$skill_css_stroke_dash: 267.0275;
+$skill_js_stroke_dash: 267.0275;
+$skill_php_stroke_dash: 125.66;
+$skill_mySQL_stroke_dash: 172.7825;
+$skill_node_stroke_dash: 109.9525;
+$skill_mongo_stroke_dash: 204.1975;
+
+@mixin case($stroke-dasharray){
+    @if ($stroke-dasharray < ($skill_stroke_dash*0.2)) {
+        opacity: .2;
+    } @else if ($stroke-dasharray < ($skill_stroke_dash*0.4)) {
+        opacity: .4;
+    } @else if ($stroke-dasharray < ($skill_stroke_dash*0.6)) {
+        opacity: .6;
+    } @else if ($stroke-dasharray < ($skill_stroke_dash*0.8)) {
+        opacity: .8;
+    }
+}
+
+.skills_html {
+    stroke-dasharray: $skill_html_stroke_dash $skill_stroke_dash - $skill_html_stroke_dash;
+    @include case($skill_html_stroke_dash);
+}
+
+.skills_css {
+    stroke-dasharray: $skill_css_stroke_dash $skill_stroke_dash - $skill_css_stroke_dash;
+    @include case($skill_css_stroke_dash);
+}
+
+.skills_js {
+    stroke-dasharray: $skill_js_stroke_dash $skill_stroke_dash - $skill_js_stroke_dash;
+    @include case($skill_js_stroke_dash);
+}
+
+.skills_php {
+    stroke-dasharray: $skill_php_stroke_dash $skill_stroke_dash - $skill_php_stroke_dash;
+    @include case($skill_php_stroke_dash);
+}
+
+.skills_mySQL {
+    stroke-dasharray: $skill_mySQL_stroke_dash $skill_stroke_dash - $skill_mySQL_stroke_dash;
+    @include case($skill_mySQL_stroke_dash);
+}
+
+.skills_node {
+    stroke-dasharray: $skill_node_stroke_dash $skill_stroke_dash - $skill_node_stroke_dash;
+    @include case($skill_node_stroke_dash);
+}
+
+.skills_mongo {
+    stroke-dasharray: $skill_mongo_stroke_dash $skill_stroke_dash - $skill_mongo_stroke_dash;
+    @include case($skill_mongo_stroke_dash);
+}

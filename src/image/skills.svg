@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+    <circle id="skills" r="50" stroke="#dfdcd5" stroke-width="20" fill="none" cx="60" cy="60">
+    <circle id="skills" r="50" stroke="#dfdcd5" stroke-width="20" fill="none" cx="60" cy="60">
+    <circle id="skills" r="50" stroke="#dfdcd5" stroke-width="20" fill="none" cx="60" cy="60">
+    <circle id="skills" r="50" stroke="#dfdcd5" stroke-width="20" fill="none" cx="60" cy="60">
+	<!-- <circle id="skills_1" r="50" stroke="#1056d1" stroke-width="20" fill="none" cx="60" cy="60" transform="rotate(-90 60 60)"> -->
+    <circle id="skills_1" r="50" stroke="#1056d1" stroke-width="20" fill="none" cy="60">
+    <circle id="skills_2" r="50" stroke="#1056d1" stroke-width="20" fill="none" cx="220" cy="60"  transform="rotate(-90 220 60)">
+    <circle id="skills_3" r="50" stroke="#1056d1" stroke-width="20" fill="none" cx="380" cy="60" transform="rotate(-90 380 60)">
+    <circle id="skills_4" r="50" stroke="#1056d1" stroke-width="20" fill="none" cx="540" cy="60" transform="rotate(-90 540 60)">
+    <text id="text_html" x="60" y="60" font-size="14" font-family="Roboto" font-weight="500" fill="#243994" transform="translate(-19.75 4)">HTML</text>
+    <text id="text_css" x="220" y="60" font-size="14" font-family="Roboto" font-weight="500" fill="#243994" transform="translate(-13.79 4)">CSS</text>
+    <text id="text_js" x="380" y="60" font-size="14" font-family="Roboto" font-weight="500" fill="#243994" transform="translate(-34 0)">
+        <tspan>JavaScript</tspan>
+        <tspan dx="-64" dy="16">&#38; Jquery</tspan>
+    </text>
+</g>
+</svg>
