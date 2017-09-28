@@ -157,6 +157,11 @@
     margin-top: 40px;
 }
 
+.about-me_skill_pic {
+    margin-right: 40px;
+    margin-top: 15px;
+}
+
 $skill_stroke_dash: 314.15;
 $skill_html_stroke_dash: 282.735;
 $skill_css_stroke_dash: 267.0275;
@@ -165,6 +170,9 @@ $skill_php_stroke_dash: 125.66;
 $skill_mySQL_stroke_dash: 172.7825;
 $skill_node_stroke_dash: 109.9525;
 $skill_mongo_stroke_dash: 204.1975;
+$skill_git_stroke_dash: 267.0275;
+$skill_gulp_stroke_dash: 219.905;
+$skill_bower_stroke_dash: 204.1975;
 
 @mixin case($stroke-dasharray){
     @if ($stroke-dasharray < ($skill_stroke_dash*0.2)) {
@@ -211,4 +219,87 @@ $skill_mongo_stroke_dash: 204.1975;
 .skills_mongo {
     stroke-dasharray: $skill_mongo_stroke_dash $skill_stroke_dash - $skill_mongo_stroke_dash;
     @include case($skill_mongo_stroke_dash);
+}
+
+.skills_git {
+    stroke-dasharray: $skill_git_stroke_dash $skill_stroke_dash - $skill_git_stroke_dash;
+    @include case($skill_git_stroke_dash);
+}
+
+.skills_gulp {
+    stroke-dasharray: $skill_gulp_stroke_dash $skill_stroke_dash - $skill_gulp_stroke_dash;
+    @include case($skill_gulp_stroke_dash);
+}
+
+.skills_bower {
+    stroke-dasharray: $skill_bower_stroke_dash $skill_stroke_dash - $skill_bower_stroke_dash;
+    @include case($skill_bower_stroke_dash);
+}
+
+.map {
+    background: url('image/map_bg.png') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.map__top {
+    flex: 1;
+    position: relative;
+}
+
+.map__contacts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacts {
+    width: 580px;
+    height: 280px;
+    background-color: #fff;
+    opacity: .8;
+}
+
+.contacts-title {
+    margin-top: 35px;
+}
+
+.contacts__line {
+    margin-top: 30px;
+}
+
+.contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts__item {
+    width: 50%;
+    height: 45px;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.contacts__img {
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+
+.contacts__description {
+    padding-left: 55px;
+    color: #7c8291;
+    height: 100%;
+    line-height: 45px;
+}
+
+.contacts__text {
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.map__footer {
+    
 }

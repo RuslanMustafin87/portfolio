@@ -43,34 +43,71 @@ block content
                 ul.about-me__skills
                     li.about-me__skill-item()
                         h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
-                        svg(width="100%" height="120")
-                            use(xlink:href="image/skills.svg#skills" class="skills")
-                            use(xlink:href="image/skills.svg#skills_1" cx="60" transform="rotate(-90 60 60)" class="skills_html")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_html")
                             use(xlink:href="image/skills.svg#text_html" class="text_html")
-                            use(xlink:href="image/skills.svg#skills" cx="220" cy="60" class="skills")
-                            use(xlink:href="image/skills.svg#skills_2" class="skills_css")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_css")
                             use(xlink:href="image/skills.svg#text_css" class="text_css")
-                            use(xlink:href="image/skills.svg#skills" cx="380" cy="60" class="skills")
-                            use(xlink:href="image/skills.svg#skills_3" class="skills_js")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_js")
                             use(xlink:href="image/skills.svg#text_js" class="text_js")
                     li.about-me__skill-item()
                         h3.title.title_color-gray.title_font-size-28.title_text-align-left Backend
-                        svg(width="100%" height="120")
-                            use(xlink:href="image/skills.svg#skills_1" class="skills_php")
-                            use(xlink:href="image/skills.svg#text_html" class="text_html")
-                            use(xlink:href="image/skills.svg#skills_2" class="skills_mySQL")
-                            use(xlink:href="image/skills.svg#text_css" class="text_css")
-                            use(xlink:href="image/skills.svg#skills_3" class="skills_node")
-                            use(xlink:href="image/skills.svg#text_js" class="text_js")
-                            use(xlink:href="image/skills.svg#skills_4" class="skills_mongo")
-                            use(xlink:href="image/skills.svg#text_js" class="text_js")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_php")
+                            use(xlink:href="image/skills.svg#text_php" class="text_php")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_mySQL")
+                            use(xlink:href="image/skills.svg#text_mySQL" class="text_mySQL")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_node")
+                            use(xlink:href="image/skills.svg#text_node" class="text_node")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_mongo")
+                            use(xlink:href="image/skills.svg#text_mongo" class="text_mongo")
                     li.about-me__skill-item()
-                        h3.title.title_color-gray.title_font-size-28.title_text-align-left Workflow
-                        svg(width="100%" height="120")
-                            use(xlink:href="image/skills.svg#skills_1" class="skills_git")
-                            use(xlink:href="image/skills.svg#text_html" class="text_html")
-                            use(xlink:href="image/skills.svg#skills_2" class="skills_gulp")
-                            use(xlink:href="image/skills.svg#text_css" class="text_css")
-                            use(xlink:href="image/skills.svg#skills_3" class="skills_bower")
-                            use(xlink:href="image/skills.svg#text_js" class="text_js")
-                            
+                        h3.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_git")
+                            use(xlink:href="image/skills.svg#text_git" class="text_git")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_gulp")
+                            use(xlink:href="image/skills.svg#text_gulp" class="text_gulp")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="image/skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="image/skills.svg#skill" class="skills_bower")
+                            use(xlink:href="image/skills.svg#text_bower" class="text_bower")
+        section.section.map
+            .map__top
+                .map__contacts.contacts
+                    .contacts-title.title.title_color-gray.title_text-transform-upprcase.title_font-size-35 Контакты
+                    .contacts__line.line
+                    ul.contacts__list
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="image/icon/sprite_contacts.svg#skype_n")
+                            .contacts__description skype_ruslanmust
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="image/icon/sprite_contacts.svg#phone_n")
+                            .contacts__description 8-999-133-75-57
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="image/icon/sprite_contacts.svg#envelope_n")
+                            .contacts__description ruslanmust87@gmail.com
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="image/icon/sprite_contacts.svg#map_n")
+                            .contacts__description 
+                                span.contacts__text Чишмы Социалистическая 9
+            .map__footer.footer
