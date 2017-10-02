@@ -280,6 +280,13 @@ $skill_bower_stroke_dash: 204.1975;
     height: 45px;
     margin-top: 30px;
     padding-left: 20px;
+    display: table;
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
 }
 
 .contacts__img {
@@ -289,17 +296,9 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .contacts__description {
-    padding-left: 55px;
+    padding-left: 10px;
     color: #7c8291;
-    height: 100%;
-    line-height: 45px;
-}
-
-.contacts__text {
-    line-height: 16px;
+    display: inline-block;
     vertical-align: middle;
-}
-
-.map__footer {
-    
+    max-width: 150px;
 }
