@@ -280,13 +280,13 @@ $skill_bower_stroke_dash: 204.1975;
     height: 45px;
     margin-top: 30px;
     padding-left: 20px;
-    display: table;
-    &::before {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-    }
+    line-height: 45px;
+    // &::before {
+    //     content: "";
+    //     display: inline-block;
+    //     height: 100%;
+    //     vertical-align: middle;
+    // }
 }
 
 .contacts__img {
@@ -296,9 +296,11 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .contacts__description {
-    padding-left: 10px;
+    padding-left: 55px;
+    height: 100%;
     color: #7c8291;
-    display: inline-block;
+    display: block;
     vertical-align: middle;
-    max-width: 150px;
+    line-height: 16px;
 }
+
