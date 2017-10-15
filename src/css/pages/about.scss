@@ -22,35 +22,6 @@
     left: 30px;
 }
 
-.social {
-    font-size: 0;
-    text-align: center;
-}
-
-.social__link {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
-.social__item {
-    display: inline-block;
-    margin-right: 30px;
-    cursor: pointer;
-    &:last-child {
-        margin-right: 0;
-    }
-}
-
-.social__icon {
-    fill: #fff;
-    width: 55px;
-    height: 55px;
-    &:hover {
-        fill: #083c96;
-    }
-}
-
 .about__user {
     position: absolute;
     top: 50%;
