@@ -229,8 +229,7 @@ $skill_bower_stroke_dash: 204.1975;
 .contacts {
     width: 580px;
     height: 280px;
-    background-color: #fff;
-    opacity: .8;
+    background-color: rgba(256, 256, 256, .8);
 }
 
 .contacts-title {
@@ -267,10 +266,10 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .contacts__description {
-    padding-left: 55px;
-    height: 100%;
+    padding-left: 15px;
+    // height: 100%;
     color: #7c8291;
-    display: block;
+    display: inline-block;
     vertical-align: middle;
     line-height: 16px;
 }

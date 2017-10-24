@@ -1,6 +1,6 @@
 .footer {
     height: 185px;
-    background-color: #3c3e47;
+    background-color: rgba(60, 62, 71, 1);
     opacity: .9;
     padding-top: 30px;
     color: #9e9fa3;
@@ -30,4 +30,16 @@
 
 .footer__social {
     margin-top: 30px;
+}
+
+.footer__bottom {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: $color__button;
+    color: #fff;
+    line-height: 40px;
+    vertical-align: middle;
 }
