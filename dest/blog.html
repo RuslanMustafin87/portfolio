@@ -10,7 +10,34 @@
   </head>
   <body>
     <div class="wrapper">
-      <main class="main main__blog"></main>
+      <main class="main main__blog">
+        <section class="hero-blog">
+          <ul class="blog__social social clearfix">
+            <li class="social__item"><a class="social__link social__link_vk">
+                <svg width="25" height="25">
+                  <use class="social__icon" xlink:href="image/icon/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link social__link_git">
+                <svg width="25" height="25">
+                  <use class="social__icon" xlink:href="image/icon/sprite.svg#git"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link social__link_in">
+                <svg width="25" height="25">
+                  <use class="social__icon" xlink:href="image/icon/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+          <div class="blog__hamburger hamburger-menu"><img class="hamburger-menu__img" src="image/icon/hamburger.svg" alt=""/></div>
+          <div class="blog__user author-title">
+            <div class="author-title__img"></div>
+            <div class="author-title__name">Руслан Мустафин</div>
+            <div class="author-title__description">Личный сайт веб-разработчика</div>
+          </div>
+          <svg class="hero__traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5" fill="#f2f0e8"></polygon>
+            <polygon class="right" points="1000,0   1000,86   500,86   500,75.5" fill="#eae8e2"></polygon>
+          </svg>
+        </section>
+      </main>
     </div>
     <script src="bundle.js"></script>
   </body>

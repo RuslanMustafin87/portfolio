@@ -1,0 +1,31 @@
+.main__blog {
+    color: #fff;
+    font-family: "Roboto";
+}
+
+.hero-blog {
+    height: 400px;
+    background: url('image/welcome_bg.png') 0 70% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.blog__social {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.blog__hamburger {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.blog__user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
