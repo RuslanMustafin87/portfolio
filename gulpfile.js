@@ -10,15 +10,20 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create();
 
 //script
-var gulpWebpack = require('gulp-webpack'),
-    webpack = require('webpack'),
-    webpackConfig = require('./webpack.config.js');
+// var gulpWebpack = require('gulp-webpack'),
+//     webpack = require('webpack'),
+//     webpackConfig = require('./webpack.config.js');
+
+// gulp.task('scripts', function(){
+//     return gulp.src('src/scripts/app.js')
+//             .pipe(gulpWebpack(webpackConfig, webpack))
+//             .pipe(gulp.dest('dest/'))
+// })
 
 gulp.task('scripts', function(){
-    return gulp.src('src/scripts/app.js')
-            .pipe(gulpWebpack(webpackConfig, webpack))
-            .pipe(gulp.dest('dest/'))
-})
+    return gulp.src('src/scripts/*.js')
+            .pipe(gulp.dest('dest/scripts'));
+});
 
 gulp.task('html', function(){
     return gulp.src(['src/html/pages/*.pug', '!src/html/template.pug'])

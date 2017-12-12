@@ -1,7 +1,11 @@
-const container =  document.querySelector('.blog-content__container');
-var accoMenuItems = document.querySelectorAll('.menu-acco__item');
+$(function(){
+    // scroll_blog 
 
-accoMenuItems.addEventListener('click', function(){
-    accoMenuItems.style.color = 'red';
-    alert('hi');
+    const container =  document.querySelector('.blog-content__container');
+    var accoMenuItems = document.querySelectorAll('.menu-acco__item');
+
+    $(accoMenuItems).on('click', function(){
+        $(this).css('color',  'red');
+    });
+
 });
