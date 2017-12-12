@@ -61,6 +61,12 @@
     }
 }
 
+.acco__item-active  {
+    padding-right: 18px;
+    color: $color_hover;
+    border-right: 2px solid $color_hover;
+}
+
 .menu-acco__description {
     vertical-align: middle;
     display: inline-block;
@@ -70,6 +76,9 @@
 .blog-content__right {
     float: right;
     width: 72.34%;
+    height: 70%;
+    overflow: hidden;
+    position: relative;
     padding-left: 120px;
     padding-right: 410px;
     @media screen and (max-width: 1365px) {
@@ -78,8 +87,10 @@
 }
 
 .blog-content__container {
-    overflow: hidden;
-    height: 70vh;
+    width: 61.5%;
+    position: absolute;
+    top: 0px;
+    transition: top .5s;
 }
 
 .blog-content__time {

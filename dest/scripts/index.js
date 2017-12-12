@@ -1,5 +1,4 @@
 // flip_index
-$(function(){
     const welAutorize = document.querySelector('.autorize');
     const welLogin = document.querySelector('.welcome__center_login');
     const welAuthor = document.querySelector('.welcome__center_author');
@@ -20,5 +19,4 @@ $(function(){
         welAuthor.style.transform = 'perspective(600px) rotateY(0deg)';
         welAutorize.style.opacity = '1';
     });
-});
 

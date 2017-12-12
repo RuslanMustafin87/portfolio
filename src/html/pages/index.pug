@@ -2,6 +2,7 @@ extends ../template
 
 block  var
     - var title = "Добро пожаловать!"
+    - var src = "scripts/index.js"
     
 block content
     section.section.welcome
@@ -50,4 +51,3 @@ block content
                 li.navigation__button: a(href='about.html' class='navigation__link') Войти
                 
         .welcome__copyright &#9400; Руслан Мустафин | Создано с любовью в Loftscool | 2017
-    script(src='scripts/main.js')
