@@ -6,24 +6,20 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     sourcemaps = require('gulp-sourcemaps'),
+    imagemin = require('gulp-imagemin'),
     del = require('del'),
     browserSync = require('browser-sync').create();
 
-//script
-// var gulpWebpack = require('gulp-webpack'),
-//     webpack = require('webpack'),
-//     webpackConfig = require('./webpack.config.js');
-
-// gulp.task('scripts', function(){
-//     return gulp.src('src/scripts/app.js')
-//             .pipe(gulpWebpack(webpackConfig, webpack))
-//             .pipe(gulp.dest('dest/'))
-// })
+// script
+var gulpWebpack = require('gulp-webpack'),
+    webpack = require('webpack'),
+    webpackConfig = require('./webpack.config.js');
 
 gulp.task('scripts', function(){
     return gulp.src('src/scripts/*.js')
-            .pipe(gulp.dest('dest/scripts'));
-});
+            .pipe(gulpWebpack(webpackConfig, webpack))
+            .pipe(gulp.dest('dest/scripts/'))
+})
 
 gulp.task('html', function(){
     return gulp.src(['src/html/pages/*.pug', '!src/html/template.pug'])
@@ -41,6 +37,7 @@ gulp.task('html', function(){
 
 gulp.task('image', function(){
     return gulp.src('src/**/*.{jpg,png,svg}')
+            .pipe(imagemin())
             .pipe(gulp.dest('dest/'));
 })
 
@@ -92,7 +89,7 @@ gulp.task('watch', function(){
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('html', 'sass', 'scripts', 'image', 'font'),
+    gulp.parallel('html', 'sass', 'scripts', 'font', 'image'),
     gulp.parallel( 'watch', 'serve')
 ));
 
