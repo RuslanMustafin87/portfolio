@@ -1,0 +1,276 @@
+.main-about {
+    color: #fff;
+    font-family: 'Roboto';
+}
+
+.hero {
+    background: url('image/welcome_bg.png') 0 70% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.about__hamburger {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.about__social {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.about__user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about__img {
+    opacity: 0.15;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    height: 270px;
+}
+
+.hero__traingle {
+    position: absolute;
+    bottom: 0;
+}
+
+.about-me {
+    color: $color_text;
+}
+
+.about-me__pic {
+    width: 100%;
+    height: 390px;
+    background: url('image/photo.jpg') no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+
+.about-me__left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #f2f0e8;
+    padding-right: 20px;
+    &-left {
+        position: relative;
+    }
+}
+
+.about-me__right {
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: #eae8e2;
+}
+
+.about-me__left-left {
+    float: left;
+    width: 50%;
+}
+
+.about-me__left-right {
+    float: right;
+    width: 50%;
+}
+
+.about-me__left-title{
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.about-me__line {
+    margin-top: 20px;
+}
+
+.about-me__left-title-h2 {
+    margin-top: 30px;
+}
+
+.about-me__text {
+    margin-top: 20px;
+}
+
+.about-me__img {
+    position: absolute;
+    left: 50%;
+    width: 171.5px;
+    height: 132.5px;
+    transform:  translate(-50%, -10%) rotate(200deg);
+    z-index: 1;
+}
+
+.about-me__right-title-h2 {
+    margin: auto;
+}
+
+.about-me__right {
+    padding: 0 40px;
+}
+
+.about-me__skills {
+    margin-top: 55px;
+}
+
+.about-me__skill-item {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.about-me_skill_pic {
+    margin-right: 40px;
+    margin-top: 15px;
+}
+
+$skill_stroke_dash: 314.15;
+$skill_html_stroke_dash: 282.735;
+$skill_css_stroke_dash: 267.0275;
+$skill_js_stroke_dash: 267.0275;
+$skill_php_stroke_dash: 125.66;
+$skill_mySQL_stroke_dash: 172.7825;
+$skill_node_stroke_dash: 109.9525;
+$skill_mongo_stroke_dash: 204.1975;
+$skill_git_stroke_dash: 267.0275;
+$skill_gulp_stroke_dash: 219.905;
+$skill_bower_stroke_dash: 204.1975;
+
+@mixin case($stroke-dasharray){
+    @if ($stroke-dasharray < ($skill_stroke_dash*0.2)) {
+        opacity: .2;
+    } @else if ($stroke-dasharray < ($skill_stroke_dash*0.4)) {
+        opacity: .4;
+    } @else if ($stroke-dasharray < ($skill_stroke_dash*0.6)) {
+        opacity: .6;
+    } @else if ($stroke-dasharray < ($skill_stroke_dash*0.8)) {
+        opacity: .8;
+    }
+}
+
+.skills_html {
+    stroke-dasharray: $skill_html_stroke_dash $skill_stroke_dash - $skill_html_stroke_dash;
+    @include case($skill_html_stroke_dash);
+}
+
+.skills_css {
+    stroke-dasharray: $skill_css_stroke_dash $skill_stroke_dash - $skill_css_stroke_dash;
+    @include case($skill_css_stroke_dash);
+}
+
+.skills_js {
+    stroke-dasharray: $skill_js_stroke_dash $skill_stroke_dash - $skill_js_stroke_dash;
+    @include case($skill_js_stroke_dash);
+}
+
+.skills_php {
+    stroke-dasharray: $skill_php_stroke_dash $skill_stroke_dash - $skill_php_stroke_dash;
+    @include case($skill_php_stroke_dash);
+}
+
+.skills_mySQL {
+    stroke-dasharray: $skill_mySQL_stroke_dash $skill_stroke_dash - $skill_mySQL_stroke_dash;
+    @include case($skill_mySQL_stroke_dash);
+}
+
+.skills_node {
+    stroke-dasharray: $skill_node_stroke_dash $skill_stroke_dash - $skill_node_stroke_dash;
+    @include case($skill_node_stroke_dash);
+}
+
+.skills_mongo {
+    stroke-dasharray: $skill_mongo_stroke_dash $skill_stroke_dash - $skill_mongo_stroke_dash;
+    @include case($skill_mongo_stroke_dash);
+}
+
+.skills_git {
+    stroke-dasharray: $skill_git_stroke_dash $skill_stroke_dash - $skill_git_stroke_dash;
+    @include case($skill_git_stroke_dash);
+}
+
+.skills_gulp {
+    stroke-dasharray: $skill_gulp_stroke_dash $skill_stroke_dash - $skill_gulp_stroke_dash;
+    @include case($skill_gulp_stroke_dash);
+}
+
+.skills_bower {
+    stroke-dasharray: $skill_bower_stroke_dash $skill_stroke_dash - $skill_bower_stroke_dash;
+    @include case($skill_bower_stroke_dash);
+}
+
+.map {
+    background: url('image/map_bg.png') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.map__top {
+    flex: 1;
+    position: relative;
+}
+
+.map__contacts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacts {
+    width: 580px;
+    height: 280px;
+    background-color: rgba(256, 256, 256, .8);
+}
+
+.contacts-title {
+    margin-top: 35px;
+}
+
+.contacts__line {
+    margin-top: 30px;
+}
+
+.contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts__item {
+    width: 50%;
+    height: 45px;
+    margin-top: 30px;
+    padding-left: 20px;
+    line-height: 45px;
+    // &::before {
+    //     content: "";
+    //     display: inline-block;
+    //     height: 100%;
+    //     vertical-align: middle;
+    // }
+}
+
+.contacts__img {
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+
+.contacts__description {
+    padding-left: 15px;
+    // height: 100%;
+    color: #7c8291;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+}
+

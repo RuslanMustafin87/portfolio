@@ -1,0 +1,232 @@
+.welcome {
+    background: url('image/welcome_bg.png') no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+.autorize {
+    width: 180px;
+    height: 45px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 41px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity .5s;
+    cursor: pointer;
+    &:hover {
+        background-color: $color_hover;
+        border-color: $color_hover;
+    }
+}
+
+.welcome__autorize {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+
+.welcome__login {
+    display: none;
+}
+
+.welcome__center {
+    width: 380px;
+    height: 445px;
+    background-color:  rgba(34, 47, 79, .6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.welcome__center-top {
+    position: relative;
+    height: 395px;
+}
+
+.welcome__user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome__social {
+    margin: 35px auto 0 auto;
+    text-align: center;
+}
+
+.navigation {
+    font-size: 0;
+    height: 50px;
+}
+
+.welcome__center_author {
+    transition: transform .3s linear;
+}
+
+.welcome__center_author .navigation__button {
+    &:first-child {
+        width: 150px;
+    }
+    &:nth-child(2) {
+        width: 130px;
+    }
+    &:last-child {
+        width: 100px;
+        border-right: none;
+    }
+}
+
+.navigation__link {
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome__center-top {
+    padding: 40px 20px 40px 20px;
+    box-sizing: border-box;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+}
+
+.welcome__center_login {
+    text-align: center;
+    transition: .3s linear;
+    transform: perspective(600px) rotateY(-90deg);
+}
+
+.welcome__center_login .navigation__button {
+    &:first-child {
+        width: 190px;
+    }
+    &:last-child {
+        width: 190px;
+        border-right: none;
+    }
+}
+
+.form__login {
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.form__login-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: $color_text;
+    padding-left: 60px;
+}
+
+.form__login-pic {
+    width: 50px;
+    height: 50px;
+    background: #f0efe9 url('image/icon/login.svg') center no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.form__password {
+    @extend .form__login;
+    margin-top: 20px;
+}
+
+.form__password-input {
+    @extend .form__login-input;
+}
+
+.form__password-pic {
+    @extend .form__login-pic;
+    background: #f0efe9 url('image/icon/password.svg') center no-repeat;
+}
+
+.welcome__copyright {
+    color: #c3c4c9;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form__block-check {
+    width: 110px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 20px;
+}
+
+.form__check-input {
+    display: none;
+    &:checked ~ .form__check {
+        background: $color_hover url('image/icon/check.svg') center no-repeat;
+        background-size: 70%;
+    } 
+}
+
+.form__check {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 2px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.form__check-span {
+    vertical-align: middle;
+}
+
+.form__radio-question {
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form__radio-human {
+    display: inline-block;
+    width: 110px;
+    text-align: left;
+}
+
+.form__radio {
+    &-input {
+        display: none;
+        &:checked ~ .form__radio {
+            background-color: $color_hover;
+        }
+    }
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    box-sizing: content-box;
+}
+
+#triangle_left {
+    width: 100%;
+    height: 100%;
+}
