@@ -1,8 +1,7 @@
-import { patch } from '../../Users/user/AppData/Local/Microsoft/TypeScript/2.6/node_modules/@types/semver';
-
 const path = require('path');
 const webpack = require('webpack'); 
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
   source: path.join(__dirname, 'src'),
@@ -11,11 +10,11 @@ const PATHS = {
 
 const config = {
   entry: {
-    'index': './src/scripts/index.js',
-    'blog': './src/scripts/blog.js'
+    'index': PATHS.source + './pages/index/index.js',
+    'blog': PATHS.source + './pages/blog/blog.js'
   },
   output: {
-    filename: 'script/[name].js'
+    filename: PATHS.build + './js/[name].js'
   },
   plugins: [
     new UglifyJSPlugin({
@@ -24,6 +23,16 @@ const config = {
     new webpack.ProvidePlugin({
       $: 'jquire',
       jQuery: 'jquery'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      chunks: ['index'],
+      template: PATHS.source + './pages/index/index.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'blog.html',
+      chunks: ['blog'],
+      template: PATHS.source + './pages/blog/blog.pug'
     })
   ]
 };
