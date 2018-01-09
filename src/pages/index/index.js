@@ -20,6 +20,6 @@
         welAutorize.style.opacity = '1';
     });
 
-import 'normalize.css';
+// import 'normalize.css';
 import '../main.scss';
 import './index.scss';

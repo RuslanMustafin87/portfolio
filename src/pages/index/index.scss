@@ -1,5 +1,10 @@
+$color__button: #0548be;
+$color_hover: #083c96;
+$color_title: #474b57;
+$color_text: #455a64;
+
 .welcome {
-    background: url('image/welcome_bg.png') no-repeat;
+    background: url(require('../../image/welcome_bg.png')) no-repeat;
     background-size: 100% 100%;
     color: #fff;
     font-family: 'Roboto';
@@ -139,7 +144,7 @@
 .form__login-pic {
     width: 50px;
     height: 50px;
-    background: #f0efe9 url('image/icon/login.svg') center no-repeat;
+    background: #f0efe9 url(require('../../image/icon/login.svg')) center no-repeat;
     position: absolute;
     left: 0;
     top: 0;
@@ -156,7 +161,7 @@
 
 .form__password-pic {
     @extend .form__login-pic;
-    background: #f0efe9 url('image/icon/password.svg') center no-repeat;
+    background: #f0efe9 url(require('../../image/icon/password.svg')) center no-repeat;
 }
 
 .welcome__copyright {
@@ -177,7 +182,7 @@
 .form__check-input {
     display: none;
     &:checked ~ .form__check {
-        background: $color_hover url('image/icon/check.svg') center no-repeat;
+        background: $color_hover url(require('../../image/icon/check.svg')) center no-repeat;
         background-size: 70%;
     } 
 }
