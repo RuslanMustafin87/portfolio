@@ -1,3 +1,7 @@
+import 'normalize.css';
+import '../main.scss';
+import './blog.scss';
+
 // scroll_blog 
     var container = document.querySelector('.blog-content__container');
     var accoMenuItems = document.querySelectorAll('.menu-acco__item');

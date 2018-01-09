@@ -1,3 +1,8 @@
+$color__button: #0548be;
+$color_hover: #083c96;
+$color_title: #474b57;
+$color_text: #455a64;
+
 .main__blog {
     color: #fff;
     font-family: "Roboto";
@@ -5,7 +10,7 @@
 
 .hero-blog {
     height: 400px;
-    background: url('image/welcome_bg.png') 0 70% no-repeat;
+    background: url('../../image/welcome_bg.png') 0 70% no-repeat;
     background-size: cover;
     position: relative;
 }

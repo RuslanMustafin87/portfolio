@@ -1,3 +1,7 @@
+import 'normalize.css';
+import '../main.scss';
+import './index.scss';
+
 // flip_index
     const welAutorize = document.querySelector('.autorize');
     const welLogin = document.querySelector('.welcome__center_login');
@@ -20,6 +24,6 @@
         welAutorize.style.opacity = '1';
     });
 
-import 'normalize.css';
+// import 'normalize.css';
 import '../main.scss';
 import './index.scss';

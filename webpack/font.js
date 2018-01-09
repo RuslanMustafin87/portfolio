@@ -3,10 +3,11 @@ module.exports = function(){
         module: {
             rules: [
                 {
-                    test: /\.pug$/,
-                    loader: 'pug-loader',
+                    test: /\.(woff2|woff)$/,
+                    loader: 'file-loader',
                     options: {
-                        pretty: true
+                        name: '[name].[ext]',
+                        outputPath: 'font/'
                     }
                 }
             ]
