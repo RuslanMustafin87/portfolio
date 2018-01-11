@@ -179,14 +179,6 @@ $color_text: #455a64;
     line-height: 20px;
 }
 
-.form__check-input {
-    display: none;
-    &:checked ~ .form__check {
-        background: $color_hover url('../../image/icon/check.svg') center no-repeat;
-        background-size: 70%;
-    } 
-}
-
 .form__check {
     width: 20px;
     height: 20px;
@@ -196,6 +188,16 @@ $color_text: #455a64;
     display: inline-block;
     vertical-align: middle;
 }
+
+.form__check-input {
+    display: none;
+    &:checked ~ .form__check {
+        background: $color_hover url('../../image/icon/check.svg') center no-repeat;
+        background-size: 70%;
+    } 
+}
+
+
 
 .form__check-span {
     vertical-align: middle;
