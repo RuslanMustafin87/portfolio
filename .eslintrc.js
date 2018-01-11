@@ -15,7 +15,9 @@ module.exports = {
         "eqeqeq": "error",
         "curly": "error",
         "array-element-newline": "error",
-        "array-bracket-spacing": "error"
+        "array-bracket-spacing": "error",
+        "indent": ["error", "tab", { "ObjectExpression": 1 }],
+        "comma-spacing": [ "error", {"before": false, "after":true} ]
     },
     "globals": {
         "$": true,

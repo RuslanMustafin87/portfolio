@@ -7,7 +7,7 @@ $color_text: #455a64;
     background: url('../../image/welcome_bg.png') no-repeat;
     background-size: 100% 100%;
     color: #fff;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
@@ -55,6 +55,8 @@ $color_text: #455a64;
 .welcome__center-top {
     position: relative;
     height: 395px;
+    padding: 40px 20px 40px 20px;
+    box-sizing: border-box;
 }
 
 .welcome__user {
@@ -96,11 +98,6 @@ $color_text: #455a64;
     display: block;
     width: 100%;
     height: 100%;
-}
-
-.welcome__center-top {
-    padding: 40px 20px 40px 20px;
-    box-sizing: border-box;
 }
 
 .form {
@@ -179,14 +176,6 @@ $color_text: #455a64;
     line-height: 20px;
 }
 
-.form__check-input {
-    display: none;
-    &:checked ~ .form__check {
-        background: $color_hover url('../../image/icon/check.svg') center no-repeat;
-        background-size: 70%;
-    } 
-}
-
 .form__check {
     width: 20px;
     height: 20px;
@@ -195,6 +184,14 @@ $color_text: #455a64;
     background-color: #fff;
     display: inline-block;
     vertical-align: middle;
+}
+
+.form__check-input {
+    display: none;
+    &:checked ~ .form__check {
+        background: $color_hover url('../../image/icon/check.svg') center no-repeat;
+        background-size: 70%;
+    } 
 }
 
 .form__check-span {

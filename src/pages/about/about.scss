@@ -1,6 +1,6 @@
 .main-about {
     color: #fff;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero {
@@ -62,19 +62,18 @@
     height: 100%;
     background-color: #f2f0e8;
     padding-right: 20px;
-    &-left {
-        position: relative;
-    }
 }
 
 .about-me__right {
     float: right;
     width: 50%;
     height: 100%;
+    padding: 0 40px;
     background-color: #eae8e2;
 }
 
 .about-me__left-left {
+    position: relative;
     float: left;
     width: 50%;
 }
@@ -113,10 +112,6 @@
 
 .about-me__right-title-h2 {
     margin: auto;
-}
-
-.about-me__right {
-    padding: 0 40px;
 }
 
 .about-me__skills {
