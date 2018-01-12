@@ -12,7 +12,8 @@ block content
                             li.social__item
                                 a(class='social__link social__link_' + item)
                                     svg(width="25" height="25")
-                                        use(xlink:href="image/icon/sprite.svg#" + item class="social__icon")
+                                        use(xlink:href=require(`../../image/icon/sprite.svg`))
+                                        use(xlink:href=(`./images/sprite.svg#${item}`) class="social__icon")
             .blog__hamburger.hamburger-menu
                 img.hamburger-menu__img(src=require("../../image/icon/hamburger.svg"), alt="")
             .blog__user.author-title
@@ -22,7 +23,6 @@ block content
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="hero__traingle")
                 polygon(class = "left" points="0,0   0,86   500.8,86   500.8,75.5" fill="#f2f0e8")
                 polygon(class = "right" points="1000,0   1000,86   500,86   500,75.5" fill="#f2f0e8")
-
         section.blog-content.clearfix
             .blog-content__left
                 ul.blog-content__menu.menu-acco

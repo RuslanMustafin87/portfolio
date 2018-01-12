@@ -10,7 +10,7 @@ $color_text: #455a64;
 
 .hero-blog {
     height: 400px;
-    background: url('../../image/welcome_bg.png') 0 70% no-repeat;
+    background: url('../../image/main_bg.png') 0 70% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -33,6 +33,11 @@ $color_text: #455a64;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.hero__traingle {
+    position: absolute;
+    bottom: 0;
 }
 
 .blog-content {

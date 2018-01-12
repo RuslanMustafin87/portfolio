@@ -8,7 +8,7 @@
     "build": "webpack --env production",
     "start": "webpack-dev-server --env development",
     "test:lint": "eslint . --cache . --fix",
-    "stylelint": "stylelint '**/*.scss' --syntax scss --fix"
+    "stylelint": "stylelint src/**/*.scss --syntax scss"
   },
   "keywords": [],
   "author": "",

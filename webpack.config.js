@@ -4,7 +4,6 @@ const uglifyJS = require('./webpack/uglifyJS');
 const babel = require('./webpack/babel');
 const merge = require('webpack-merge');
 const server = require('./webpack/devserver');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pug = require('./webpack/pug');
 const css = require('./webpack/css');
@@ -17,7 +16,7 @@ const lintJS = require('./webpack/js.lint');
 
 const PATHS = {
 	source: path.join(__dirname, 'src'),
-	build: path.join(__dirname, 'dest')
+	build: path.join(__dirname, 'dist')
 };
 
 const config = merge([
@@ -36,7 +35,6 @@ const config = merge([
 				jQuery: 'jquery',
 				jquery: 'jquery'
       		}),
-     		new CleanWebpackPlugin('dest'),
 			new HtmlWebpackPlugin({
 				filename: 'index.html',
 				chunks: ['index',
@@ -55,7 +53,7 @@ const config = merge([
 		],
 	},
 	lintJS(PATHS.source),
-	lintCSS(),
+	// lintCSS(),
 	uglifyJS(),
 	babel(),
 	pug(),
@@ -66,6 +64,7 @@ const config = merge([
 module.exports = function(env){
 	if (env === 'production') {
 		return merge([
+			clean(),
 			config,
 			extractCSS()
 		]);
@@ -73,9 +72,9 @@ module.exports = function(env){
 	if (env === 'development') {
 		return merge([
 			config,
-			server(),
 			css(),
-			sass()
+			sass(),
+			server()
 		]);
 	}
 };

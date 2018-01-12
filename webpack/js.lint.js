@@ -8,7 +8,7 @@ module.exports = (paths) => {
 					loader: 'eslint-loader',
 					include: paths, 
 					exclude: [/node_modules/,
-						/dest/],
+						/dist/],
 					options: {
 						fix: true,
 						cache: true
