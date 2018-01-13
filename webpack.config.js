@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const clean = require('./webpack/clean');
 const uglifyJS = require('./webpack/uglifyJS');
 const babel = require('./webpack/babel');
 const merge = require('webpack-merge');

@@ -12,29 +12,26 @@ module.exports = function(){
 								outputPath: 'images/'
 							}
 						},
-						// {
-						// 	loader: 'image-webpack-loader',
-						// 	options: {
-						// 		bypassOnDebug: true,
-						// 		mozjpeg: {
-						// 			progressive: true,
-						// 			quality: 65
-						// 		},
-						// 		optipng: {
-						// 			enabled: false,
-						// 		  },
-						// 		pngquant: {
-						// 			quality: '65-90',
-						// 			speed: 4
-						// 		  },
-						// 		gifsicle: {
-						// 			interlaced: false,
-						// 		  },
-						// 		webp: {
-						// 			quality: 75
-						// 		}
-						// 	}
-						// }
+						{
+							loader: 'image-webpack-loader',
+							options: {
+								bypassOnDebug: true,
+								mozjpeg: {
+									progressive: true,
+									quality: 65
+								},
+								optipng: {
+									enabled: false,
+								  },
+								pngquant: {
+									quality: '65-90',
+									speed: 4
+								  },
+								// webp: {
+								// 	quality: 75
+								// }
+							}
+						}
 					]
 				}
 			]

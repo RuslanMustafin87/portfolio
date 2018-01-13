@@ -1,22 +1,26 @@
 .social {
     font-size: 0;
     height: 100%;
-    width: 100%;
+}
+
+.social__icon-main {
+    display: none;
+}
+
+.social__item {
+    display: inline-block;
+    margin-right: 30px;
+    height: 100%;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .social__link {
     display: block;
     height: 100%;
     width: 100%;
-}
-
-.social__item {
-    display: inline-block;
-    margin-right: 30px;
-    cursor: pointer;
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
 .social__icon {

@@ -5,6 +5,7 @@ module.exports = () => {
         plugins: [
             new StyleLintPlugin({
                 configFile: './stylelint.config.js',
+                context: 'src',
                 syntax: 'scss',
                 fix: true
             })

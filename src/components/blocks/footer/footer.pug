@@ -5,12 +5,8 @@
             each item in [["Мои работы", "mywork.html"], ["Обо мне", "about.html"], ["Блог", "blog.html"], ["Авторизация", "index.html"]]
                 li.footer__navigation-item
                     a.footer__navigation-link(href=item[1])= item[0]
-        ul.footer__social.social.clearfix
-            each item in ['vk', 'git', 'in']
-                li.social__item
-                    a(class='social__link social__link_' + item)
-                        svg(width="25" height="25")
-                            use(xlink:href=(`./images/sprite.svg#${item}`) class="social__icon")
+        .footer__social
+            include ../social/social
     .footer__block
         p skype_ruslanmust
         p ruslanmust87@gmail.com
