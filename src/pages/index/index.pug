@@ -12,12 +12,8 @@ block content
                     .author-title__img
                     .author-title__name Руслан Мустафин
                     .author-title__description Личный сайт веб-разработчика
-                    ul.welcome__social.social.clearfix
-                        each item in ['vk', 'git', 'in']
-                            li.social__item
-                                a(class='social__link social__link_' + item)
-                                    svg(width="25" height="25")
-                                        use(xlink:href="image/icon/sprite.svg#" + item class="social__icon")
+                    .welcome__social
+                        include ../../components/blocks/social/social
             ul.welcome__buttons.navigation
                 li.navigation__button: a(href='mywork.html' class='navigation__link') Мои работы
                 li.navigation__button: a(href='about.html' class='navigation__link') Обо мне
