@@ -1,8 +1,6 @@
 ul.social.clearfix
-    svg(width="0" height="0" class="social__icon-main")
-        use(xlink:href=require('../../../image/icon/sprite.svg'))
-    each item in ['vk', 'git', 'in']
+    each item in ['vk', 'github', 'in']
         li.social__item
-            a(class='social__link social__link_' + item)
+            a(class='social__link')
                 svg(width="25" height="25")
-                    use(xlink:href=(`./images/sprite.svg#${item}`) class="social__icon")
+                    use(xlink:href=(`./images/icons/${item}.svg`) class="social__icon")

@@ -27,9 +27,12 @@ module.exports = function(){
 									quality: '65-90',
 									speed: 4
 								  },
-								// webp: {
-								// 	quality: 75
-								// }
+								svgo: {
+
+								},
+								webp: {
+									quality: 75
+								}
 							}
 						}
 					]

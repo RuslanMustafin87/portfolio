@@ -12,8 +12,10 @@ const sass = require('./webpack/sass');
 const lintCSS = require('./webpack/sass.lint');
 const extractCSS = require('./webpack/css.extract');
 const image = require('./webpack/image');
+const sprite = require('./webpack/sprite');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
+const favicon = require('./webpack/favicon');
 
 const PATHS = {
 	source: path.join(__dirname, 'src'),
@@ -59,6 +61,8 @@ const config = merge([
 	babel(),
 	pug(),
 	image(),
+	sprite(PATHS.source),
+	favicon(),
 	font()
 ]);
 
