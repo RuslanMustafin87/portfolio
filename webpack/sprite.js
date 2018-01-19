@@ -6,13 +6,13 @@ module.exports = (path) => {
             rules: [
                 {
                     test: /\.svg$/,
-                    include: path + 'image/icon/',
+                    include: path + 'icon/',
                     use: [
                         {
                             loader: 'svg-sprite-loader',
                             options: {
                                 extract: true,
-                                spriteFilename: 'sprite-[hash:6].svg'
+                                spriteFilename: 'sprite.svg'
                             }
                         }
                     ]

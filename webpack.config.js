@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const clean = require('./webpack/clean');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const uglifyJS = require('./webpack/uglifyJS');
 const babel = require('./webpack/babel');
 const merge = require('webpack-merge');
@@ -12,7 +12,7 @@ const sass = require('./webpack/sass');
 const lintCSS = require('./webpack/sass.lint');
 const extractCSS = require('./webpack/css.extract');
 const image = require('./webpack/image');
-const sprite = require('./webpack/sprite');
+// const sprite = require('./webpack/sprite');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
 const favicon = require('./webpack/favicon');
@@ -26,7 +26,8 @@ const config = merge([
 	{
 		entry: {
 			'index': PATHS.source + '/pages/index/index.js',
-			'blog': PATHS.source + '/pages/blog/blog.js'
+			'blog': PATHS.source + '/pages/blog/blog.js',
+			'about': PATHS.source + '/pages/about/about.js'
 		},
 		output: {
 			path: PATHS.build,
@@ -37,7 +38,8 @@ const config = merge([
 				$: 'jquery',
 				jQuery: 'jquery',
 				jquery: 'jquery'
-      		}),
+			  }),
+			new CleanWebpackPlugin('dist'),
 			new HtmlWebpackPlugin({
 				filename: 'index.html',
 				chunks: ['index',
@@ -50,6 +52,12 @@ const config = merge([
 					'common'],
 				template: PATHS.source + '/pages/blog/blog.pug'
 			}),
+			new HtmlWebpackPlugin({
+				filename: 'about.html',
+				chunks: ['about',
+					'common'],
+				template: PATHS.source + '/pages/about/about.pug'
+			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'
 			})
@@ -61,7 +69,7 @@ const config = merge([
 	babel(),
 	pug(),
 	image(),
-	sprite(PATHS.source),
+	// sprite(PATHS.source),
 	favicon(),
 	font()
 ]);
@@ -69,7 +77,6 @@ const config = merge([
 module.exports = function(env){
 	if (env === 'production') {
 		return merge([
-			clean(),
 			config,
 			extractCSS()
 		]);

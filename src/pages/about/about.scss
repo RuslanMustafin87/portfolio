@@ -1,10 +1,15 @@
+$color__button: #0548be;
+$color_hover: #083c96;
+$color_title: #474b57;
+$color_text: #455a64;
+
 .main-about {
     color: #fff;
     font-family: 'Roboto', sans-serif;
 }
 
 .hero {
-    background: url('../../image/main_bg.png') 0 70% no-repeat;
+    background: url('../../images/main_bg.png') 0 70% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -51,7 +56,7 @@
 .about-me__pic {
     width: 100%;
     height: 390px;
-    background: url('image/photo.jpg') no-repeat;
+    background: url('../../images/photo.jpg') no-repeat;
     background-size: cover;
     margin: auto;
 }
@@ -203,7 +208,7 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .map {
-    background: url('image/map_bg.png') center no-repeat;
+    background: url('../../images/map_bg.png') center no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -269,3 +274,6 @@ $skill_bower_stroke_dash: 204.1975;
     line-height: 16px;
 }
 
+.about-me_main {
+    display: none;
+}

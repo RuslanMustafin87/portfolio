@@ -4,7 +4,7 @@ $color_title: #474b57;
 $color_text: #455a64;
 
 .welcome {
-    background: url('../../image/main_bg.png') no-repeat;
+    background: url('../../images/main_bg.png') no-repeat;
     background-size: 100% 100%;
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -141,7 +141,7 @@ $color_text: #455a64;
 .form__login-pic {
     width: 50px;
     height: 50px;
-    background: #f0efe9 url('../../image/icon/login.svg') center no-repeat;
+    background: #f0efe9 url('../../images/icons/login.svg') center no-repeat;
     position: absolute;
     left: 0;
     top: 0;
@@ -158,7 +158,7 @@ $color_text: #455a64;
 
 .form__password-pic {
     @extend .form__login-pic;
-    background: #f0efe9 url('../../image/icon/password.svg') center no-repeat;
+    background: #f0efe9 url('../../images/icons/password.svg') center no-repeat;
 }
 
 .welcome__copyright {
@@ -189,7 +189,7 @@ $color_text: #455a64;
 .form__check-input {
     display: none;
     &:checked ~ .form__check {
-        background: $color_hover url('../../image/icon/check.svg') center no-repeat;
+        background: $color_hover url('../../images/icons/check.svg') center no-repeat;
         background-size: 70%;
     } 
 }
