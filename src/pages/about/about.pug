@@ -36,6 +36,8 @@ block content
                 .about-me__text.about-me__text-right
                     p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                 ul.about-me__skills
+                    svg(style='display: none')
+                        use(xlink:href=require("../../image/skills.svg"))
                     li.about-me__skill-item()
                         h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
                         svg.about-me_skill_pic(width="120" height="120")
@@ -88,6 +90,8 @@ block content
                     .contacts-title.title.title_color-gray.title_text-transform-upprcase.title_font-size-35 Контакты
                     .contacts__line.line
                     ul.contacts__list
+                        svg(style='display: none')
+                            use(xlink:href=require("../../icon/sprite_contacts.svg"))
                         li.contacts__item
                             svg.contacts__img
                                 use(xlink:href="../../images/sprite_contacts.svg#skype_n")
