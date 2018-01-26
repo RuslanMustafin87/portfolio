@@ -38,11 +38,10 @@ block content
                 ul.about-me__skills
                     li.about-me__skill-item()
                         h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
-                        img(src=require('../../images/sprite_skills.svg') class='about-me_main')
                         svg.about-me_skill_pic(width="120" height="120")
-                            use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
-                            //- use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_html")
-                            //- use(xlink:href="../../images/sprite_skills.svg#text_html" class="text_html")
+                            use(xlink:href=require("#skill_bg") class="skill_bg")
+                            use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_html")
+                            use(xlink:href="../../images/sprite_skills.svg#text_html" class="text_html")
                         svg.about-me_skill_pic(width="120" height="120")
                             use(xlink:href="../../images/skills.svg#skill_bg" class="skill_bg")
                             use(xlink:href="../../images/skills.svg#skill" class="skills_css")
