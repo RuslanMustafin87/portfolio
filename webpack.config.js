@@ -69,16 +69,11 @@ const config = merge([
 	uglifyJS(),
 	babel(),
 	pug(),
-<<<<<<< HEAD
-	image(),
-	// sprite(PATHS.source),
-=======
 	image(PATHS.source),
 	sprite(PATHS.source),
->>>>>>> a94210323c251de87905af3ba59904e9f61ddf08
 	favicon(),
 	font(),
-	svg()
+	// svg()
 ]);
 
 module.exports = function(env){

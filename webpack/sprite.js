@@ -6,7 +6,7 @@ module.exports = (path) => {
             rules: [
                 {
                     test: /\.svg$/,
-                    include: path + 'icon/',
+                    include: path + '/images/icons/',
                     use: [
                         {
                             loader: 'svg-sprite-loader',
