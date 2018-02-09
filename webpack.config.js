@@ -70,10 +70,10 @@ const config = merge([
 	babel(),
 	pug(),
 	image(PATHS.source),
-	sprite(PATHS.source),
+	// sprite(PATHS.source),
 	favicon(),
 	font(),
-	// svg()
+	svg()
 ]);
 
 module.exports = function(env){
