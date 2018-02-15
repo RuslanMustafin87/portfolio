@@ -2,5 +2,4 @@ ul.social.clearfix
     each item in ['vk', 'github', 'in']
         li.social__item
             a(class='social__link')
-                svg(width="25" height="25")
-                    use(xlink:href=require(`../../../images/icons/${item}.svg`) class="social__icon")
+                object(type="image/svg+xml" data=require(`../../../images/icons/${item}.svg`))

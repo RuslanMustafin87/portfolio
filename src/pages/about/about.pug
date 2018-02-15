@@ -9,8 +9,8 @@ block content
             .about__hamburger.hamburger-menu
                 img.hamburger-menu__img(src=require("../../images/icons/hamburger.svg") alt="")
             .about__social
-                //- include ../../components/blocks/social/social
-            //- img.about__img(src=require('../../images/stars1.svg'), alt="")
+                include ../../components/blocks/social/social
+            img.about__img(src=require('../../images/stars1.svg'), alt="")
             .about__user.author-title
                 .author-title__img
                 .author-title__name Руслан Мустафин
@@ -87,24 +87,22 @@ block content
                 .map__contacts.contacts
                     .contacts-title.title.title_color-gray.title_text-transform-upprcase.title_font-size-35 Контакты
                     .contacts__line.line
-                    ul.contacts__list
-                        object(type="image/svg+xml" data=require("../../images/sprite_contacts.svg"))
-                            | Your browser does not support SVG
-                        li.contacts__item
-                            svg.contacts__img
-                                use(xlink:href="images/sprite_contacts.svg#skype_n")
-                            .contacts__description skype_ruslanmust
-                        li.contacts__item
-                            svg.contacts__img
-                                use(xlink:href="../../images/sprite_contacts.svg#phone_n")
-                            .contacts__description 8-999-133-75-57
-                        li.contacts__item
-                            svg.contacts__img
-                                use(xlink:href="../../images/sprite_contacts.svg#envelope_n")
-                            .contacts__description ruslanmust87@gmail.com
-                        li.contacts__item
-                            svg.contacts__img
-                                use(xlink:href="../../images/sprite_contacts.svg#map_n")
-                            .contacts__description Чишмы Социалистическая<br>9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   >9
+                    //- ul.contacts__list
+                    //-     li.contacts__item
+                    //-         svg.contacts__img
+                    //-             use(xlink:href="images/sprite_contacts.svg#skype_n")
+                    //-         .contacts__description skype_ruslanmust
+                    //-     li.contacts__item
+                    //-         svg.contacts__img
+                    //-             use(xlink:href="../../images/sprite_contacts.svg#phone_n")
+                    //-         .contacts__description 8-999-133-75-57
+                    //-     li.contacts__item
+                    //-         svg.contacts__img
+                    //-             use(xlink:href="../../images/sprite_contacts.svg#envelope_n")
+                    //-         .contacts__description ruslanmust87@gmail.com
+                    //-     li.contacts__item
+                    //-         svg.contacts__img
+                    //-             use(xlink:href="../../images/sprite_contacts.svg#map_n")
+                    //-         .contacts__description Чишмы Социалистическая<br>9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   >9
             .map__footer
                 include ../../components/blocks/footer/footer.pug
