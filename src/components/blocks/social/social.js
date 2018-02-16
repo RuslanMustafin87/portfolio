@@ -4,8 +4,14 @@ export const social = () => {
 
 	socialIcons.forEach((item) => {
 		item.addEventListener('mouseover', () => {
-			item.setAttribute('fill', 'red');
+			var itemContent = item.contentWindow.document;
+			var icon = itemContent.getElementById('icon');
+			icon.setAttribute('fill', '#083c96');
+		});
+		item.addEventListener('mouseout', () => {
+			var itemContent = item.contentWindow.document;
+			var icon = itemContent.getElementById('icon');
+			icon.setAttribute('fill', '#FFF');
 		});
 	});
-
 };

@@ -1,5 +1,3 @@
-var SvgStore = require('webpack-svgstore-plugin');
-
 module.exports = () => {
   return {
 		module: {
@@ -7,12 +5,13 @@ module.exports = () => {
 				{
 					test: /\.svg$/,
 					use: [
-							{
-								loader: 'svg-url-loader',
-								options: {
-									noquotes: true
-								}
-							},
+						{
+							loader: 'file-loader',
+							options: {
+								name: '[name].[ext]',
+								outputPath: 'images/icons/'
+							}
+						},
 							// {
 							// 	loader: 'svgo-loader',
 							// 	options: {

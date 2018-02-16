@@ -3,7 +3,7 @@ module.exports = function(path){
 		module: {
 			rules: [
 				{
-					test: /\.(jpg|png|svg)$/,
+					test: /\.(jpg|png)$/,
 					use: [
 						{
 							loader: 'file-loader',
@@ -27,9 +27,6 @@ module.exports = function(path){
 									quality: '65-90',
 									speed: 4
 								  },
-								svgo: {
-
-								},
 								webp: {
 									quality: 75
 								}

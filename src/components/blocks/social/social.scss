@@ -17,13 +17,10 @@
     display: block;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
 
 .social__icon {
     width: 25px;
     height: 25px;
-    fill: red;
-    &:hover {
-        fill: #083c96;
-    }
 }

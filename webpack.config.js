@@ -73,7 +73,7 @@ const config = merge([
 	// sprite(PATHS.source),
 	favicon(),
 	font(),
-	// svg()
+	svg()
 ]);
 
 module.exports = function(env){
