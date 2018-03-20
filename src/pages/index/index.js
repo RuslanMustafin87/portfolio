@@ -11,6 +11,7 @@ const toMain = document.querySelector('#toMain');
 welAutorize.addEventListener('click', function(){
 	welAuthor.style.transitionDelay = '0s';
 	welAuthor.style.transform = 'perspective(600px) rotateY(90deg)';
+	welLogin.style.transition = '.3s linear';
 	welLogin.style.transitionDelay = '0.3s';
 	welLogin.style.transform = 'perspective(600px) rotateY(0deg)';
 	welAutorize.style.opacity = '0';

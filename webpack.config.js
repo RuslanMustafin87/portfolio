@@ -16,7 +16,7 @@ const image = require('./webpack/image');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
 const favicon = require('./webpack/favicon');
-const svg = require('./webpack/svg')
+const svg = require('./webpack/svg');
 
 const PATHS = {
 	source: path.join(__dirname, 'src'),
@@ -26,8 +26,8 @@ const PATHS = {
 const config = merge([
 	{
 		entry: {
-			// 'index': PATHS.source + '/pages/index/index.js',
-			// 'blog': PATHS.source + '/pages/blog/blog.js',
+			'index': PATHS.source + '/pages/index/index.js',
+			'blog': PATHS.source + '/pages/blog/blog.js',
 			'about': PATHS.source + '/pages/about/about.js'
 		},
 		output: {
@@ -61,7 +61,7 @@ const config = merge([
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'
-			})
+			}),
 		],
 	},
 	lintJS(PATHS.source),
@@ -70,7 +70,7 @@ const config = merge([
 	babel(),
 	pug(),
 	image(PATHS.source),
-	// sprite(PATHS.source),
+	// sprite(),
 	favicon(),
 	font(),
 	svg()

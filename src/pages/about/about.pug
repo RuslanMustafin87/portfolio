@@ -6,8 +6,8 @@ block  var
 block content
     main.main.main-about
         section.section.hero
-            .about__hamburger.hamburger-menu
-                img.hamburger-menu__img(src=require("../../images/icons/hamburger.svg") alt="")
+            .about__hamburger.hamburger-menu.icon
+                include ../../images/icons/hamburger.svg
             .about__social
                 include ../../components/blocks/social/social
             img.about__img(src=require('../../images/stars1.svg'), alt="")
@@ -38,71 +38,73 @@ block content
                 ul.about-me__skills
                     li.about-me__skill-item()
                         h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href=("images/sprite_skills.svg#skill_bg") class="skill_bg")
-                    //-         use(xlink:href="images/sprite_skills.svg#skill" class="skills_html")
-                    //-         use(xlink:href="images/sprite_skills.svg#text_html" class="text_html")
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_css")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_css" class="text_css")
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_js")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_js" class="text_js")
-                    //- li.about-me__skill-item()
-                    //-     h3.title.title_color-gray.title_font-size-28.title_text-align-left Backend
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_php")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_php" class="text_php")
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_mySQL")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_mySQL" class="text_mySQL")
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_node")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_node" class="text_node")
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_mongo")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_mongo" class="text_mongo")
-                    //- li.about-me__skill-item()
-                    //-     h3.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_git")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_git" class="text_git")
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_gulp")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_gulp" class="text_gulp")
-                    //-     svg.about-me_skill_pic(width="120" height="120")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_bower")
-                    //-         use(xlink:href="../../images/sprite_skills.svg#text_bower" class="text_bower")
+                        img(src=require('../../images/sprite_skills.svg') id='sprite__skills')
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="images/sprite_skills.svg#skill" class="skills_html")
+                            use(xlink:href="images/sprite_skills.svg#text_html" class="text_html")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="images/sprite_skills.svg#skill" class="skills_css")
+                            use(xlink:href="images/sprite_skills.svg#text_css" class="text_css")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="images/sprite_skills.svg#skill" class="skills_js")
+                            use(xlink:href="images/sprite_skills.svg#text_js" class="text_js")
+                    li.about-me__skill-item()
+                        h3.title.title_color-gray.title_font-size-28.title_text-align-left Backend
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="images/sprite_skills.svg#skill" class="skills_php")
+                            use(xlink:href="images/sprite_skills.svg#text_php" class="text_php")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="images/sprite_skills.svg#skill" class="skills_mySQL")
+                            use(xlink:href="images/sprite_skills.svg#text_mySQL" class="text_mySQL")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="images/sprite_skills.svg#skill" class="skills_node")
+                            use(xlink:href="images/sprite_skills.svg#text_node" class="text_node")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_mongo")
+                            use(xlink:href="../../images/sprite_skills.svg#text_mongo" class="text_mongo")
+                    li.about-me__skill-item()
+                        h3.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_git")
+                            use(xlink:href="../../images/sprite_skills.svg#text_git" class="text_git")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_gulp")
+                            use(xlink:href="../../images/sprite_skills.svg#text_gulp" class="text_gulp")
+                        svg.about-me_skill_pic(width="120" height="120")
+                            use(xlink:href="../../images/sprite_skills.svg#skill_bg" class="skill_bg")
+                            use(xlink:href="../../images/sprite_skills.svg#skill" class="skills_bower")
+                            use(xlink:href="../../images/sprite_skills.svg#text_bower" class="text_bower")
         section.section.map
             .map__top
                 .map__contacts.contacts
                     .contacts-title.title.title_color-gray.title_text-transform-upprcase.title_font-size-35 Контакты
                     .contacts__line.line
-                    //- ul.contacts__list
-                    //-     li.contacts__item
-                    //-         svg.contacts__img
-                    //-             use(xlink:href="images/sprite_contacts.svg#skype_n")
-                    //-         .contacts__description skype_ruslanmust
-                    //-     li.contacts__item
-                    //-         svg.contacts__img
-                    //-             use(xlink:href="../../images/sprite_contacts.svg#phone_n")
-                    //-         .contacts__description 8-999-133-75-57
-                    //-     li.contacts__item
-                    //-         svg.contacts__img
-                    //-             use(xlink:href="../../images/sprite_contacts.svg#envelope_n")
-                    //-         .contacts__description ruslanmust87@gmail.com
-                    //-     li.contacts__item
-                    //-         svg.contacts__img
-                    //-             use(xlink:href="../../images/sprite_contacts.svg#map_n")
-                    //-         .contacts__description Чишмы Социалистическая<br>9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   >9
-            .map__footer
+                    img(src=require('../../images/sprite_contacts.svg') id='sprite_contacts')
+                    ul.contacts__list
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="images/sprite_contacts.svg#skype_n")
+                            .contacts__description skype_ruslanmust
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="images/sprite_contacts.svg#phone_n")
+                            .contacts__description 8-999-133-75-57
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="images/sprite_contacts.svg#envelope_n")
+                            .contacts__description ruslanmust87@gmail.com
+                        li.contacts__item
+                            svg.contacts__img
+                                use(xlink:href="images/sprite_contacts.svg#map_n")
+                            .contacts__description Чишмы Социалистическая<br>9                                                                                                                                                                                                                       
+            .map__bottom
                 include ../../components/blocks/footer/footer.pug

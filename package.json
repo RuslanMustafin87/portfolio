@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env production",
-    "start": "webpack-dev-server --env development",
+    "dev": "webpack --env production --watch",
+    "start": "webpack-dev-server --env development --open",
     "test:lint": "eslint . --cache . --fix",
     "stylelint": "stylelint src/**/*.scss --syntax scss"
   },
@@ -31,7 +32,7 @@
     "postcss-loader": "^2.0.10",
     "pug": "^2.0.0-rc.4",
     "pug-loader": "^2.3.0",
-    "sass-loader": "^6.0.6",
+    "sass-loader": "^6.0.7",
     "style-loader": "^0.19.1",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^3.0.0",
@@ -39,10 +40,9 @@
     "stylelint-webpack-plugin": "^0.9.0",
     "svg-inline-loader": "^0.8.0",
     "svg-sprite-loader": "^3.6.2",
-    "svg-url-loader": "^2.3.1",
     "svgo-loader": "^2.1.0",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
-    "webpack": "3.10.0",
+    "webpack": "3.11.0",
     "webpack-dev-server": "^2.10.1",
     "webpack-merge": "^4.1.1"
   },

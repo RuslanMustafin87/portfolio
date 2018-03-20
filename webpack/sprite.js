@@ -6,15 +6,21 @@ module.exports = (path) => {
             rules: [
                 {
                     test: /\.svg$/,
-                    include: path + '/images/icons/',
                     use: [
+                        // {
+						// 	loader: 'file-loader',
+						// 	options: {
+						// 		name: '[name].[ext]',
+						// 		outputPath: 'images/'
+						// 	}
+						// },
                         {
                             loader: 'svg-sprite-loader',
                             options: {
                                 extract: true,
-                                spriteFilename: 'sprite.svg'
+                                spriteFilename: 'images/sprite.svg'
                             }
-                        }
+                        },
                     ]
                 }
             ]
