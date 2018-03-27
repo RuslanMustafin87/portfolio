@@ -1,0 +1,32 @@
+.hamburger-icon {
+    position: absolute;
+    z-index: 101;
+    cursor: pointer;
+}
+
+//трансформация иконки меню гамбургер
+
+.hamburger__layer-1, .hamburger__layer-2, .hamburger__layer-3 {
+    transition: transform .3s;
+}
+
+.hamburger__layer-1 {
+    transform-origin: 3px 3px;
+}
+
+.hamburger__layer-3 {
+    transform-origin: -4px 29px;
+}
+
+.hamburger__cross-layer-1 {
+    transform: rotate(45deg);
+}
+
+.hamburger__cross-layer-2 {
+    opacity: 0;
+}
+
+.hamburger__cross-layer-3 {
+    transform: rotate(-45deg);
+}
+

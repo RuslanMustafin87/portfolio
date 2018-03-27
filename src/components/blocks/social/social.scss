@@ -23,4 +23,12 @@
 .social__icon {
     width: 25px;
     height: 25px;
+    fill: #fff;
+    &:hover {
+        fill:#083c96;
+    }
+}
+
+#sprite__social {
+    display: none;
 }

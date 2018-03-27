@@ -2,7 +2,8 @@ import 'normalize.css';
 import '../main.scss';
 import './blog.scss';
 
-// scroll_blog 
+// прокрутка статей в blog-content 
+
 var container = document.querySelector('.blog-content__container');
 var accoMenuItems = document.querySelectorAll('.menu-acco__item');
 var blogContentPosition; 
@@ -23,11 +24,6 @@ function toggleClass(activeItem){
 	$(activeItem).addClass('acco__item-active');
 }
 
-// $(document).on('mousewheel', '.blog-content__container',  function(event, delta){
-//     console.log(event.delta);
-//     // scrollContent(200); 
-// });
+import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 
-// $(container).on('mousewheel', function(){
-        
-// });
+hamburger();

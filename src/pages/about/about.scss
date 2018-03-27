@@ -14,27 +14,25 @@ $color_text: #455a64;
     position: relative;
 }
 
-.about__hamburger {
-    position: absolute;
+.hero__hamburger {
     top: 30px;
     right: 30px;
-    cursor: pointer;
 }
 
-.about__social {
+.hero__social {
     position: absolute;
     top: 30px;
     left: 30px;
 }
 
-.about__user {
+.hero__user {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.about__img {
+.hero__img {
     opacity: 0.15;
     position: absolute;
     top: 50%;
@@ -42,6 +40,14 @@ $color_text: #455a64;
     transform: translate(-50%, -50%);
     width: 460px;
     height: 270px;
+}
+
+.hero__arrow {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .hero__traingle {
@@ -67,13 +73,14 @@ $color_text: #455a64;
     height: 100%;
     background-color: #f2f0e8;
     padding-right: 20px;
+    padding-top: 20px;
 }
 
 .about-me__right {
     float: right;
     width: 50%;
     height: 100%;
-    padding: 0 40px;
+    padding: 20px 40px 0 40px;
     background-color: #eae8e2;
 }
 

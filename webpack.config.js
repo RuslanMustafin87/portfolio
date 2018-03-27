@@ -28,7 +28,8 @@ const config = merge([
 		entry: {
 			'index': PATHS.source + '/pages/index/index.js',
 			'blog': PATHS.source + '/pages/blog/blog.js',
-			'about': PATHS.source + '/pages/about/about.js'
+			'about': PATHS.source + '/pages/about/about.js',
+			'portfolio': PATHS.source + '/pages/portfolio/portfolio.js',
 		},
 		output: {
 			path: PATHS.build,
@@ -58,6 +59,12 @@ const config = merge([
 				chunks: ['about',
 					'common'],
 				template: PATHS.source + '/pages/about/about.pug'
+			}),
+			new HtmlWebpackPlugin({
+				filename: 'portfolio.html',
+				chunks: ['portfolio',
+					'common'],
+				template: PATHS.source + '/pages/portfolio/portfolio.pug'
 			}),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common'

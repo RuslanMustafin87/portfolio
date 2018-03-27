@@ -1,0 +1,60 @@
+.main-portfolio {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    background: url('../../images/main_bg.png') 0 70% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero__hamburger {
+    top: 30px;
+    right: 30px;
+}
+
+.hero__social {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.hero__user {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero__img {
+    opacity: 0.15;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    height: 270px;
+}
+
+.hero__arrow {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.hero__title {
+    text-transform: uppercase;
+    font: 63px 'Sansus Webissimo';
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero__traingle {
+    position: absolute;
+    bottom: 0;
+}

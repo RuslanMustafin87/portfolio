@@ -1,6 +1,6 @@
 import 'normalize.css';
 import '../main.scss';
-import './about.scss';
+import './portfolio.scss';
 
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 
