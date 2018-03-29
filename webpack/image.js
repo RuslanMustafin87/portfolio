@@ -27,6 +27,9 @@ module.exports = function(path){
 									quality: '65-90',
 									speed: 4
 								  },
+								// svgo: {
+								// 	collapseGroups: false
+								// },
 								webp: {
 									quality: 75
 								}
