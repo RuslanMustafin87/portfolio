@@ -21,5 +21,14 @@ block content
                 polygon(class = "right" points="1000,0   1000,180  500,180   500,85" fill="rgba(13,15,31, .9)")
             img.hero__img-stars-2(src=require("../../images/stars2.svg") alt="")
             h1.hero__title Мои работы
-            .hero__arrow.arrow__down
-                include ../../images/icons/arrow_down.svg
+            .hero__arrow
+                img.arrow__down(src=require('../../images/icons/arrow_down.svg'))
+        section.section.portfolio-content.clearfix
+            .portfolio-content__left
+                .portfolio-content__left-center
+                    h1.title.title_color-gray.title_font-size-35.title_text-transform-uppercase Сайт школы онлайн образования
+                    .portfolio-content__left-line.line
+                    .portfolio-content__left-text 
+                        p Html, CSS, Javascript
+                    a.portfolio-content__left-link(href='#')
+            .portfolio-content__right
