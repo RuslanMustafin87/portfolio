@@ -4,11 +4,18 @@ module.exports = () => {
 			rules: [
 				{
 					test: /\.svg$/,
-					loader: 'file-loader',
-					options: {
-						name: '[name].[ext]',
-						outputPath: 'images/'
-					}
+					use: [
+						{
+							loader: 'file-loader',
+							options: {
+								name: '[name].[ext]',
+								outputPath: 'images/'
+							}
+						},
+						{
+							loader: 'postcss-loader'
+						}
+					]
 				}
 			]
 		}
