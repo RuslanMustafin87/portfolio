@@ -80,7 +80,6 @@ const config = merge([
 	// sprite(),
 	favicon(),
 	font(),
-	svg()
 ]);
 
 module.exports = function(env){
