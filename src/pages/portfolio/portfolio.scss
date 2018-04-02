@@ -142,3 +142,15 @@ $color_text: #455a64;
 .portfolio-content__slider {
     height: 100%;
 }
+
+.portfolio-contact {
+    height: 1350px;
+    background: url('../../images/beacon.png') no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+.portfolio-contact__title {
+    margin: auto;
+    width: 340px;
+}
