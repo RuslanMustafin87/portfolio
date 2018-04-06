@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env production",
     "dev": "webpack --env production --watch",
-    "start": "webpack-dev-server --env development --open",
+    "start": "webpack-dev-server --env development --open --inline --hot",
     "test:lint": "eslint . --cache . --fix",
     "stylelint": "stylelint src/**/*.scss --syntax scss"
   },

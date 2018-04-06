@@ -154,3 +154,60 @@ $color_text: #455a64;
     margin: auto;
     width: 340px;
 }
+
+.portfolio-contact__features {
+    width: 760px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.portfolio-contact__features-item {
+    width: 48%;
+    background: url('../../images/icons/quote.svg') 0 45% no-repeat;
+}
+
+.portfolio-contact__features-item_float-left {
+    float: left;
+}
+
+.portfolio-contact__features-item_float-right {
+    float: right;
+}
+
+.portfolio-contact__photo {
+    border-radius: 50% 50%;
+    display: block;
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+
+.portfolio-contact__photo_kovalchuk {
+    background-image: url('../../images/photo_1.png');
+}
+
+.portfolio-contact__photo_sabancev {
+    background-image: url('../../images/photo_2.png');
+}
+
+.portfolio-contact__features-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Roboto";
+    font-style: italic;
+}
+
+.portfolio-content__quote-writer {
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+.portfolio-content__quote-writer-profesion {
+    text-align: center;
+    display: block;
+}

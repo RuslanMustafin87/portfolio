@@ -35,9 +35,22 @@ block content
                 .portfolio-content__slider    
                     include ../../components/blocks/slider/slider.pug
         section.portfolio-contact
+            img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')
             h1.portfolio-contact__title.title.title_font-size-63.title_text-transform-uppercase Что обо мне говорят
-            .portfolio-contact__features
-                .portfolio-contact__features-item
-                    img.portfolio-contact__photo(src=require("../../images/photo_1.png"), alt="")
-                .portfolio-contact__features-item
-
+            .portfolio-contact__features.clearfix
+                .portfolio-contact__features-item.portfolio-contact__features-item_float-left
+                    .portfolio-contact__photo.portfolio-contact__photo_kovalchuk
+                    blockquote.portfolio-contact__features-text 
+                        | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    cite.portfolio-content__quote-writer
+                        | Ковальчук Дмитрий
+                    cite.portfolio-content__quote-writer-profesion
+                        | - основатель Loftschool
+                .portfolio-contact__features-item.portfolio-contact__features-item_float-right
+                    .portfolio-contact__photo.portfolio-contact__photo_sabancev
+                    blockquote.portfolio-contact__features-text
+                        | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    cite.portfolio-content__quote-writer
+                        | Сабанцев Владимир
+                    cite.portfolio-content__quote-writer-profesion
+                        | - преподователь
