@@ -1,0 +1,43 @@
+.title {
+    color: #fff;
+    font-family: 'Sansus Webissimo', sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.title_color-gray {
+    color: $color_title;
+}
+
+.title_font-size-63 {
+    font-size: 63px;
+}
+
+.title_font-size-35 {
+    font-size: 35px;
+    line-height: 41px;
+}
+
+.title_font-size-28 {
+    font-size: 28px;
+}
+
+.title_text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.title_width-280 {
+    width: 280px;
+}
+
+.title_text-align-left {
+    text-align: left;
+}
+
+.line {
+    width: 85px;
+    height: 2px;
+    background-color: #9c9d9f;
+    margin: auto;
+}

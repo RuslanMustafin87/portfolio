@@ -1,0 +1,16 @@
+.footer
+    .footer__block Этот сайт сделан в рамка обучения в Школе<br> онлайн обучения Loftscoll
+    .footer__block
+        ul.footer__navigation
+            each item in [["Мои работы", "portfolio.html"], ["Обо мне", "about.html"], ["Блог", "blog.html"], ["Авторизация", "index.html"]]
+                li.footer__navigation-item
+                    a.footer__navigation-link(href=item[1])= item[0]
+        .footer__social
+            include ../social/social
+    .footer__block
+        p skype_ruslanmust
+        p ruslanmust87@gmail.com
+        p 8-999-133-75-57
+        p Чишмы Социалистическая 9
+    .footer__bottom &copy; Руслан Мустафин | Создано с любовью в Loftscool | 2017
+        
