@@ -32,6 +32,9 @@
     cursor: pointer;
     color: #fff;
     font-weight: bold;
+    &:hover {
+        color: $color_hover;
+    }
 }
 
 .footer__social {
