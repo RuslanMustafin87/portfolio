@@ -1,0 +1,76 @@
+@mixin font($weight:normal){
+    font-family: 'Roboto';
+    font-weight: $weight;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.05);
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+}
+
+.form__title {
+    // margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form__name, .form__email {
+    @include font();
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: rgba(255,255,255,.1);
+    padding: 0 20px;
+    color: rgba(255,255,255,.5);
+}
+
+.form__message {
+    @include font();
+    margin-top: 20px;
+    width: 100%;
+    height: 130px;
+    outline: none;
+    border: none;
+    background-color: rgba(255,255,255,.1);
+    padding: 10px 20px;
+    color: rgba(255,255,255,.5);
+}
+
+.form__submit {
+    @include font();
+    position: absolute;
+    width: 50%;
+    height: 50px;;
+    left: 0;
+    bottom: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: $color_button;
+    &:hover {
+        background-color: $color_hover;
+    }
+}
+
+.form__reset {
+    position: absolute;
+    width: 50%;
+    height: 50px;;
+    right: 0;
+    bottom: 0;
+    outline: none;
+    border: none;
+    @include font();
+    color: rgba(255,255,255,.5);
+    background-color: transparent; 
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(255,255,255,.1);
+    }
+}

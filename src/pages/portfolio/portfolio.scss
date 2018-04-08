@@ -1,0 +1,236 @@
+$color_button: #0548be;
+$color_hover: #083c96;
+$color_title: #474b57;
+$color_text: #455a64;
+
+.main-portfolio {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    background: url('../../images/main_bg.png') 0 70% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero__hamburger {
+    top: 30px;
+    right: 30px;
+}
+
+.hero__social {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.hero__user {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero__img {
+    opacity: 0.15;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 460px;
+    height: 270px;
+}
+
+.hero__arrow {
+    position: absolute;
+    bottom: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.hero__title {
+    text-transform: uppercase;
+    font: 63px 'Sansus Webissimo';
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero__img-stars-2 {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    opacity: .25;
+    width: 231px;
+    height: 179px;
+    transform:  translateX(-50%) rotate(190deg);
+}
+
+.hero__traingle {
+    position: absolute;
+    bottom: 0;
+}
+
+.portfolio-content__left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #f2f0e8;
+    position: relative;
+}
+
+.portfolio-content__right {
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: #d2d2d2;
+}
+
+.portfolio-content__left-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio-content__left-line {
+    margin-top: 30px;
+}
+
+.portfolio-content__left-text {
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: $color_hover;
+    font-family: 'Roboto';
+    font-weight: 500;
+    text-align: center;
+}
+
+.portfolio-content__left-link {
+    display: block;
+    width: 200px;
+    height: 45px;
+    margin: auto;
+    margin-top: 55px;
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 500;
+    background-color: $color_button;
+    line-height: 45px;
+    &:hover {
+        background-color: $color_hover;
+    }
+    &::after {
+        content: '';
+        float: left;
+        width: 22.5%;
+        height: 100%;
+        background: url('../../images/icons/link.svg') no-repeat;
+        background-position: center;
+    }
+    &::before {
+        content: 'Посмотреть сайт';
+        float: right;
+        width: 77.5%;
+        height: 100%;
+    }
+}
+
+.portfolio-content__slider {
+    height: 100%;
+}
+
+.portfolio-contact {
+    height: 1350px;
+    background: url('../../images/beacon.png') no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+    position: relative;
+}
+
+.portfolio-contact__title {
+    margin: auto;
+    width: 340px;
+}
+
+.portfolio-contact__img {
+    opacity: .2;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%) rotate(30deg) scale(2);
+}
+
+.portfolio-contact__features {
+    width: 760px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.portfolio-contact__features-item {
+    width: 48%;
+    background: url('../../images/icons/quote.svg') 0 45% no-repeat;
+}
+
+.portfolio-contact__features-item_float-left {
+    float: left;
+}
+
+.portfolio-contact__features-item_float-right {
+    float: right;
+}
+
+.portfolio-contact__photo {
+    border-radius: 50% 50%;
+    display: block;
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+
+.portfolio-contact__photo_kovalchuk {
+    background-image: url('../../images/photo_1.png');
+}
+
+.portfolio-contact__photo_sabancev {
+    background-image: url('../../images/photo_2.png');
+}
+
+.portfolio-contact__features-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Roboto";
+    font-style: italic;
+}
+
+.portfolio-content__quote-writer {
+    text-align: center;
+    font-weight: bold;
+    display: block;
+}
+
+.portfolio-content__quote-writer-profesion {
+    text-align: center;
+    display: block;
+}
+
+.portfolio-contact__form {
+    margin: auto;
+    margin-top: 75px;
+    width: 380px;
+    height: 460px;
+}
+
+.portfolio-contact__footer {
+    position: absolute;
+    bottom: 0;
+    height: 185px;
+    width: 100%;
+}

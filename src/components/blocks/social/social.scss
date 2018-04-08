@@ -1,0 +1,34 @@
+.social {
+    font-size: 0;
+    height: 100%;
+}
+
+.social__item {
+    display: inline-block;
+    margin-right: 30px;
+    height: 100%;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social__link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.social__icon {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    &:hover {
+        fill:#083c96;
+    }
+}
+
+#sprite__social {
+    display: none;
+}

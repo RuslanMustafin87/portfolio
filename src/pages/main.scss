@@ -1,0 +1,26 @@
+//color
+$color_button: #0548be;
+$color_hover: #083c96;
+$color_title: #474b57;
+$color_text: #455a64;
+
+//common
+@import '../common/layot.scss';
+@import '../common/fonts.scss';
+@import '../common/components.scss';
+
+//blocks
+@import '../components/blocks/author_title/author_title.scss';
+@import '../components/blocks/navigation/navigation.scss';
+@import '../components/blocks/footer/footer.scss';
+@import '../components/blocks/social/social.scss';
+@import '../components/blocks/hamburger_menu/hamburger_menu.scss';
+@import '../components/blocks/hamburger_icon/hamburger_icon.scss';
+@import '../components/blocks/slider/slider.scss';
+@import '../components/blocks/form/form.scss';
+
+// //pages
+// @import 'pages/index.scss';
+// @import 'pages/about.scss';
+// @import 'pages/blog.scss';
+
