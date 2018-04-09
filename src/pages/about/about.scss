@@ -80,7 +80,7 @@ $color_text: #455a64;
     background-color: #f2f0e8;
     padding-right: 1.25rem;
     padding-top: 1.25rem;
-    @include laptop{
+    @include desktop{
         padding-left: 1.25rem;
     }
 }
@@ -98,7 +98,7 @@ $color_text: #455a64;
     position: relative;
     float: left;
     width: 50%;
-    @include laptop{
+    @include desktop{
         float: none;
         width: 100%;
         height: 8.125rem;
@@ -108,7 +108,7 @@ $color_text: #455a64;
 .about-me__left-right {
     float: right;
     width: 50%;
-    @include laptop{
+    @include desktop{
         float: none;
         width: 100%;
     }
@@ -164,7 +164,7 @@ $color_text: #455a64;
     margin-top: 0.9375rem;
     width: 7.5rem;
     height: 7.5rem;
-    @include laptop {
+    @include desktop {
         width: 110px;
         height: 110px;
         margin-left: 37px;
@@ -263,6 +263,9 @@ $skill_bower_stroke_dash: 204.1975;
 
 .map__bottom {
     height: 11.5625rem;
+    @include tablet{
+        height: 17.6923rem;
+    }
 }
 
 .map__contacts {

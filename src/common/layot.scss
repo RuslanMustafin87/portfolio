@@ -51,13 +51,16 @@ a {
 }
 
 html {
-  @include laptop(){
+  @include desktop{
     font-size: 15px;
-  };
-  @include tablet(){
+  }
+  @include laptop(){
     font-size: 14px;
   };
-  @include phone(){
+  @include tablet(){
     font-size: 13px;
+  };
+  @include phone(){
+    font-size: 12px;
   };
 }

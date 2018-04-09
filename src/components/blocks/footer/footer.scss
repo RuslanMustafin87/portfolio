@@ -6,6 +6,9 @@
     padding-top: 1.875rem;
     color: #9e9fa3;
     width: 100%;
+    @include tablet{
+        padding: 0 20px 0 20px;
+    }
 }
 
 .portfolio-contact__footer .footer {
@@ -17,25 +20,60 @@
     border-right: 1px solid #9c9d9f;
     float: left;
     height: 5.625rem;
-    padding-left: 1.875rem;
+    padding: 0 1.875rem;
     &:last-child {
         border: none;
+    };
+    @include desktop(){
+        &:first-child {
+            width: 35%;
+        };
+        &:nth-child(2) {
+            width: 40%;
+        };
+        &:nth-child(3) {
+            width: 25%;
+        };
+    };
+    @include tablet{
+        border-right: none;
+    }
+    @include tablet{
+        &:first-child {
+            width: 100%;
+            float: none;
+            border-bottom: 1px solid #9c9d9f;
+            text-align: center;
+            height: 4.615rem;
+            line-height: 4.616rem;
+            vertical-align: middle;
+        }
     }
 }
 
+.footer__navigation {
+    display: flex;
+}
+
 .footer__navigation-item {
-    display: inline-block;
     margin-right: 2.5rem;
-    font-size: 0;
     &:last-child {
         margin: 0;
+    }
+}
+
+@media (max-width: 1420px) {
+    .footer__navigation-item {
+        margin: 0;
+    }
+    .footer__navigation {
+        justify-content: space-between;
     }
 }
 
 .footer__navigation-link {
     cursor: pointer;
     color: #fff;
-    font-size: 1rem;
     font-weight: bold;
     &:hover {
         color: $color_hover;
@@ -51,6 +89,7 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+    left: 0;
     text-align: center;
     background-color: $color_button;
     color: #fff;
