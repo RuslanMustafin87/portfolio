@@ -31,6 +31,9 @@ a {
   min-height: 650px;
   height: 100vh;
   position: relative;
+  @include phone(){
+    min-height: 0;
+  }
 }
 
 .wrapper {
@@ -45,4 +48,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  @include laptop(){
+    font-size: 15px;
+  };
+  @include tablet(){
+    font-size: 14px;
+  };
+  @include phone(){
+    font-size: 13px;
+  };
 }

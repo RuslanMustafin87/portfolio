@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g viewbox="0 0 120 120">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <g >
         <circle id="skill_bg" r="50" stroke="#dfdcd5" stroke-width="20" fill="none" cx="60" cy="60" />
         <circle id="skill" r="50" stroke="#1056d1" stroke-width="20" fill="none" cx="60" cy="60" transform="rotate(-90 60 60)" />
         <text id="text_html" x="60" y="60" font-size="14" font-family="Roboto" font-weight="500" fill="#243994" transform="translate(-19.75 4)">HTML</text>

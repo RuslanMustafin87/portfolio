@@ -1,3 +1,5 @@
+@import '../../common/mixin.scss';
+
 $color_button: #0548be;
 $color_hover: #083c96;
 $color_title: #474b57;
@@ -15,14 +17,14 @@ $color_text: #455a64;
 }
 
 .hero__hamburger {
-    top: 30px;
-    right: 30px;
+    top: 1.875rem;
+    right: 1.875rem;
 }
 
 .hero__social {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 1.875rem;
+    left: 1.875rem;
 }
 
 .hero__user {
@@ -37,14 +39,16 @@ $color_text: #455a64;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 460px;
-    height: 270px;
+    transform: translate(-50%, -50%) scale(2.5);
+    @include phone{
+        top: 45%;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
 }
 
 .hero__arrow {
     position: absolute;
-    bottom: 100px;
+    bottom: 6.25rem;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -57,12 +61,14 @@ $color_text: #455a64;
 
 .about-me {
     color: $color_text;
+    height: initial;
+    background-color: #f2f0e8;
 }
 
 .about-me__pic {
     width: 100%;
-    height: 390px;
-    background: url('../../images/photo.jpg') no-repeat;
+    height: 24.375rem;
+    background: url('../../images/photo.jpg') center no-repeat;
     background-size: cover;
     margin: auto;
 }
@@ -72,15 +78,19 @@ $color_text: #455a64;
     width: 50%;
     height: 100%;
     background-color: #f2f0e8;
-    padding-right: 20px;
-    padding-top: 20px;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    @include laptop{
+        padding-left: 1.25rem;
+    }
 }
 
 .about-me__right {
     float: right;
     width: 50%;
     height: 100%;
-    padding: 20px 40px 0 40px;
+    padding-top: 1.25rem;
+    padding-bottom: 3.125rem;
     background-color: #eae8e2;
 }
 
@@ -88,11 +98,20 @@ $color_text: #455a64;
     position: relative;
     float: left;
     width: 50%;
+    @include laptop{
+        float: none;
+        width: 100%;
+        height: 8.125rem;
+    }
 }
 
 .about-me__left-right {
     float: right;
     width: 50%;
+    @include laptop{
+        float: none;
+        width: 100%;
+    }
 }
 
 .about-me__left-title{
@@ -102,22 +121,26 @@ $color_text: #455a64;
 }
 
 .about-me__line {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .about-me__left-title-h2 {
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .about-me__text {
-    margin-top: 20px;
+    margin: 1.25rem 2.5rem 0 2.5rem;
+}
+
+.about-me__title {
+    margin-left: 2.5rem;
 }
 
 .about-me__img {
     position: absolute;
     left: 50%;
-    width: 171.5px;
-    height: 132.5px;
+    width: 10.7188rem;
+    height: 8.2813rem;
     transform:  translate(-50%, -10%) rotate(190deg);
     z-index: 1;
 }
@@ -132,12 +155,20 @@ $color_text: #455a64;
 
 .about-me__skill-item {
     text-align: left;
-    margin-top: 40px;
+    margin-top: 2.5rem;
+    font-size: 0;
 }
 
 .about-me_skill_pic {
-    margin-right: 40px;
-    margin-top: 15px;
+    margin-left: 2.5rem;
+    margin-top: 0.9375rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    @include laptop {
+        width: 110px;
+        height: 110px;
+        margin-left: 37px;
+    }
 }
 
 #sprite__skills, #sprite_contacts {
@@ -231,7 +262,7 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .map__bottom {
-    height: 185px;
+    height: 11.5625rem;
 }
 
 .map__contacts {
@@ -242,17 +273,17 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .contacts {
-    width: 580px;
-    height: 280px;
+    width: 36.25rem;
+    height: 17.5rem;
     background-color: rgba(256, 256, 256, .8);
 }
 
 .contacts-title {
-    margin-top: 35px;
+    margin-top: 2.1875rem;
 }
 
 .contacts__line {
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .contacts__list {
@@ -262,22 +293,22 @@ $skill_bower_stroke_dash: 204.1975;
 
 .contacts__item {
     width: 50%;
-    height: 45px;
-    margin-top: 30px;
-    padding-left: 20px;
-    line-height: 45px;
+    height: 2.8125rem;
+    margin-top: 1.875rem;
+    padding-left: 1.25rem;
+    line-height: 2.8125rem;
 }
 
 .contacts__img {
-    width: 45px;
-    height: 45px;
+    width: 2.8125rem;
+    height: 2.8125rem;
     float: left;
 }
 
 .contacts__description {
-    padding-left: 15px;
+    padding-left: 0.9375rem;
     color: #7c8291;
     display: inline-block;
     vertical-align: middle;
-    line-height: 16px;
+    line-height: 1rem;
 }
