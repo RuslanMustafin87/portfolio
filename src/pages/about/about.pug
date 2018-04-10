@@ -18,7 +18,7 @@ block content
                 .author-title__description Личный сайт веб-разработчика
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="hero__traingle")
                 polygon(class = "left" points="0,0   0,86   500.8,86   500.8,75.5" fill="#f2f0e8")
-                polygon(class = "right" points="1000,0   1000,86   500,86   500,75.5" fill="#eae8e2")
+                polygon(class = "hero__traingle-right" points="1000,0   1000,86   500,86   500,75.5" fill="#eae8e2")
             .hero__arrow.arrow__down
                 include ../../images/icons/arrow_down.svg
         section.section.about-me.clearfix
@@ -32,7 +32,7 @@ block content
                     .about-me__line.line
                     .about-me__text
                         p  Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                          |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                        p  Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             .about-me__right
                 h2.about-me__right-title-h2.title.title_color-gray.title_font-size-35.title_text-transform-uppercase.title_width-280 Чем я могу быть вам полезен
                 .about-me__line.line
@@ -40,7 +40,7 @@ block content
                     p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                 ul.about-me__skills
                     li.about-me__skill-item()
-                        h3.about-me__title.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
+                        h3.about-me__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
                         img(src=require('../../images/sprite_skills.svg') id='sprite__skills')
                         svg.about-me_skill_pic(viewBox='0 0 120 120')
                             use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
@@ -55,7 +55,7 @@ block content
                             use(xlink:href="images/sprite_skills.svg#skill" class="skills_js")
                             use(xlink:href="images/sprite_skills.svg#text_js" class="text_js")
                     li.about-me__skill-item()
-                        h3.about-me__title.title.title_color-gray.title_font-size-28.title_text-align-left Backend
+                        h3.about-me__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Backend
                         svg.about-me_skill_pic(viewBox='0 0 120 120')
                             use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
                             use(xlink:href="images/sprite_skills.svg#skill" class="skills_php")
@@ -73,7 +73,7 @@ block content
                             use(xlink:href="images/sprite_skills.svg#skill" class="skills_mongo")
                             use(xlink:href="images/sprite_skills.svg#text_mongo" class="text_mongo")
                     li.about-me__skill-item()
-                        h3.about-me__title.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
+                        h3.about-me__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
                         svg.about-me_skill_pic(viewBox='0 0 120 120')
                             use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
                             use(xlink:href="images/sprite_skills.svg#skill" class="skills_git")

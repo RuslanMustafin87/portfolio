@@ -59,6 +59,12 @@ $color_text: #455a64;
     bottom: 0;
 }
 
+.hero__traingle-right {
+    @include tablet{
+        fill: #f2f0e8;
+    }
+}
+
 .about-me {
     color: $color_text;
     height: initial;
@@ -113,7 +119,7 @@ $color_text: #455a64;
     left: 50%;
     width: 10.7188rem;
     height: 8.2813rem;
-    transform:  translate(-50%, -15%) rotate(190deg);
+    transform:  translate(-50%, 0%) rotate(190deg);
     z-index: 1;
 }
 
@@ -121,7 +127,7 @@ $color_text: #455a64;
     text-align: center;
     position: relative;
     z-index: 10;
-    @include tablet {
+    @include desktop{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -135,6 +141,9 @@ $color_text: #455a64;
     @include desktop{
         float: none;
         width: 100%;
+    }
+    @include tablet{
+        padding-bottom: 3.846rem;
     }
 }
 
@@ -157,19 +166,18 @@ $color_text: #455a64;
 }
 
 .about-me__text {
-    margin: 1.25rem 2.5rem 0 2.5rem;
-    @include tablet {
-        margin: 0;
-        margin-top: 1.25rem;
+    margin-top: 1.25rem;
+    & p:nth-child(2) {
+        margin-top: 5px;
     }
-}
-
-.about-me__title {
-    margin-left: 2.5rem;
 }
 
 .about-me__right-title-h2 {
     margin: auto;
+}
+
+.about-me__text-right {
+    padding: 0 11.5384rem;
 }
 
 .about-me__skills {
@@ -180,6 +188,14 @@ $color_text: #455a64;
     text-align: left;
     margin-top: 2.5rem;
     font-size: 0;
+}
+
+.about-me__title-h3 {
+    margin-left: 2.5rem;
+    @include tablet{
+        margin: 0;
+        text-align: center;
+    }
 }
 
 .about-me_skill_pic {
