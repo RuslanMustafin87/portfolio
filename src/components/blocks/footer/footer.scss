@@ -47,6 +47,22 @@
             height: 4.615rem;
             line-height: 4.616rem;
             vertical-align: middle;
+            padding: 0;
+        }
+    };
+    @include tablet{
+        &:nth-child(2) {
+            width: 60%;
+            float: left;
+            padding: 20px 0 0 0;
+        };
+    };
+    @include tablet{
+        &:nth-child(3) {
+            width: 40%;
+            float: right;
+            padding: 20px 0 0 0;
+            text-align: right;
         }
     }
 }
@@ -71,6 +87,15 @@
     }
 }
 
+@include tablet{
+    .footer__navigation{
+        justify-content: flex-start;
+    };
+    .footer__navigation-item{
+        margin-right: 2.5rem;
+    }
+}
+
 .footer__navigation-link {
     cursor: pointer;
     color: #fff;
@@ -78,6 +103,13 @@
     &:hover {
         color: $color_hover;
     }
+}
+
+.footer__contact-text {
+    margin-top: 0.3125rem;
+    &:first-child {
+        margin-top: 0;
+    };
 }
 
 .footer__social {
