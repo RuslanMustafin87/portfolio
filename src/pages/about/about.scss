@@ -81,12 +81,16 @@ $color_text: #455a64;
     @include desktop{
         padding-left: 1.25rem;
         padding-top: 0;
-    }
+    };
     @include tablet{
         float: none;
         width: 100%;
-        padding-right: 11.5384rem;
-        padding-left: 11.5384rem;
+        padding-right: 19.53%;
+        padding-left: 19.53%;
+    };
+    @include phone{
+        padding-left: 3.125%;
+        padding-right: 3.125%;
     }
 }
 
@@ -177,17 +181,27 @@ $color_text: #455a64;
 }
 
 .about-me__text-right {
-    padding: 0 11.5384rem;
+    @include tablet{
+        padding-right: 19.53%;
+        padding-left: 19.53%;
+    };
+    @include phone{
+        padding-left: 3.125%;
+        padding-right: 3.125%;
+    }
 }
 
-.about-me__skills {
-    margin-top: 55px;
-}
+// .about-me__skills {
+   
+// }
 
 .about-me__skill-item {
     text-align: left;
     margin-top: 2.5rem;
     font-size: 0;
+    @include tablet{
+        text-align: center;
+    }
 }
 
 .about-me__title-h3 {
@@ -198,11 +212,25 @@ $color_text: #455a64;
     }
 }
 
+.about-me__skills-container {
+    display: flex;
+    justify-content: start;
+    align-content: space-around;
+    flex-wrap: wrap;
+    @include tablet{
+        justify-content: space-around;
+    }
+}
+
+
 .about-me_skill_pic {
-    margin-left: 2.5rem;
-    margin-top: 0.9375rem;
-    width: 7.5rem;
-    height: 7.5rem
+    width: 120px;
+    height: 120px;
+    margin-top: 3.4375rem;
+    margin-right: 2.5rem;
+    @include tablet{
+        margin-right: 0;
+    }
 }
 
 #sprite__skills, #sprite_contacts {
