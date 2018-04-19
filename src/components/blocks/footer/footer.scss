@@ -5,7 +5,7 @@
     opacity: .85;
     padding-top: 1.875rem;
     color: #9e9fa3;
-    width: 100%;
+    line-height: 1.5rem;
     @include tablet{
         padding: 0 20px 0 20px;
     }
@@ -13,6 +13,10 @@
 
 .portfolio-contact__footer .footer {
     background-color: #1c1f29;
+    @include phone{
+        padding-left: 3.125%;
+        padding-right: 3.125%;
+    }
 }
 
 .footer__block {
@@ -52,15 +56,34 @@
         &:nth-child(2) {
             width: 60%;
             float: left;
-            padding: 20px 0 0 0;
+            padding: 0;
+            padding-top: 1.25rem;
         };
     };
+    @include phone{
+        &:nth-child(2){
+            width:100%;
+            float:none;
+            border-bottom: 1px solid #9c9d9f;
+            padding-bottom: 1.25rem;
+            height: initial;
+        }
+    }
     @include tablet{
         &:nth-child(3) {
             width: 40%;
             float: right;
-            padding: 20px 0 0 0;
+            padding: 1.25rem 0 0 0;
             text-align: right;
+        }
+        
+    }
+    @include phone{
+        &:nth-child(3){
+            width:100%;
+            float:none;
+            height: initial;
+            padding-bottom: 3.75rem;
         }
     }
 }
@@ -75,12 +98,21 @@
 
 .footer__navigation {
     display: flex;
+    @include tablet{
+        justify-content: flex-start;
+    }
+    @include phone{
+        justify-content: space-between;
+    }
 }
 
 .footer__navigation-item {
     margin-right: 2.5rem;
     &:last-child {
         margin: 0;
+    }
+    @include tablet{
+        margin-right:2.5rem;
     }
 }
 
@@ -90,15 +122,6 @@
     }
     .footer__navigation {
         justify-content: space-between;
-    }
-}
-
-@include tablet{
-    .footer__navigation{
-        justify-content: flex-start;
-    };
-    .footer__navigation-item{
-        margin-right: 2.5rem;
     }
 }
 
@@ -120,6 +143,10 @@
 
 .footer__social {
     margin-top: 1.875rem;
+    @include phone{
+        margin: 1.25rem auto 0 auto;
+        width: 135px;
+    }
 }
 
 .footer__bottom {
@@ -133,4 +160,10 @@
     color: #fff;
     line-height: 2.5rem;
     vertical-align: middle;
+}
+
+.footer__contact {
+    @include phone{
+        text-align: center;
+    }
 }
