@@ -25,6 +25,7 @@ $color_text: #455a64;
     position: absolute;
     top: 1.875rem;
     left: 1.875rem;
+    width: 8.4375rem;
 }
 
 .hero__user {
@@ -92,19 +93,6 @@ $color_text: #455a64;
     @include phone{
         padding-left: 3.125%;
         padding-right: 3.125%;
-    }
-}
-
-.about-me__right {
-    float: right;
-    width: 50%;
-    height: 100%;
-    padding-top: 1.25rem;
-    padding-bottom: 3.125rem;
-    background-color: #eae8e2;
-    @include tablet{
-        float: none;
-        width: 100%;
     }
 }
 
@@ -177,6 +165,22 @@ $color_text: #455a64;
     }
 }
 
+.about-me__right {
+    float: right;
+    width: 50%;
+    height: 100%;
+    padding-top: 1.25rem;
+    padding-bottom: 3.125rem;
+    padding: 1.25rem 2.5rem 3.125rem 2.5rem;
+    background-color: #eae8e2;
+    @include tablet{
+        float: none;
+        width: 100%;
+        padding: 1.25rem 0 3.125rem 0;
+    }
+}
+
+
 .about-me__right-title-h2 {
     margin: auto;
 }
@@ -192,9 +196,6 @@ $color_text: #455a64;
     }
 }
 
-// .about-me__skills {
-   
-// }
 
 .about-me__skill-item {
     text-align: left;
@@ -202,6 +203,10 @@ $color_text: #455a64;
     font-size: 0;
     @include tablet{
         text-align: center;
+        padding: 0 2.5rem;
+    }
+    @include phone{
+        padding: 0 3.125%;
     }
 }
 
@@ -216,7 +221,6 @@ $color_text: #455a64;
 .about-me__skills-container {
     display: flex;
     justify-content: start;
-    align-content: space-around;
     flex-wrap: wrap;
     @include tablet{
         justify-content: space-around;
@@ -224,11 +228,14 @@ $color_text: #455a64;
 }
 
 
-.about-me_skill_pic {
+.about-me_skill-img {
     width: 120px;
     height: 120px;
     margin-top: 3.4375rem;
     margin-right: 2.5rem;
+    &:last-child {
+        margin-right: 0;
+    }
     @include tablet{
         margin-right: 0;
     }

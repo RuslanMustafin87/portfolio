@@ -7,16 +7,12 @@
     color: #9e9fa3;
     line-height: 1.5rem;
     @include tablet{
-        padding: 0 20px 0 20px;
+        padding: 0 1.25rem 0 1.25rem;
     }
 }
 
 .portfolio-contact__footer .footer {
     background-color: #1c1f29;
-    @include phone{
-        padding-left: 3.125%;
-        padding-right: 3.125%;
-    }
 }
 
 .footer__block {
@@ -41,8 +37,6 @@
     };
     @include tablet{
         border-right: none;
-    }
-    @include tablet{
         &:first-child {
             width: 100%;
             float: none;
@@ -50,16 +44,20 @@
             text-align: center;
             height: 4.615rem;
             padding: 0;
-        }
-    };
-    @include tablet{
+        };
         &:nth-child(2) {
             width: 60%;
             float: left;
             padding: 0;
             padding-top: 1.25rem;
         };
-    };
+        &:nth-child(3) {
+            width: 40%;
+            float: right;
+            padding: 1.25rem 0 0 0;
+            text-align: right;
+        }
+    }
     @include phone{
         &:nth-child(2){
             width:100%;
@@ -67,25 +65,14 @@
             border-bottom: 1px solid #9c9d9f;
             padding-bottom: 1.25rem;
             height: initial;
-        }
-    }
-    @include tablet{
-        &:nth-child(3) {
-            width: 40%;
-            float: right;
-            padding: 1.25rem 0 0 0;
-            text-align: right;
-        }
-        
-    }
-    @include phone{
+        };
         &:nth-child(3){
             width:100%;
             float:none;
             height: initial;
-            padding-bottom: 3.75rem;
+            padding-bottom: 6.25rem;
         }
-    }
+    };
 }
 
 .footer__description {
@@ -134,18 +121,11 @@
     }
 }
 
-// .footer__contact-text {
-//     margin-top: 0.3125rem;
-//     &:first-child {
-//         margin-top: 0;
-//     };
-// }
-
 .footer__social {
     margin-top: 1.875rem;
+    width: 8.4375rem;
     @include phone{
         margin: 1.25rem auto 0 auto;
-        width: 135px;
     }
 }
 
@@ -158,8 +138,16 @@
     text-align: center;
     background-color: $color_button;
     color: #fff;
-    line-height: 2.5rem;
-    vertical-align: middle;
+    @include phone{
+        height: 5rem;
+        padding-left: 3.125%;
+        padding-right: 3.125%;
+    };
+    & p {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .footer__contact {

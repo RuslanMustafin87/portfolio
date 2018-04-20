@@ -1,17 +1,13 @@
 .social {
     font-size: 0;
     height: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .social__item {
-    display: inline-block;
-    margin-right: 1.875rem;
     height: 100%;
     cursor: pointer;
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
 .social__link {
