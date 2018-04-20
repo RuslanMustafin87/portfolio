@@ -9,7 +9,7 @@ $color_text: #455a64;
 }
 
 .hero-blog {
-    height: 400px;
+    height: 25rem;
     background: url('../../images/main_bg.png') 0 70% no-repeat;
     background-size: cover;
     position: relative;
@@ -17,13 +17,14 @@ $color_text: #455a64;
 
 .blog__social {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 1.875rem;
+    left: 1.875rem;
+    width: 8.4375rem;
 }
 
 .blog__hamburger {
-    top: 30px;
-    right: 30px;
+    top: 1.875rem;
+    right: 1.875rem;
 }
 
 .blog__user {
@@ -40,7 +41,7 @@ $color_text: #455a64;
 
 .blog-content {
     background-color: #f2f0e8;
-    padding-top: 50px;
+    padding-top: 3.125rem;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -49,36 +50,35 @@ $color_text: #455a64;
 .blog-content__left {
     float: left;
     width: 27.66%;
-    padding-left: 120px;
+    padding-left: 7.5rem;
     @media (max-width: 1365px) {
-        padding-left: 60px;
+        padding-left: 3.75rem;
     }
 }
 
 .menu-acco__item {
     text-align: right;
     color: $color_text;
-    margin-bottom: 20px;
-    height: 40px;
-    padding-right: 20px;
-    line-height: 40px;
+    margin-bottom: 1.25rem;
+    height: 2.5rem;
+    padding-right: 1.25rem;
     &:hover {
-        padding-right: 18px;
+        padding-right: 1.125rem;
         color: $color_hover;
         border-right: 2px solid $color_hover;
     }
 }
 
-.acco__item-active  {
-    padding-right: 18px;
-    color: $color_hover;
-    border-right: 2px solid $color_hover;
+.menu-acco__description {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.menu-acco__description {
-    vertical-align: middle;
-    display: inline-block;
-    line-height: 16px;
+.acco__item-active  {
+    padding-right: 1.125rem;
+    color: $color_hover;
+    border-right: 2px solid $color_hover;
 }
 
 .blog-content__right {
@@ -87,30 +87,30 @@ $color_text: #455a64;
     height: 70%;
     overflow: hidden;
     position: relative;
-    padding-left: 120px;
-    padding-right: 410px;
+    padding-left: 7.5rem;
+    padding-right: 25.625rem;
     @media screen and (max-width: 1365px) {
-        padding-right: 205px;
+        padding-right: 12.8125rem;
     }
 }
 
 .blog-content__container {
     width: 61.5%;
     position: absolute;
-    top: 0px;
+    top: 0;
     transition: top .5s;
 }
 
 .blog-content__time {
     color: #083c96;
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     display: block;
 }
 
 .blog-content__text {
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     color: $color_text;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
 }
 
 .blog-content__code-pic {
@@ -121,14 +121,14 @@ $color_text: #455a64;
 .blog-content__line {
     background-color: #ecebe4;
     width: 100%;
-    height: 5px;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    height: 0.3125rem;
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
 }
 
 .blog__footer {
     position: absolute;
     bottom: 0;
-    height: 185px;
+    height: 11.5625rem;
     width: 100%;
 }
