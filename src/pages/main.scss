@@ -5,6 +5,7 @@ $color_title: #474b57;
 $color_text: #455a64;
 
 //common
+@import '../common/mixin.scss';
 @import '../common/layot.scss';
 @import '../common/fonts.scss';
 @import '../common/components.scss';

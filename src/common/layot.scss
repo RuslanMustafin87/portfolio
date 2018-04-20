@@ -7,6 +7,10 @@ html, body {
   width: 100%;
 }
 
+html{
+  font-size: 16px;
+}
+
 ul {
   list-style: none;
 }
@@ -31,6 +35,9 @@ a {
   min-height: 650px;
   height: 100vh;
   position: relative;
+  @include phone(){
+    min-height: 0;
+  }
 }
 
 .wrapper {
@@ -45,4 +52,19 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  @include desktop{
+    font-size: 15px;
+  }
+  @include laptop(){
+    font-size: 14px;
+  };
+  @include tablet(){
+    font-size: 13px;
+  };
+  @include phone(){
+    font-size: 12px;
+  };
 }

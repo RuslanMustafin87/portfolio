@@ -1,11 +1,12 @@
 .social {
     font-size: 0;
     height: 100%;
+    text-align: center;
 }
 
 .social__item {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 1.875rem;
     height: 100%;
     cursor: pointer;
     &:last-child {
@@ -21,8 +22,8 @@
 }
 
 .social__icon {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     fill: #fff;
     &:hover {
         fill:#083c96;

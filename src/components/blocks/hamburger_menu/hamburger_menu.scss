@@ -30,30 +30,33 @@
 }
 
 .hamburger-menu__link {
-    font: 63px 'Sansus Webissimo';
+    font: 3.9375rem 'Sansus Webissimo';
     color: #fff;
     text-transform: uppercase;
     display: block;
     &:after {
         content: '';
         display: none;
-        height: 2px;
-        width: 90px;
+        height: 0.125rem;
+        width: 5.625rem;
         background-color: #fff;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -30px;
+        bottom: -1.875rem;
     };
     &:hover:after {
         display: block;
-    } 
+    }
+    @include phone{
+        font-size: 3rem;
+    }
 }
 
 .hamburger-menu__item {
-    margin-top: 90px;
+    margin-top: 5.625rem;
     position: relative;
     &:first-child {
-        margin-top: 0px;
+        margin-top: 0rem;
     };
 }
