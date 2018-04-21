@@ -47,11 +47,18 @@ $color_text: #455a64;
     height: 100vh;
     overflow: hidden;
     position: relative;
+    padding-bottom: 14.6875rem;
+    @include phone{
+        height: 150vh;
+    }
 }
 
 .blog-content__left {
     float: left;
-    width: 25.8333%;
+    width: 21.6667%;
+    @include desktop{
+        width: 25.8333%;
+    }
     @include tablet{
         display: none;
     }
@@ -88,11 +95,12 @@ $color_text: #455a64;
 
 .blog-content__right {
     float: right;
-    width: 74.1667%;
+    width: 78.3333%;
     height: 100%;
     padding-left: 6.1111%;
     padding-right: 22.2222%;
     @include desktop{
+        width: 74.1667%;
         padding-left: 8.3333%;
         padding-right: 9.1666%;
     };

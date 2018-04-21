@@ -4,7 +4,7 @@ import './blog.scss';
 
 // прокрутка статей в blog-content 
 
-var container = document.querySelector('.blog-content__container');
+var container = document.querySelector('.blog-content__articles');
 var accoMenuItems = document.querySelectorAll('.menu-acco__item');
 var blogContentPosition; 
 
