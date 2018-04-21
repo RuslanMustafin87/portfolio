@@ -47,10 +47,16 @@ $color_text: #455a64;
     height: 100vh;
     overflow: hidden;
     position: relative;
-    padding-bottom: 14.6875rem;
+    display: flex;
+    flex-direction: column;
     @include phone{
         height: 150vh;
     }
+}
+
+.blog-content__top{
+    flex: 1;
+    padding-bottom: 50px;
 }
 
 .blog-content__left {
@@ -151,8 +157,6 @@ $color_text: #455a64;
 }
 
 .blog__footer {
-    position: absolute;
-    bottom: 0;
     height: 11.5625rem;
     width: 100%;
 }
