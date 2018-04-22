@@ -43,7 +43,6 @@ $color_text: #455a64;
 
 .blog-content {
     background-color: #f2f0e8;
-    padding-top: 3.125rem;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -70,6 +69,7 @@ $color_text: #455a64;
     height: 100%;
     position: absolute;
     transition: transform .3s linear;
+    padding-top: 3.125rem;
     @include desktop{
         width: 25.8333%;
     }
@@ -115,10 +115,12 @@ $color_text: #455a64;
 }
 
 .menu-acco__item {
+    display: table;
+    width: 100%;
     text-align: right;
     color: $color_text;
     margin-bottom: 1.25rem;
-    height: 2.5rem;
+    min-height: 2.5rem;
     padding-right: 1.25rem;
     padding-left: 10%;
     cursor: pointer;
@@ -129,17 +131,20 @@ $color_text: #455a64;
         font-weight: bold;
     }
     @include tablet{
+        border: none;
         color: #fff;
         &:hover{
+            border: none;
             color:#fff;
         }
     }
 }
 
 .menu-acco__description {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .acco__item-active  {
@@ -148,8 +153,8 @@ $color_text: #455a64;
     border-right: 2px solid $color_hover;
     font-weight: bold;
     @include tablet{
+        border: none;
         color: #fff;
-        border-right: 2px solid #fff !important;
     }
 }
 
@@ -157,6 +162,7 @@ $color_text: #455a64;
     float: right;
     position: relative;
     z-index: 1;
+    padding-top: 3.125rem;
     padding-left: 6.1111%;
     padding-right: 22.2222%;
     width: 78.3333%;
@@ -170,6 +176,7 @@ $color_text: #455a64;
         float: none;
         width: 100%;
         padding: 0 1.25rem;
+        padding-top: 3.125rem;
     };
 }
 

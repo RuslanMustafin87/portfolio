@@ -1,3 +1,5 @@
+@import '../../common/mixin.scss';
+
 $color_button: #0548be;
 $color_hover: #083c96;
 $color_title: #474b57;
@@ -15,14 +17,15 @@ $color_text: #455a64;
 }
 
 .hero__hamburger {
-    top: 30px;
-    right: 30px;
+    top: 1.875rem;
+    right: 1.875rem;
 }
 
 .hero__social {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 1.875rem;
+    left: 1.875rem;
+    width: 8.4375rem;
 }
 
 .hero__user {
@@ -38,40 +41,53 @@ $color_text: #455a64;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    width: 460px;
-    height: 270px;
+    width: 28.75rem;
+    height: 16.875rem;
 }
 
 .hero__arrow {
     position: absolute;
-    bottom: 250px;
+    bottom: 32%;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
 }
 
 .hero__title {
-    text-transform: uppercase;
-    font: 63px 'Sansus Webissimo';
     position: absolute;
-    bottom: 50px;
+    bottom: 8.9743%;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
+    @include desktop{
+        bottom: 6%;
+    }
+    @include phone{
+        font-size: 2.9167rem;
+    }
 }
 
 .hero__img-stars-2 {
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 3.3%;
     opacity: .25;
-    width: 231px;
-    height: 179px;
+    width: 13%;
+    // height: 11.1875rem;
     transform:  translateX(-50%) rotate(190deg);
+    @include desktop{
+        transform: translate(-50%, 10%) rotate(190deg) ;
+    }
 }
 
 .hero__traingle {
     position: absolute;
     bottom: 0;
+    width: 100%;
+    height: 43.59%;
+    @include desktop{
+        height: 37.18%;
+    };
 }
 
 .portfolio-content__left {
@@ -97,11 +113,11 @@ $color_text: #455a64;
 }
 
 .portfolio-content__left-line {
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .portfolio-content__left-text {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     text-transform: uppercase;
     color: $color_hover;
     font-family: 'Roboto';
@@ -111,15 +127,15 @@ $color_text: #455a64;
 
 .portfolio-content__left-link {
     display: block;
-    width: 200px;
-    height: 45px;
+    width: 12.5rem;
+    height: 2.8125rem;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 3.4375rem;
     color: #fff;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     background-color: $color_button;
-    line-height: 45px;
+    line-height: 2.8125rem;
     &:hover {
         background-color: $color_hover;
     }
@@ -144,30 +160,30 @@ $color_text: #455a64;
 }
 
 .portfolio-contact {
-    height: 1350px;
+    height: 84.375rem;
     background: url('../../images/beacon.png') no-repeat;
     background-size: cover;
-    padding-top: 70px;
+    padding-top: 4.375rem;
     position: relative;
 }
 
 .portfolio-contact__title {
     margin: auto;
-    width: 340px;
+    width: 21.25rem;
 }
 
 .portfolio-contact__img {
     opacity: .2;
     position: absolute;
-    top: 90px;
+    top: 8.3vh;
     left: 50%;
     transform: translateX(-50%) rotate(30deg) scale(2);
 }
 
 .portfolio-contact__features {
-    width: 760px;
+    width: 47.5rem;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 4.375rem;
 }
 
 .portfolio-contact__features-item {
@@ -186,8 +202,8 @@ $color_text: #455a64;
 .portfolio-contact__photo {
     border-radius: 50% 50%;
     display: block;
-    height: 80px;
-    width: 80px;
+    height: 5rem;
+    width: 5rem;
     background-size: cover;
     background-position: center;
     margin: auto;
@@ -202,11 +218,11 @@ $color_text: #455a64;
 }
 
 .portfolio-contact__features-text {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 26px;
-    font-family: "Roboto";
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-family: "Roboto", sans-serif;
     font-style: italic;
 }
 
@@ -223,14 +239,14 @@ $color_text: #455a64;
 
 .portfolio-contact__form {
     margin: auto;
-    margin-top: 75px;
-    width: 380px;
-    height: 460px;
+    margin-top: 4.6875rem;
+    width: 23.75rem;
+    height: 28.75rem;
 }
 
 .portfolio-contact__footer {
     position: absolute;
     bottom: 0;
-    height: 185px;
+    height: 11.5625rem;
     width: 100%;
 }
