@@ -49,24 +49,68 @@ $color_text: #455a64;
     position: relative;
     display: flex;
     flex-direction: column;
-    @include phone{
-        height: 150vh;
+    @include tablet{
+        height: initial;
     }
 }
 
 .blog-content__top{
     flex: 1;
     padding-bottom: 50px;
+    position: relative;
+    @include tablet{
+        flex: none;
+        height: 100vh;
+    }
 }
 
 .blog-content__left {
     float: left;
     width: 21.6667%;
+    height: 100%;
+    position: absolute;
+    transition: transform .3s linear;
     @include desktop{
         width: 25.8333%;
     }
     @include tablet{
-        display: none;
+        float: none;
+        width: 30%;
+        position: absolute;
+        z-index: 2;
+        transform: translateX(-100%);
+        background-color: $color_button;
+    }
+    @include phone{
+        width: 50%;
+    }
+}
+
+.blog-content__left_active{
+    transform: translateX(0%);
+}
+
+.blog-content__left-toggle{
+    display: none;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(40%, -50%);
+    background-color: $color_button;
+    @include tablet{
+        display: block;
+    }
+}
+
+.blog-content__menu{
+    @include tablet{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
     }
 }
 
@@ -84,6 +128,12 @@ $color_text: #455a64;
         border-right: 2px solid $color_hover;
         font-weight: bold;
     }
+    @include tablet{
+        color: #fff;
+        &:hover{
+            color:#fff;
+        }
+    }
 }
 
 .menu-acco__description {
@@ -97,14 +147,20 @@ $color_text: #455a64;
     color: $color_hover;
     border-right: 2px solid $color_hover;
     font-weight: bold;
+    @include tablet{
+        color: #fff;
+        border-right: 2px solid #fff !important;
+    }
 }
 
 .blog-content__right {
     float: right;
-    width: 78.3333%;
-    height: 100%;
+    position: relative;
+    z-index: 1;
     padding-left: 6.1111%;
     padding-right: 22.2222%;
+    width: 78.3333%;
+    height: 100%;
     @include desktop{
         width: 74.1667%;
         padding-left: 8.3333%;
@@ -159,4 +215,10 @@ $color_text: #455a64;
 .blog__footer {
     height: 11.5625rem;
     width: 100%;
+    @include tablet{
+        height: 17.6923rem;
+    };
+    @include phone{
+        height: initial;
+    }
 }

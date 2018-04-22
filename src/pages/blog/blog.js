@@ -27,3 +27,12 @@ function toggleClass(activeItem){
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 
 hamburger();
+
+// появление левого меню 
+
+const toggleLeftMenu = document.querySelector('.blog-content__left-toggle');
+const leftMenu = document.querySelector('.blog-content__left');
+
+toggleLeftMenu.addEventListener('click', () => {
+	leftMenu.classList.toggle('blog-content__left_active');
+});

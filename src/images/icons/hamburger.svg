@@ -1,5 +1,5 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="40px" height="35px" viewBox="0 0 40 35" enable-background="new 0 0 40 35" xml:space="preserve" fill="#FFFFFF">
+<svg version="1.1" id="hamburger_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	viewBox="0 0 40 35" enable-background="new 0 0 40 35" xml:space="preserve" fill="#FFFFFF">
 <path class='hamburger__layer-1' d="M40,2.5C40,3.881,38.881,5,37.5,5h-35C1.119,5,0,3.881,0,2.5l0,0C0,1.119,1.119,0,2.5,0h35
 	C38.881,0,40,1.119,40,2.5L40,2.5z"/>
 <path  class='hamburger__layer-2' d="M40,17.5c0,1.381-1.119,2.5-2.5,2.5h-35C1.119,20,0,18.881,0,17.5l0,0C0,16.119,1.119,15,2.5,15h35

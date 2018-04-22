@@ -55,14 +55,14 @@ $color_text: #455a64;
     left: 0;
     right: 0;
     margin: auto;
-    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .welcome__center-top {
     position: relative;
     height: 24.6875rem;
     padding: 2.5rem 1.25rem 2.5rem 1.25rem;
-    box-sizing: border-box;
 }
 
 .welcome__user {
@@ -84,7 +84,9 @@ $color_text: #455a64;
 }
 
 .welcome__center_author {
-    transition: transform .3s linear;
+    transform: rotateX(-90deg);
+    transform-origin:  50% 0;
+    opacity: 0;
 }
 
 .welcome__center_author .navigation__button {

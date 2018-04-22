@@ -335,6 +335,9 @@ $skill_bower_stroke_dash: 204.1975;
     height: 11.5625rem;
     @include tablet{
         height: 17.6923rem;
+    };
+    @include phone{
+        height: initial;
     }
 }
 
@@ -400,7 +403,5 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .map__bottom {
-    @include phone{
-        height: initial;
-    }
+    
 }
