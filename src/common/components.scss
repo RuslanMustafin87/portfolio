@@ -41,3 +41,15 @@
     background-color: #9c9d9f;
     margin: auto;
 }
+
+.arrow{
+    cursor: pointer;
+    opacity: .5;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.arrow_direction-up {
+    transform: rotate(180deg) !important;
+}

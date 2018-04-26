@@ -2,21 +2,68 @@
     height: 100%;
 }
 
-.slider__content {
-    height: 70%;
+.slider__left{
+    float: left;
+    width: 50%;
+    height: 100%;
     position: relative;
+    @include tablet{
+        float: none;
+        width: 100%;
+        height: 25%;
+    }
+    @include phone{
+        height:40%;
+    }
+}
+
+.slider__left-center{
+    @include align-center;
+    @include tablet{
+        width: 100%;
+    }
+}
+
+.slider__right-top{
+    float: right;
+    width: 50%;
+    height:70%;
+    position: relative;
+    background-color: #e3e2de;
+    @include tablet{
+        float: none;
+        width: 100%;
+        height: 50%;
+    }
+    @include phone{
+        height:40%;
+    }
+}
+
+.slider__right-bottom {
+    float: right;
+    width: 50%;
+    height:30%;
+    @include tablet{
+        float: none;
+        width: 100%;
+        height: 25%;
+    }
+    @include phone{
+        height:20%;
+    }
 }
 
 .slider__slide-down {
     float: left;
-    height: 30%;
+    height: 100%;
     width: 50%;
     position: relative;
 }
 
 .slider__slide-up {
     float: right;
-    height: 30%;
+    height: 100%;
     width: 50%;
     position: relative;
 }
@@ -34,13 +81,10 @@
     position: relative;
 }
 
-.slider__slide {
+.slider__img {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50% );
     max-width:80%;
+    @include align-center;
 }
 
 .slider__item_backgroud-1 {
@@ -73,12 +117,5 @@
 
 .slider__arrow {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50% );
-}
-
-.slider__arrow_direction-up {
-    transform: rotate(180deg);
+    @include align-center;
 }
