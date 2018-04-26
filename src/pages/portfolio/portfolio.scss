@@ -1,3 +1,5 @@
+@import '../../common/mixin.scss';
+
 $color_button: #0548be;
 $color_hover: #083c96;
 $color_title: #474b57;
@@ -33,7 +35,7 @@ $color_text: #455a64;
     transform: translateX(-50%);
 }
 
-.hero__img {
+.hero__img-stars-1 {
     opacity: 0.15;
     position: absolute;
     top: 20%;
@@ -41,6 +43,9 @@ $color_text: #455a64;
     transform: translateX(-50%);
     width: 28.75rem;
     height: 16.875rem;
+    @include phone{
+        transform:  translateX(-50%) scale(.8);
+    }
 }
 
 .hero__arrow {
@@ -52,12 +57,11 @@ $color_text: #455a64;
 }
 
 .hero__title {
-    text-transform: uppercase;
-    font: 3.9375rem 'Sansus Webissimo', sans-serif;
     position: absolute;
-    bottom: 6%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .hero__img-stars-2 {
@@ -68,11 +72,26 @@ $color_text: #455a64;
     width: 14.4375rem;
     height: 11.1875rem;
     transform:  translateX(-50%) rotate(190deg);
+    @include desktop{
+        transform:  translate(-50%, 0%) rotate(190deg) scale(.9);
+    }
+    @include phone{
+        transform:  translate(-50%, 5%) rotate(190deg) scale(.7);
+    }
+    @media (max-width: 320px){
+        transform:  translate(-50%, 15%) rotate(190deg) scale(.7);
+    }
 }
 
 .hero__traingle {
     position: absolute;
     bottom: 0;
+    height: 42%;
+    width: 100%;
+    fill: rgba(13,15,31, .9);
+    @include tablet{
+        height: 30%;
+    }
 }
 
 .portfolio-content__left {

@@ -53,6 +53,9 @@ $color_text: #455a64;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    @media (orientation: landscape) and (max-width: 480px) {
+        bottom: 3rem;
+    }
 }
 
 .hero__traingle {
