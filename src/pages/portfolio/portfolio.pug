@@ -11,50 +11,66 @@ block content
                 include ../../images/icons/hamburger.svg
             .hero__social
                 include ../../components/blocks/social/social
-            img.hero__img(src=require('../../images/stars1.svg'), alt="")
+            img.hero__img-stars-1(src=require('../../images/stars1.svg'), alt="")
             .hero__user.author-title
                 .author-title__img
                 .author-title__name Руслан Мустафин
                 .author-title__description Личный сайт веб-разработчика
-            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 180" preserveaspectratio="none" class="hero__traingle")
-                polygon(class = "left" points="0,0   0,180   500,180   500,85" fill="rgba(13,15,31, .9)")
-                polygon(class = "right" points="1000,0   1000,180  500,180   500,85" fill="rgba(13,15,31, .9)")
+            svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 180" preserveAspectRatio='none' class="hero__traingle")
+                polygon(class = "left" points="0,0   0,180   500,180   500,75" )
+                polygon(class = "right" points="1000,0   1000,180  500,180   500,75" )
             img.hero__img-stars-2(src=require("../../images/stars2.svg") alt="")
-            h1.hero__title.title.title_font-size-63.title_text-transform-uppercase Мои работы
+            h1.hero__title.title.title_text-transform-uppercase.title_font-size-63 Мои работы
             .hero__arrow
-                img.arrow__down(src=require('../../images/icons/arrow_down.svg'))
+                img.arrow(src=require('../../images/icons/arrow_down.svg'))
         section.section.portfolio-content.clearfix
-            .portfolio-content__left
-                .portfolio-content__left-center
-                    h1.title.title_color-gray.title_font-size-35.title_text-transform-uppercase Сайт школы онлайн образования
-                    .portfolio-content__left-line.line
-                    .portfolio-content__left-text 
-                        p Html, CSS, Javascript
-                    a.portfolio-content__left-link(href='#')
-            .portfolio-content__right
-                .portfolio-content__slider    
-                    include ../../components/blocks/slider/slider.pug
+                .portfolio-content__slider.slider
+                    .slider__right-top
+                            ul.slider__container
+                                li.slider__item
+                                    img.slider__img(src=require('../../images/slide_1.png'))
+                    .slider__left
+                        .slider__left-center
+                            h1.title.title_color-gray.title_font-size-35.title_text-transform-uppercase Сайт школы онлайн образования
+                            .portfolio-content__left-line.line
+                            .portfolio-content__left-text 
+                                p Html, CSS, Javascript
+                            a.portfolio-content__left-link(href='#')
+                    .slider__right-bottom.clearfix
+                        .slider__slide-down
+                            ul.slider__container
+                                li.slider__item.slider__item_backgroud-1
+                                    .slider__item-color
+                                        img.slider__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
+                        .slider__slide-up
+                            ul.slider__container
+                                li.slider__item.slider__item_backgroud-2
+                                    .slider__item-color
+                                        img.slider__arrow.arrow.arrow_direction-up(src=require('../../images/icons/arrow_down.svg'))
         section.portfolio-contact
-            img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')
-            h1.portfolio-contact__title.title.title_font-size-63.title_text-transform-uppercase Что обо мне говорят
-            .portfolio-contact__features.clearfix
-                .portfolio-contact__features-item.portfolio-contact__features-item_float-left
-                    .portfolio-contact__photo.portfolio-contact__photo_kovalchuk
-                    blockquote.portfolio-contact__features-text 
-                        | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                    cite.portfolio-content__quote-writer
-                        | Ковальчук Дмитрий
-                    cite.portfolio-content__quote-writer-profesion
-                        | - основатель Loftschool
-                .portfolio-contact__features-item.portfolio-contact__features-item_float-right
-                    .portfolio-contact__photo.portfolio-contact__photo_sabancev
-                    blockquote.portfolio-contact__features-text
-                        | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                    cite.portfolio-content__quote-writer
-                        | Сабанцев Владимир
-                    cite.portfolio-content__quote-writer-profesion
-                        | - преподователь
-            .portfolio-contact__form
-                include ../../components/blocks/form/form.pug
+            .portfolio-contact__top
+                img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')
+                h1.portfolio-contact__title.title.title_font-size-63.title_text-transform-uppercase Что обо мне говорят
+                .portfolio-contact__features.clearfix
+                    .portfolio-contact__features-item.portfolio-contact__features-item_float-left
+                        .portfolio-contact__photo.portfolio-contact__photo_kovalchuk
+                        blockquote.portfolio-contact__features-text 
+                            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        cite.portfolio-content__quote-writer
+                            | Ковальчук Дмитрий
+                        cite.portfolio-content__quote-writer-profesion
+                            | - основатель Loftschool
+                    .portfolio-contact__features-item.portfolio-contact__features-item_float-right
+                        .portfolio-contact__photo.portfolio-contact__photo_sabancev
+                        blockquote.portfolio-contact__features-text
+                            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        cite.portfolio-content__quote-writer
+                            | Сабанцев Владимир
+                        cite.portfolio-content__quote-writer-profesion
+                            | - преподователь
+                .portfolio-contact__form
+                    include ../../components/blocks/form/form.pug
+                .portfolio-contact__arrow
+                    img.arrow.arrow_direction-up(src=require('../../images/icons/arrow_down.svg'))
             .portfolio-contact__footer
                 include ../../components/blocks/footer/footer.pug

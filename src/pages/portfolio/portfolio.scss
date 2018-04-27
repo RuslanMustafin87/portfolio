@@ -35,7 +35,7 @@ $color_text: #455a64;
     transform: translateX(-50%);
 }
 
-.hero__img {
+.hero__img-stars-1 {
     opacity: 0.15;
     position: absolute;
     top: 20%;
@@ -43,6 +43,9 @@ $color_text: #455a64;
     transform: translateX(-50%);
     width: 28.75rem;
     height: 16.875rem;
+    @include phone{
+        transform:  translateX(-50%) scale(.8);
+    }
 }
 
 .hero__arrow {
@@ -51,65 +54,48 @@ $color_text: #455a64;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    opacity: .5;
+    &:hover{
+        opacity: 1;
+    }
 }
 
 .hero__title {
     position: absolute;
-    bottom: 8.9743%;
+    bottom: 8%;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    @include desktop{
-        bottom: 6%;
-    }
-    @include phone{
-        font-size: 2.9167rem;
-    }
 }
 
 .hero__img-stars-2 {
     position: absolute;
     left: 50%;
-    bottom: 3.3%;
+    bottom: 2%;
     opacity: .25;
-    width: 13%;
-    // height: 11.1875rem;
+    width: 14.4375rem;
+    height: 11.1875rem;
     transform:  translateX(-50%) rotate(190deg);
     @include desktop{
-        transform: translate(-50%, 10%) rotate(190deg) ;
+        transform:  translate(-50%, 0%) rotate(190deg) scale(.9);
+    }
+    @include phone{
+        transform:  translate(-50%, 5%) rotate(190deg) scale(.7);
+    }
+    @media (max-width: 320px){
+        transform:  translate(-50%, 15%) rotate(190deg) scale(.7);
     }
 }
 
 .hero__traingle {
     position: absolute;
     bottom: 0;
+    height: 42%;
     width: 100%;
-    height: 43.59%;
-    @include desktop{
-        height: 37.18%;
-    };
-}
-
-.portfolio-content__left {
-    float: left;
-    width: 50%;
-    height: 100%;
-    background-color: #f2f0e8;
-    position: relative;
-}
-
-.portfolio-content__right {
-    float: right;
-    width: 50%;
-    height: 100%;
-    background-color: #d2d2d2;
-}
-
-.portfolio-content__left-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    fill: rgba(13,15,31, .9);
+    @include tablet{
+        height: 30%;
+    }
 }
 
 .portfolio-content__left-line {
@@ -160,10 +146,16 @@ $color_text: #455a64;
 }
 
 .portfolio-contact {
-    height: 84.375rem;
     background: url('../../images/beacon.png') no-repeat;
     background-size: cover;
     padding-top: 4.375rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-contact__top{
+    padding-bottom:4.375rem;
     position: relative;
 }
 
@@ -178,12 +170,20 @@ $color_text: #455a64;
     top: 8.3vh;
     left: 50%;
     transform: translateX(-50%) rotate(30deg) scale(2);
+    @include phone{
+        top: 4vh;
+        transform: translateX(-50%) rotate(30deg) scale(1);
+    }
 }
 
 .portfolio-contact__features {
     width: 47.5rem;
     margin: auto;
     margin-top: 4.375rem;
+    @include phone{
+        width: 100%;
+        padding: 0 3%;
+    }
 }
 
 .portfolio-contact__features-item {
@@ -193,10 +193,19 @@ $color_text: #455a64;
 
 .portfolio-contact__features-item_float-left {
     float: left;
+    @include phone{
+        float: none;
+        width: 100%;
+    }
 }
 
 .portfolio-contact__features-item_float-right {
     float: right;
+    @include phone{
+        float: none;
+        width: 100%;
+        margin-top: .8rem;
+    }
 }
 
 .portfolio-contact__photo {
@@ -244,9 +253,18 @@ $color_text: #455a64;
     height: 28.75rem;
 }
 
+.portfolio-contact__arrow{
+    margin: 4.375rem auto 0 auto;
+    display: table;
+}
+
 .portfolio-contact__footer {
-    position: absolute;
-    bottom: 0;
     height: 11.5625rem;
     width: 100%;
+    @include tablet{
+        height: 17.6923rem;
+    };
+    @include phone{
+        height: initial;
+    }
 }
