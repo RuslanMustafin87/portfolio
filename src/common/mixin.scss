@@ -1,3 +1,5 @@
+// миксины для адаптивности
+
 @mixin desktop(){
     @media (max-width: 1200px) {
         @content;
@@ -21,6 +23,16 @@
         @content;
     }
 }
+
+// миксины для адаптивности фоновых картинок
+
+@mixin retina{
+    @media (min-width: 1260px) {
+        @content;
+    }
+}
+
+// миксины выравнивания 
 
 @mixin align-center{
     position: absolute;

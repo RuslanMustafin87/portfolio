@@ -21,8 +21,7 @@ block content
                 polygon(class = "right" points="1000,0   1000,180  500,180   500,75" )
             img.hero__img-stars-2(src=require("../../images/stars2.svg") alt="")
             h1.hero__title.title.title_text-transform-uppercase.title_font-size-63 Мои работы
-            .hero__arrow
-                img.arrow(src=require('../../images/icons/arrow_down.svg'))
+            img.hero__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
         section.section.portfolio-content.clearfix
                 .portfolio-content__slider.slider
                     .slider__right-top
@@ -41,12 +40,12 @@ block content
                             ul.slider__container
                                 li.slider__item.slider__item_backgroud-1
                                     .slider__item-color
-                                        img.slider__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
+                                        img.slider__arrow-down.arrow(src=require('../../images/icons/arrow_down.svg'))
                         .slider__slide-up
                             ul.slider__container
                                 li.slider__item.slider__item_backgroud-2
                                     .slider__item-color
-                                        img.slider__arrow.arrow.arrow_direction-up(src=require('../../images/icons/arrow_down.svg'))
+                                        img.slider__arrow-up.arrow(src=require('../../images/icons/arrow_down.svg'))
         section.portfolio-contact
             .portfolio-contact__top
                 img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')
