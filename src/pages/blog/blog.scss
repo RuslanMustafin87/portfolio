@@ -30,10 +30,7 @@ $color_text: #455a64;
 }
 
 .blog__user {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include align-center;
 }
 
 .hero__traingle {

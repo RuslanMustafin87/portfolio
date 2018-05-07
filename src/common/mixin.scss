@@ -27,7 +27,7 @@
 // миксины для адаптивности фоновых картинок
 
 @mixin retina{
-    @media (min-width: 1260px) {
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 144dpi) {
         @content;
     }
 }
