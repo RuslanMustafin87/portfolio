@@ -32,9 +32,9 @@ module.exports = function(){
 										{cleanupIDs: false}
 									]
 								},
-								webp: {
-									quality: 100
-								}
+								// webp: {
+								// 	quality: 75
+								// }
 							}
 						}
 					]

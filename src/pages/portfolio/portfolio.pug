@@ -2,6 +2,7 @@ extends ../base
 
 block  var
     - var title = "Добро пожаловать!"
+    - var authorDescription = 'Личный сайт веб-разработчика'
     
 block content
     main.main.main-portfolio
@@ -12,10 +13,8 @@ block content
             .hero__social
                 include ../../components/blocks/social/social
             img.hero__img-stars-1(src=require('../../images/stars1.svg'), alt="")
-            .hero__user.author-title
-                .author-title__img
-                .author-title__name Руслан Мустафин
-                .author-title__description Личный сайт веб-разработчика
+            .hero__user
+                include ../../components/blocks/author_title/author_title
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 180" preserveAspectRatio='none' class="hero__traingle")
                 polygon(class = "left" points="0,0   0,180   500,180   500,75" )
                 polygon(class = "right" points="1000,0   1000,180  500,180   500,75" )

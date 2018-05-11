@@ -38,7 +38,8 @@
     color: #fff;
     text-transform: uppercase;
     display: block;
-    &:after {
+    position: relative;
+    &::after {
         content: '';
         display: none;
         height: 0.125rem;
@@ -48,8 +49,8 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: -1.875rem;
-    };
-    &:hover:after {
+    }
+    &:hover::after {
         display: block;
     }
     @include phone{
@@ -57,8 +58,6 @@
     }
 }
 
-.hamburger-menu__item {
-    &:first-child {
-        margin-top: 0;
-    };
+.hamburger-menu__link--first {
+    margin-top: 0;
 }
