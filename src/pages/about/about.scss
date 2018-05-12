@@ -29,17 +29,12 @@ $color_text: #455a64;
 }
 
 .hero__user {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include align-center;
 }
 
 .hero__img {
     opacity: 0.15;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include align-center;
     transform: translate(-50%, -50%) scale(2.5);
     @include phone{
         top: 45%;
@@ -146,12 +141,7 @@ $color_text: #455a64;
 .about-me__pic {
     width: 100%;
     height: 24.375rem;
-    background: url('../../images/photo.jpg') center no-repeat;
-    background-size: cover;
-    margin: auto;
 }
-
-
 
 .about-me__line {
     margin-top: 1.25rem;
@@ -345,10 +335,7 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .map__contacts {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include align-center;
     width: 36.25rem;
     height: 17.5rem;
     @include tablet{

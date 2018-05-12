@@ -2,16 +2,15 @@ extends ../base
 
 block  var
     - var title = "Добро пожаловать!"
+    - var authorDescription = 'Личный сайт веб-разработчика' 
     
 block content
     section.section.welcome
         .welcome__autorize.autorize Авторизироватся
         .welcome__center.welcome__center_author
             .welcome__center-top
-                .welcome__user.author-title
-                    .author-title__img
-                    .author-title__name Руслан Мустафин
-                    .author-title__description Личный сайт веб-разработчика
+                .welcome__user
+                    include ../../components/blocks/author_title/author_title
                     .welcome__social
                         include ../../components/blocks/social/social
             ul.welcome__buttons.navigation

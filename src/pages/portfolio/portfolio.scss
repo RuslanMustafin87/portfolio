@@ -256,6 +256,7 @@ $color_text: #455a64;
 .portfolio-contact__arrow{
     margin: 4.375rem auto 0 auto;
     display: table;
+    transform: rotate(180deg);
 }
 
 .portfolio-contact__footer {
@@ -266,5 +267,5 @@ $color_text: #455a64;
     };
     @include phone{
         height: initial;
-    }
+    };
 }

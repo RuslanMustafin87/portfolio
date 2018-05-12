@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pug = require('./webpack/pug');
 const css = require('./webpack/css');
 const sass = require('./webpack/sass');
-const lintCSS = require('./webpack/sass.lint');
+// const lintCSS = require('./webpack/sass.lint');
 const extractCSS = require('./webpack/css.extract');
 const image = require('./webpack/image');
 // const sprite = require('./webpack/sprite');
@@ -39,7 +39,7 @@ const config = merge([
 				$: 'jquery',
 				jQuery: 'jquery',
 				jquery: 'jquery'
-			  }),
+			}),
 			new CleanWebpackPlugin('dist'),
 			new HtmlWebpackPlugin({
 				filename: 'index.html',
@@ -75,7 +75,7 @@ const config = merge([
 	uglifyJS(),
 	babel(),
 	pug(),
-	image(PATHS.source),
+	image(),
 	// sprite(),
 	favicon(),
 	font(),

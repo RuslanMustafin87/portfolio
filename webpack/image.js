@@ -1,4 +1,4 @@
-module.exports = function(path){
+module.exports = function(){
 	return {
 		module: {
 			rules: [
@@ -22,19 +22,19 @@ module.exports = function(path){
 								},
 								optipng: {
 									enabled: false,
-								  },
+								},
 								pngquant: {
 									quality: '65-90',
 									speed: 4
-								  },
+								},
 								svgo: {
 									plugins: [
 										{cleanupIDs: false}
 									]
 								},
-								webp: {
-									quality: 75
-								}
+								// webp: {
+								// 	quality: 75
+								// }
 							}
 						}
 					]

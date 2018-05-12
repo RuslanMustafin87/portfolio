@@ -2,6 +2,7 @@ extends ../base
 
 block  var
     - var title = "Добро пожаловать!"
+    - var authorDescription = 'Личный сайт веб-разработчика'
     
 block content
     main.main.main-portfolio
@@ -12,17 +13,14 @@ block content
             .hero__social
                 include ../../components/blocks/social/social
             img.hero__img-stars-1(src=require('../../images/stars1.svg'), alt="")
-            .hero__user.author-title
-                .author-title__img
-                .author-title__name Руслан Мустафин
-                .author-title__description Личный сайт веб-разработчика
+            .hero__user
+                include ../../components/blocks/author_title/author_title
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 180" preserveAspectRatio='none' class="hero__traingle")
                 polygon(class = "left" points="0,0   0,180   500,180   500,75" )
                 polygon(class = "right" points="1000,0   1000,180  500,180   500,75" )
             img.hero__img-stars-2(src=require("../../images/stars2.svg") alt="")
             h1.hero__title.title.title_text-transform-uppercase.title_font-size-63 Мои работы
-            .hero__arrow
-                img.arrow(src=require('../../images/icons/arrow_down.svg'))
+            img.hero__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
         section.section.portfolio-content.clearfix
                 .portfolio-content__slider.slider
                     .slider__right-top
@@ -41,12 +39,12 @@ block content
                             ul.slider__container
                                 li.slider__item.slider__item_backgroud-1
                                     .slider__item-color
-                                        img.slider__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
+                                        img.slider__arrow-down.arrow(src=require('../../images/icons/arrow_down.svg'))
                         .slider__slide-up
                             ul.slider__container
                                 li.slider__item.slider__item_backgroud-2
                                     .slider__item-color
-                                        img.slider__arrow.arrow.arrow_direction-up(src=require('../../images/icons/arrow_down.svg'))
+                                        img.slider__arrow-up.arrow(src=require('../../images/icons/arrow_down.svg'))
         section.portfolio-contact
             .portfolio-contact__top
                 img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')

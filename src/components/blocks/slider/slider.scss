@@ -105,17 +105,25 @@
     &:hover {
         background-color: rgba(170,171,183, .7);
     }
-    &:hover .slider__arrow_transform-up {
+    &:hover .slider__arrow-up {
         top: 40%;
         transition: top .2s;
     }
-    &:hover .slider__arrow_transform-down {
+    &:hover .slider__arrow-down {
         top: 60%;
         transition: top .2s;
     }
 }
 
-.slider__arrow {
+.slider__arrow-down {
     display: block;
     @include align-center;
+}
+
+.slider__arrow-up{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
 }
