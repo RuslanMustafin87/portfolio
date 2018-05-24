@@ -1,15 +1,23 @@
 .slider
-    .slider__content
-        .slider__container
-            .slider__item
-                img.slider__slide(src=require('../../../images/slide_1.png'))
-    .slider__slide-down
-        .slider__container
-            .slider__item.slider__item_backgroud-1
-                .slider__item-color
-                    img.slider__arrow_transform-down.arrow(src=require('../../../images/icons/arrow_down.svg'))
-    .slider__slide-up
-        .slider__container
-            .slider__item.slider__item_backgroud-2
-                .slider__item-color
-                    img.slider__arrow_transform-up.arrow.arrow_direction-up(src=require('../../../images/icons/arrow_down.svg'))
+                    .slider__right-top
+                            ul.slider__container
+                                li.slider__item
+                                    img.slider__img(src=require('../../../images/slide_1.png'))
+                    .slider__left
+                        .slider__left-center
+                            h1.title.title_color-gray.title_font-size-35.title_text-transform-uppercase Сайт школы онлайн образования
+                            .slider__line.line
+                            .slider__text
+                                p Html, CSS, Javascript
+                            a.slider__link(href='#')
+                    .slider__right-bottom.clearfix
+                        .slider__slide-down
+                            ul.slider__container
+                                li.slider__item.slider__item_backgroud-1
+                                    .slider__item-color
+                                        img.slider__arrow-down.arrow(src=require('../../../images/icons/arrow_down.svg'))
+                        .slider__slide-up
+                            ul.slider__container
+                                li.slider__item.slider__item_backgroud-2
+                                    .slider__item-color
+                                        img.slider__arrow-up.arrow(src=require('../../../images/icons/arrow_down.svg'))

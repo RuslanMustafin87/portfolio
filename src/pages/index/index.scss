@@ -10,6 +10,7 @@ $color_text: #455a64;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
+    position: relative;
     @include retina{
         background: url('../../images/main_bg.png') center / cover no-repeat;
     }
@@ -33,6 +34,20 @@ $color_text: #455a64;
     }
 }
 
+.welcome__center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 23.75rem;
+    height: 27.8125rem;
+    background-color:  rgba(34, 47, 79, .6);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
 .welcome__autorize {
     position: absolute;
     top: 1.25rem;
@@ -47,20 +62,6 @@ $color_text: #455a64;
     display: none;
 }
 
-.welcome__center {
-    width: 23.75rem;
-    height: 27.8125rem;
-    background-color:  rgba(34, 47, 79, .6);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
 .welcome__center-top {
     position: relative;
     height: 24.6875rem;
@@ -68,10 +69,7 @@ $color_text: #455a64;
 }
 
 .welcome__user {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .welcome__social {

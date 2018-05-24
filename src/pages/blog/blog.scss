@@ -73,7 +73,7 @@ $color_text: #455a64;
     @include tablet{
         float: none;
         width: 30%;
-        position: absolute;
+        position: fixed;
         z-index: 2;
         transform: translateX(-100%);
         background-color: $color_button;

@@ -13,7 +13,10 @@ block content
             .blog__hamburger.hamburger-icon
                 include ../../images/icons/hamburger.svg
             .blog__user
-                include ../../components/blocks/author_title/author_title
+                .author-title
+                    img.author-title__img(src=require('../../images/avatar_photo.jpg') alt='Руслан Мустафин')
+                    .author-title__name Руслан Мустафин
+                    .author-title__description Сайты, которые я написал
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="hero__traingle")
                 polygon(class = "left" points="0,0   0,86   500.8,86   500.8,75.5" fill="#f2f0e8")
                 polygon(class = "right" points="1000,0   1000,86   500,86   500,75.5" fill="#f2f0e8")

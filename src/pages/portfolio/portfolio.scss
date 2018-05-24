@@ -33,6 +33,7 @@ $color_text: #455a64;
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
+    width: 15.625rem;
 }
 
 .hero__img-stars-1 {
@@ -95,49 +96,6 @@ $color_text: #455a64;
     fill: rgba(13,15,31, .9);
     @include tablet{
         height: 30%;
-    }
-}
-
-.portfolio-content__left-line {
-    margin-top: 1.875rem;
-}
-
-.portfolio-content__left-text {
-    margin-top: 1.875rem;
-    text-transform: uppercase;
-    color: $color_hover;
-    font-family: 'Roboto';
-    font-weight: 500;
-    text-align: center;
-}
-
-.portfolio-content__left-link {
-    display: block;
-    width: 12.5rem;
-    height: 2.8125rem;
-    margin: auto;
-    margin-top: 3.4375rem;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    background-color: $color_button;
-    line-height: 2.8125rem;
-    &:hover {
-        background-color: $color_hover;
-    }
-    &::after {
-        content: '';
-        float: left;
-        width: 22.5%;
-        height: 100%;
-        background: url('../../images/icons/link.svg') no-repeat;
-        background-position: center;
-    }
-    &::before {
-        content: 'Посмотреть сайт';
-        float: right;
-        width: 77.5%;
-        height: 100%;
     }
 }
 
