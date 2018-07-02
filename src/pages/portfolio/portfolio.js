@@ -23,3 +23,12 @@ arrowDown.addEventListener('click', () => {
 	}, 1);
 
 });
+
+// позиционирование фона для элемента блюра
+
+function blur(){
+	const elem = document.querySelector('.portfolio-contact');
+	const blurElem = document.querySelector('.');
+	const elemSize = elem.clientHeight;
+	posLeft = 
+}

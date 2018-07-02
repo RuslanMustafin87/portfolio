@@ -106,6 +106,7 @@ $color_text: #455a64;
 .portfolio-contact {
     background: url('../../images/beacon.png') no-repeat;
     background-size: cover;
+    background-position: center;
     padding-top: 4.375rem;
     display:flex;
     flex-direction: column;
@@ -209,6 +210,20 @@ $color_text: #455a64;
     margin-top: 4.6875rem;
     width: 23.75rem;
     height: 28.75rem;
+    position: relative;
+}
+
+.portfolio-contact__form::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // filter: blur(50px);
+    background: url('../../images/beacon.png') no-repeat;
+    background-size: 1860px;
 }
 
 .portfolio-contact__arrow{
