@@ -8,27 +8,37 @@ hamburger();
 
 // прокрутка при нажатии стрелки вниз .arrow__down
 
-const arrowDown = document.querySelector('.arrow__down');
+// const arrowDown = document.querySelector('.arrow__down');
 
-arrowDown.addEventListener('click', () => {
+// arrowDown.addEventListener('click', () => {
 
-	var timerId = setInterval( () => {
+// 	var timerId = setInterval( () => {
         
-		if (window.pageYOffset >= window.innerHeight) {
-			clearInterval(timerId);
-		} else {
-			window.scrollBy(0, 7);
-		}
+// 		if (window.pageYOffset >= window.innerHeight) {
+// 			clearInterval(timerId);
+// 		} else {
+// 			window.scrollBy(0, 7);
+// 		}
 
-	}, 1);
+// 	}, 1);
 
-});
+// });
 
-// позиционирование фона для элемента блюра
+// позиционирование фона для элемента с блюром
 
 function blur(){
-	const elem = document.querySelector('.portfolio-contact');
-	const blurElem = document.querySelector('.');
-	const elemSize = elem.clientHeight;
-	posLeft = 
+	const section = document.querySelector('.portfolio-contact');
+	const elem = document.querySelector('.portfolio-contact__form');
+	var blurElem = document.querySelector('.portfolio-contact__form-blur');
+	const elemSize = section.clientWidth;
+	const posLeft = -elem.offsetLeft;
+	const posTop = -elem.offsetTop;
+
+	blurElem.style.backgroundSize = elemSize + 'px' + ' ' + 'auto';
+	blurElem.style.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
+	alert(elem.offsetLeft + ' ' + elem.offsetTop);
 }
+
+blur();
+
+window.resize = blur;

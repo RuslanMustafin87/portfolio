@@ -111,11 +111,11 @@ $color_text: #455a64;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    position:  relative;
 }
 
 .portfolio-contact__top{
     padding-bottom:4.375rem;
-    position: relative;
 }
 
 .portfolio-contact__title {
@@ -211,19 +211,17 @@ $color_text: #455a64;
     width: 23.75rem;
     height: 28.75rem;
     position: relative;
+    overflow: hidden;
 }
 
-.portfolio-contact__form::before {
-    display: block;
-    content: '';
+.portfolio-contact__form-blur {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    // filter: blur(50px);
-    background: url('../../images/beacon.png') no-repeat;
-    background-size: 1860px;
+    // filter: blur(20px);
+    background:  url('../../images/beacon.png') no-repeat;
 }
 
 .portfolio-contact__arrow{
