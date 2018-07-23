@@ -6,6 +6,9 @@ block  var
     
 block content
     section.section.welcome
+        video(class='welcome__video' preload autoplay loop)
+            source(src=require('../../images/night.mp4'))
+        include ../../components/blocks/parallax/parallax
         .welcome__autorize.autorize Авторизироватся
         .welcome__center.welcome__center_author
             .welcome__center-top

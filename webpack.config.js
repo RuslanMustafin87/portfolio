@@ -12,6 +12,7 @@ const sass = require('./webpack/sass');
 // const lintCSS = require('./webpack/sass.lint');
 const extractCSS = require('./webpack/css.extract');
 const image = require('./webpack/image');
+const video = require('./webpack/video');
 // const sprite = require('./webpack/sprite');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
@@ -76,6 +77,7 @@ const config = merge([
 	babel(),
 	pug(),
 	image(),
+	video(),
 	// sprite(),
 	favicon(),
 	font(),

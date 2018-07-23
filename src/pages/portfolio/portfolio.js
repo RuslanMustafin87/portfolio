@@ -36,7 +36,6 @@ function blur(){
 
 	blurElem.style.backgroundSize = elemSize + 'px' + ' ' + 'auto';
 	blurElem.style.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
-	alert(elem.offsetLeft + ' ' + elem.offsetTop);
 }
 
 blur();

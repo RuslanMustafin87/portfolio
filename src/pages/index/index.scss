@@ -6,13 +6,24 @@ $color_title: #474b57;
 $color_text: #455a64;
 
 .welcome {
-    background: url('../../images/main_bg_2.png') center / cover no-repeat;
+    // background: url('../../images/main_bg_2.png') center / cover no-repeat;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
     position: relative;
-    @include retina{
-        background: url('../../images/main_bg.png') center / cover no-repeat;
+    // @include retina{
+    //     background: url('../../images/main_bg.png') center / cover no-repeat;
+    // }
+}
+
+.welcome__video{
+    position: absolute;
+    width: 100%;
+    top:0;
+    left: 0;
+    @include tablet {
+        width: initial;
+        height: 100%;
     }
 }
 

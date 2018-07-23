@@ -2,6 +2,10 @@ import 'normalize.css';
 import '../main.scss';
 import './index.scss';
 
+import {parallax} from '../../components/blocks/parallax/parallax.js';
+
+parallax();
+
 const welAutorize = document.querySelector('.autorize');
 const welLogin = document.querySelector('.welcome__center_login');
 const welAuthor = document.querySelector('.welcome__center_author');
