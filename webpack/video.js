@@ -3,7 +3,7 @@ module.exports = function(){
 		module: {
 			rules: [
 				{
-					test: /\.mp4$/,
+					test: /\.(mp4|webm)$/,
 					loader: 'file-loader',
 					options: {
 						name: '[name].[ext]',

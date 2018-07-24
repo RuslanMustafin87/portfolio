@@ -20,7 +20,23 @@ window.onload = () => {
 	setTimeout( () => {
 		welAuthor.style.transformOrigin = '50% 50%';
 	}, 800);
+
+	// videoResize();
 };
+
+// window.addEventListener('resize', videoResize);
+
+// function videoResize(){
+// 	let video = document.querySelector('.welcome__video');
+
+// 	if (window.innerWidth >= window.innerHeight) {
+// 		video.style.height = 'auto';
+// 		video.style.width = '100%';
+// 	} else {
+// 		video.style.width = 'auto';
+// 		video.style.height = '100%';
+// 	}
+// } 
 
 // flip_index vertical
 
