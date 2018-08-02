@@ -1,22 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const uglifyJS = require('./webpack/uglifyJS');
 const babel = require('./webpack/babel');
 const merge = require('webpack-merge');
-const server = require('./webpack/devserver');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pug = require('./webpack/pug');
 const css = require('./webpack/css');
 const sass = require('./webpack/sass');
 // const lintCSS = require('./webpack/sass.lint');
-const extractCSS = require('./webpack/css.extract');
 const image = require('./webpack/image');
 const video = require('./webpack/video');
-// const sprite = require('./webpack/sprite');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
 const favicon = require('./webpack/favicon');
+const argv = require('yargs').argv;
+
+const devMode = argv.mode === 'development';
 
 const PATHS = {
 	source: path.join(__dirname, 'src'),
@@ -34,6 +33,21 @@ const config = merge([
 		output: {
 			path: PATHS.build,
 			filename: './js/[name].js'
+		},
+		optimization: {
+			runtimeChunk: { name: 'common' },
+			splitChunks: {
+				cacheGroups: {
+					default: false,
+					commons: {
+						test: /\.(js|css)$/,
+						chunks: 'all',
+						minChunks: 2,
+						name: 'common',
+						enforce: true,
+					},
+			  },
+			},
 		},
 		plugins: [
 			new webpack.ProvidePlugin({
@@ -66,36 +80,27 @@ const config = merge([
 					'common'],
 				template: PATHS.source + '/pages/portfolio/portfolio.pug'
 			}),
-			new webpack.optimize.CommonsChunkPlugin({
-				name: 'common'
-			}),
 		],
 	},
 	lintJS(PATHS.source),
 	// lintCSS(),
-	uglifyJS(),
 	babel(),
 	pug(),
 	image(),
 	video(),
-	// sprite(),
+	css(devMode),
+	sass(devMode),
 	favicon(),
 	font(),
+	{
+		devServer: {
+			stats: 'errors-only',
+			port: 9000
+		}
+	},
+	{
+		devtool: devMode ? 'eval-source-map': ''
+	}
 ]);
 
-module.exports = function(env){
-	if (env === 'production') {
-		return merge([
-			config,
-			extractCSS()
-		]);
-	}
-	if (env === 'development') {
-		return merge([
-			config,
-			css(),
-			sass(),
-			server()
-		]);
-	}
-};
+module.exports = config;

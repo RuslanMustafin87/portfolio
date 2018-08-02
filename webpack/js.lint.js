@@ -11,7 +11,6 @@ module.exports = (paths) => {
 						/dist/],
 					options: {
 						fix: true,
-						cache: true
 					}
 				}
 			]

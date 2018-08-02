@@ -56,11 +56,11 @@ html {
   }
   @include laptop(){
     font-size: 14px;
-  };
+  }
   @include tablet(){
     font-size: 13px;
-  };
+  }
   @include phone(){
     font-size: 12px;
-  };
+  }
 }

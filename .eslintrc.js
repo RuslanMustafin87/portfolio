@@ -14,10 +14,11 @@ module.exports = {
         "quotes": ["error", "single"],
         "eqeqeq": "error",
         "curly": "error",
-        "array-element-newline": "error",
+        "array-element-newline": ["error", "consistent"],
         "array-bracket-spacing": "error",
         "indent": ["error", "tab", { "ObjectExpression": 1 }],
-        "comma-spacing": [ "error", {"before": false, "after":true} ]
+        "comma-spacing": [ "error", {"before": false, "after":true} ],
+        "no-console": "off"
     },
     "globals": {
         "$": true,

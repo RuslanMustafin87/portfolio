@@ -1,35 +1,24 @@
-const autoprefixer = require('autoprefixer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = function(){
+module.exports = function(devMode){
 	return {
 		module: {
 			rules: [
 				{
 					test: /\.scss$/,
 					use: [
-						'style-loader',
-						{
-							loader: 'css-loader',
-							options: {
-								minimize: true,
-								sourceMap: true
-							}
-						},
-						{
-							loader: 'postcss-loader',
-							options: {
-								plugins: [
-									autoprefixer({
-										browsers:['ie >= 8', 'last 4 version']
-									})
-								],
-								sourceMap: true
-							}
-						},
+						devMode ? 'style-loader': MiniCssExtractPlugin.loader,
+						'css-loader',
+						'postcss-loader',
 						'sass-loader'
 					]
 				}
 			]
-		}
+		},
+		plugins: [
+			new MiniCssExtractPlugin({
+				filename: 'css/[name].css',
+			})
+		],
 	};
 };

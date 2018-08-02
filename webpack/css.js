@@ -1,21 +1,23 @@
-module.exports = function(){
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = function(devMode){
 	return {
 		module: {
 			rules: [
 				{
 					test: /\.css$/,
 					use: [
-						'style-loader',
-						{
-							loader: 'css-loader',
-							options: {
-								minimize: true,
-								sourceMap: true
-							}
-						}
+						devMode ? 'style-loader': MiniCssExtractPlugin.loader,
+						'css-loader',
+						'postcss-loader'
 					]
 				}
 			]
-		}
+		},
+		plugins: [
+			new MiniCssExtractPlugin({
+				filename: 'css/[name].css',
+			})
+		],
 	};
 }

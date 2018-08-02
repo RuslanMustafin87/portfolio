@@ -23,18 +23,18 @@
     padding: 0 1.875rem;
     &:last-child {
         border: none;
-    };
+    }
     @include desktop(){
         &:first-child {
             width: 35%;
-        };
+        }
         &:nth-child(2) {
             width: 40%;
-        };
+        }
         &:nth-child(3) {
             width: 25%;
-        };
-    };
+        }
+    }
     @include tablet{
         border-right: none;
         &:first-child {
@@ -44,13 +44,13 @@
             text-align: center;
             height: 4.615rem;
             padding: 0;
-        };
+        }
         &:nth-child(2) {
             width: 60%;
             float: left;
             padding: 0;
             padding-top: 1.25rem;
-        };
+        }
         &:nth-child(3) {
             width: 40%;
             float: right;
@@ -65,14 +65,14 @@
             border-bottom: 1px solid #9c9d9f;
             padding-bottom: 1.25rem;
             height: initial;
-        };
+        }
         &:nth-child(3){
             width:100%;
             float:none;
             height: initial;
             padding-bottom: 6.25rem;
         }
-    };
+    }
 }
 
 .footer__description {
@@ -142,7 +142,7 @@
         height: 5rem;
         padding-left: 3.125%;
         padding-right: 3.125%;
-    };
+    }
     & p {
         position: relative;
         top: 50%;
