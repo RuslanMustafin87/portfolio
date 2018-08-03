@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start": "webpack-dev-server --env development --open --inline --hot",
+    "start": "webpack-dev-server --mode development --open --inline --hot",
     "watch": "weppack --mode development",
     "eslint": "eslint . --cache . --fix",
     "stylelint": "stylelint src/**/*.scss --fix --syntax scss"
