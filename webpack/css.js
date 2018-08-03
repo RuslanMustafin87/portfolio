@@ -11,12 +11,21 @@ module.exports = function(devMode){
 						'css-loader',
 						'postcss-loader'
 					]
+				},
+				{
+					test: /\.scss$/,
+					use: [
+						devMode ? 'style-loader': MiniCssExtractPlugin.loader,
+						'css-loader',
+						'postcss-loader',
+						'sass-loader'
+					]
 				}
 			]
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: 'css/[name].css',
+				filename: '[name].css',
 			})
 		],
 	};

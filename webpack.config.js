@@ -6,7 +6,6 @@ const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pug = require('./webpack/pug');
 const css = require('./webpack/css');
-const sass = require('./webpack/sass');
 // const lintCSS = require('./webpack/sass.lint');
 const image = require('./webpack/image');
 const video = require('./webpack/video');
@@ -89,7 +88,6 @@ const config = merge([
 	image(),
 	video(),
 	css(devMode),
-	sass(devMode),
 	favicon(),
 	font(),
 	{

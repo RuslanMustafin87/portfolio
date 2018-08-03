@@ -30,14 +30,15 @@ function blur(){
 	const section = document.querySelector('.portfolio-contact');
 	const elem = document.querySelector('.portfolio-contact__form');
 	var blurElem = document.querySelector('.portfolio-contact__form-blur');
-	const elemSize = section.clientWidth;
+	const elemHeight = section.clientHeight;
+	const elemWidth = section.clientWidth;
 	const posLeft = -elem.offsetLeft;
 	const posTop = -elem.offsetTop;
 
-	blurElem.style.backgroundSize = elemSize + 'px' + ' ' + 'auto';
-	blurElem.style.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
+	blurElem.style.backgroundSize = `${elemWidth}px ${elemHeight}px`;
+	blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`;
 }
 
 blur();
 
-window.resize = blur;
+window.addEventListener('resize', blur);

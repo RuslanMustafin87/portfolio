@@ -42,8 +42,7 @@ $color_text: #455a64;
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    width: 28.75rem;
-    height: 16.875rem;
+    size: 28.75rem 16.875rem;
     @include phone{
         transform:  translateX(-50%) scale(.8);
     }
@@ -99,14 +98,18 @@ $color_text: #455a64;
     }
 }
 
+.portfolio-content {
+    @util clearfix;
+}
+
 .portfolio-content__slider {
     height: 100%;
 }
 
 .portfolio-contact {
     background: url('../../images/beacon.png') no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    // background-position: center;
     padding-top: 4.375rem;
     display:flex;
     flex-direction: column;
@@ -136,6 +139,7 @@ $color_text: #455a64;
 }
 
 .portfolio-contact__features {
+    @util clearfix; 
     width: 47.5rem;
     margin: auto;
     margin-top: 4.375rem;
@@ -168,10 +172,9 @@ $color_text: #455a64;
 }
 
 .portfolio-contact__photo {
-    border-radius: 50% 50%;
+    border-radius: 50%;
     display: block;
-    height: 5rem;
-    width: 5rem;
+    size: 5rem;
     background-size: cover;
     background-position: center;
     margin: auto;
@@ -218,9 +221,8 @@ $color_text: #455a64;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    // filter: blur(20px);
+    size: 100%;
+    filter: blur(2px);
     background:  url('../../images/beacon.png') no-repeat;
 }
 
@@ -231,12 +233,11 @@ $color_text: #455a64;
 }
 
 .portfolio-contact__footer {
-    height: 11.5625rem;
-    width: 100%;
+    size: 100% 11.5625rem;
     @include tablet{
-        height: 17.6923rem;
-    };
+        size: 100% 17.6923rem;
+    }
     @include phone{
-        height: initial;
-    };
+        size: 100% initial;
+    }
 }

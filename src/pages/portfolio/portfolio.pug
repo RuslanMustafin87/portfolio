@@ -22,14 +22,14 @@ block content
             img.hero__img-stars-2(src=require("../../images/stars2.svg") alt="")
             h1.hero__title.title.title_text-transform-uppercase.title_font-size-63 Мои работы
             img.hero__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
-        section.section.portfolio-content.clearfix
+        section.section.portfolio-content
                 .portfolio-content__slider
                     include ../../components/blocks/slider/slider.pug
         section.portfolio-contact
             .portfolio-contact__top
                 img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')
                 h1.portfolio-contact__title.title.title_font-size-63.title_text-transform-uppercase Что обо мне говорят
-                .portfolio-contact__features.clearfix
+                .portfolio-contact__features
                     .portfolio-contact__features-item.portfolio-contact__features-item_float-left
                         .portfolio-contact__photo.portfolio-contact__photo_kovalchuk
                         blockquote.portfolio-contact__features-text 
