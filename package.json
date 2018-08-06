@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open --inline --hot",
-    "watch": "weppack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development  webpack --mode development",
+    "start": "cross-env NODE_ENV=development  webpack-dev-server --mode development --open --inline --hot",
+    "watch": "cross-env NODE_ENV=development  weppack --mode development",
     "eslint": "eslint . --cache . --fix",
     "stylelint": "stylelint src/**/*.scss --fix --syntax scss"
   },
@@ -20,6 +20,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.17",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.0.5",
@@ -45,8 +46,7 @@
     "webpack": "4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
-    "webpack-merge": "^4.1.4",
-    "yargs": "^12.0.1"
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {
     "jquery": "^3.2.1",

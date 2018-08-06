@@ -40,26 +40,41 @@ hamburger();
 // }
 
 function blur(){
-	// const heightToWidth = 0.75;
+	const heightToWidth = 0.75;
 	const widthToHeight = 1.332; // соотношение ширины к высоте
+
 	const section = document.querySelector('.portfolio-contact'); // секция родитель
 	const blurElem = document.querySelector('.portfolio-contact__form-blur'); // форма
 	const form = document.querySelector('.portfolio-contact__form'); // элемент с блюром
 
 	const sectionHeight = section.clientHeight; // высота секции родителя
-	// const sectionWidth = section.clientWidth;
+	const sectionWidth = section.clientWidth;
 	const formWidth = form.clientWidth; // ширина формы
+	// const formHeight= form.clientHeight; // выстота формы 
 
-	const sectionBackgroundWidth = sectionHeight * widthToHeight; // иширина фона родителя 
+	if (widthToHeight > sectionWidth / sectionHeight) {
 
-	const posTop = -form.offsetTop; // позиционирование по высоте
-	const posLeft = -(sectionBackgroundWidth / 2 - formWidth / 2); // позиционирование по высоте
+		const sectionBackgroundWidth = sectionHeight * widthToHeight; // иширина фона родителя 
 
-	
-	blurElem.style.backgroundSize = `auto ${sectionHeight}px`; // размеры фона элемета блюра
-	blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование
+		const posTop = -form.offsetTop; // позиционирование по высоте
+		const posLeft = -(sectionBackgroundWidth / 2 - formWidth / 2); // позиционирование по высоте
+
+		
+		blurElem.style.backgroundSize = `auto ${sectionHeight}px`; // размеры фона элемета блюра
+		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
+	} 
+	else {
+		
+		const sectionBackgroundHeight = sectionWidth * heightToWidth;
+
+		const posTop = -((sectionBackgroundHeight - sectionHeight) / 2 + form.offsetTop);
+		const posLeft = -form.offsetLeft;
+
+		blurElem.style.backgroundSize = `${sectionWidth}px auto`; // размеры фона элемета блюра
+		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
+	}
 }
 
-blur();
+window.addEventListener('load', blur);
 
 window.addEventListener('resize', blur);

@@ -12,9 +12,8 @@ const video = require('./webpack/video');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
 const favicon = require('./webpack/favicon');
-const argv = require('yargs').argv;
 
-const devMode = argv.mode === 'development';
+const devMode = process.env.NODE_ENV === 'development';
 
 const PATHS = {
 	source: path.join(__dirname, 'src'),
@@ -45,7 +44,7 @@ const config = merge([
 						name: 'common',
 						enforce: true,
 					},
-			  },
+				},
 			},
 		},
 		plugins: [
