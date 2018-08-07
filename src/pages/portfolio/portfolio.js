@@ -26,22 +26,9 @@ hamburger();
 
 // позиционирование фона для элемента с блюром
 
-// function blur(){
-// 	const section = document.querySelector('.portfolio-contact');
-// 	const elem = document.querySelector('.portfolio-contact__form');
-// 	var blurElem = document.querySelector('.portfolio-contact__form-blur');
-// 	const elemHeight = section.clientHeight;
-// 	const elemWidth = section.clientWidth;
-// 	const posLeft = -elem.offsetLeft;
-// 	const posTop = -elem.offsetTop;
-
-// 	blurElem.style.backgroundSize = `${elemWidth}px ${elemHeight}px`;
-// 	blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`;
-// }
-
 function blur(){
-	const heightToWidth = 0.75;
-	const widthToHeight = 1.332; // соотношение ширины к высоте
+	const heightToWidth = 0.7506;
+	const widthToHeight = 1.3323; // соотношение ширины к высоте у картинки для фона
 
 	const section = document.querySelector('.portfolio-contact'); // секция родитель
 	const blurElem = document.querySelector('.portfolio-contact__form-blur'); // форма
@@ -51,10 +38,9 @@ function blur(){
 	const sectionWidth = section.clientWidth;
 	const formWidth = form.clientWidth; // ширина формы
 	// const formHeight= form.clientHeight; // выстота формы 
-
-	if (widthToHeight > sectionWidth / sectionHeight) {
-
-		const sectionBackgroundWidth = sectionHeight * widthToHeight; // иширина фона родителя 
+	
+	function heightPositioning(){ // функция позиционирования фона по высоте
+		const sectionBackgroundWidth = sectionHeight * widthToHeight; // ширина фона родителя 
 
 		const posTop = -form.offsetTop; // позиционирование по высоте
 		const posLeft = -(sectionBackgroundWidth / 2 - formWidth / 2); // позиционирование по высоте
@@ -62,9 +48,9 @@ function blur(){
 		
 		blurElem.style.backgroundSize = `auto ${sectionHeight}px`; // размеры фона элемета блюра
 		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
-	} 
-	else {
-		
+	}
+
+	function widthPositioning(){ // функция позиционирования фона по ширине
 		const sectionBackgroundHeight = sectionWidth * heightToWidth;
 
 		const posTop = -((sectionBackgroundHeight - sectionHeight) / 2 + form.offsetTop);
@@ -73,6 +59,30 @@ function blur(){
 		blurElem.style.backgroundSize = `${sectionWidth}px auto`; // размеры фона элемета блюра
 		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
 	}
+
+	widthToHeight > sectionWidth / sectionHeight ? heightPositioning(): widthPositioning();
+
+	// if (widthToHeight > sectionWidth / sectionHeight) {
+
+	// 	const sectionBackgroundWidth = sectionHeight * widthToHeight; // иширина фона родителя 
+
+	// 	const posTop = -form.offsetTop; // позиционирование по высоте
+	// 	const posLeft = -(sectionBackgroundWidth / 2 - formWidth / 2); // позиционирование по высоте
+
+		
+	// 	blurElem.style.backgroundSize = `auto ${sectionHeight}px`; // размеры фона элемета блюра
+	// 	blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
+	// } 
+	// else {
+		
+	// 	const sectionBackgroundHeight = sectionWidth * heightToWidth;
+
+	// 	const posTop = -((sectionBackgroundHeight - sectionHeight) / 2 + form.offsetTop);
+	// 	const posLeft = -form.offsetLeft;
+
+	// 	blurElem.style.backgroundSize = `${sectionWidth}px auto`; // размеры фона элемета блюра
+	// 	blurElem.style.backgroundPosition = `${posLeft}px ${posTop - 1}px`; // позиционирование фона
+	// }
 }
 
 window.addEventListener('load', blur);
