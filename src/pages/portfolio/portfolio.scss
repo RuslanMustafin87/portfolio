@@ -107,7 +107,7 @@ $color_text: #455a64;
 }
 
 .portfolio-contact {
-    background: url('../../images/beacon_test.png') no-repeat;
+    background: url('../../images/beacon.png') no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 4.375rem;
@@ -223,8 +223,8 @@ $color_text: #455a64;
     top: 0;
     left: 0;
     size: 100%;
-    // filter: blur(2px);
-    background:  url('../../images/beacon_test.png') no-repeat;
+    filter: blur(2px);
+    background:  url('../../images/beacon.png') no-repeat;
 }
 
 .portfolio-contact__arrow{

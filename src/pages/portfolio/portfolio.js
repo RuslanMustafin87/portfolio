@@ -61,28 +61,6 @@ function blur(){
 	}
 
 	widthToHeight > sectionWidth / sectionHeight ? heightPositioning(): widthPositioning();
-
-	// if (widthToHeight > sectionWidth / sectionHeight) {
-
-	// 	const sectionBackgroundWidth = sectionHeight * widthToHeight; // иширина фона родителя 
-
-	// 	const posTop = -form.offsetTop; // позиционирование по высоте
-	// 	const posLeft = -(sectionBackgroundWidth / 2 - formWidth / 2); // позиционирование по высоте
-
-		
-	// 	blurElem.style.backgroundSize = `auto ${sectionHeight}px`; // размеры фона элемета блюра
-	// 	blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
-	// } 
-	// else {
-		
-	// 	const sectionBackgroundHeight = sectionWidth * heightToWidth;
-
-	// 	const posTop = -((sectionBackgroundHeight - sectionHeight) / 2 + form.offsetTop);
-	// 	const posLeft = -form.offsetLeft;
-
-	// 	blurElem.style.backgroundSize = `${sectionWidth}px auto`; // размеры фона элемета блюра
-	// 	blurElem.style.backgroundPosition = `${posLeft}px ${posTop - 1}px`; // позиционирование фона
-	// }
 }
 
 window.addEventListener('load', blur);
