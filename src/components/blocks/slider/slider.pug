@@ -1,8 +1,12 @@
 .slider
                     .slider__right-top
                             ul.slider__container
-                                li.slider__item
+                                li.slider__item.slide__active
                                     img.slider__img(src=require('../../../images/slide_1.png'))
+                                li.slider__item
+                                    img.slider__img(src=require('../../../images/slide_2.png'))
+                                li.slider__item
+                                    img.slider__img(src=require('../../../images/slide_3.png'))
                     .slider__left
                         .slider__left-center
                             h1.title.title_color-gray.title_font-size-35.title_text-transform-uppercase Сайт школы онлайн образования
@@ -11,13 +15,21 @@
                                 p Html, CSS, Javascript
                             a.slider__link(href='#')
                     .slider__right-bottom.clearfix
-                        .slider__slide-down
-                            ul.slider__container
-                                li.slider__item.slider__item_backgroud-1
+                        .slider__slide-down.slider-vert-roll
+                            ul.slider__container-down
+                                li.slider__item-down.slider__item_backgroud-1
                                     .slider__item-color
-                                        img.slider__arrow-down.arrow(src=require('../../../images/icons/arrow_down.svg'))
-                        .slider__slide-up
-                            ul.slider__container
-                                li.slider__item.slider__item_backgroud-2
+                                li.slider__item-down.slider__item_backgroud-2.slider-vert-roll__slide-active
                                     .slider__item-color
-                                        img.slider__arrow-up.arrow(src=require('../../../images/icons/arrow_down.svg'))
+                                li.slider__item-down.slider__item_backgroud-3
+                                    .slider__item-color
+                            img.slider__arrow-down.arrow(src=require('../../../images/icons/arrow_down.svg'))
+                        .slider__slide-up.slider-vert-roll
+                            img.slider__arrow-up.arrow(src=require('../../../images/icons/arrow_down.svg'))
+                            ul.slider__container-down
+                                li.slider__item-down.slider__item_backgroud-1
+                                    .slider__item-color
+                                li.slider__item-down.slider__item_backgroud-2
+                                    .slider__item-color
+                                li.slider__item-down.slider__item_backgroud-3
+                                    .slider__item-color
