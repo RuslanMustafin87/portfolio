@@ -3,7 +3,7 @@ import '../main.scss';
 import './portfolio.scss';
 
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
-import slider from '../../components/blocks/slider/slider.js';
+import slider from '../../components/blocks/slider/index.js';
 
 hamburger();
 slider();
