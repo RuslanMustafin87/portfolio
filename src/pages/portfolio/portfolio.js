@@ -3,8 +3,10 @@ import '../main.scss';
 import './portfolio.scss';
 
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
+import slider from '../../components/blocks/slider/slider.js';
 
 hamburger();
+slider();
 
 // прокрутка при нажатии стрелки вниз .arrow__down
 

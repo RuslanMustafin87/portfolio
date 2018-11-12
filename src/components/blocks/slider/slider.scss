@@ -132,11 +132,16 @@
     width: 100%;
     left: 0;
     top: -100%;
+    transition: top .5s linear;
 }
 
 .slider__item-down, .slider__item-up{
     height: 33.3333%;
 }
+
+// .slider-vert-roll__slide-active{
+    
+// }
 
 .slider__container {
     height: 100%;
