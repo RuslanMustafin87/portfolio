@@ -14,58 +14,53 @@ function indexElem(elem){
 
 // движение вниз контейнера сладера
 
-const sliderContainerDown = document.querySelector('.slider__container-down');
-
-function sliderSmallDown(){
+function sliderSmallDown(container, activeClass){
 		
-	const slideVertActive = document.querySelector('.slider-vert-roll__slide-active_down');
-	const slideNext = slideVertActive.nextElementSibling;
-	const slideFirst = sliderContainerDown.firstElementChild;
-	let positionSliderVert;
+	const slideActive = document.getElementsByClassName(activeClass)[0];
+	const slideNext = slideActive.nextElementSibling;
+	const slideFirst = container.firstElementChild;
+	let positionSlider;
 		
-	slideVertActive.classList.remove('slider-vert-roll__slide-active_down');
+	slideActive.classList.remove('slider-vert-roll__slide-active_down');
 
 	if (slideNext){
 
 		slideNext.classList.add('slider-vert-roll__slide-active_down');
 		
-		positionSliderVert = indexElem(slideNext) * -100;
+		positionSlider = indexElem(slideNext) * -100;
 	} else {
 		
 		slideFirst.classList.add('slider-vert-roll__slide-active_down');
 
-		positionSliderVert = indexElem(slideFirst) * -100;
+		positionSlider = indexElem(slideFirst) * -100;
 	}
 
-	sliderContainerDown.style.top = positionSliderVert + '%';
+	container.style.top = positionSlider + '%';
 }
 
 // движение вверх контейнера сладера
 
-const sliderContainerUp = document.querySelector('.slider__container-up');
-
-function sliderSmallUp(){
+function sliderSmallUp(container, activeClass){
 		
-	const slideVertActive = document.querySelector('.slider-vert-roll__slide-active_up');
-	const slideNext = slideVertActive.nextElementSibling;
-	const slideLast = sliderContainerUp.lastElementChild;
-	let positionSliderVert;
+	const slideActive = document.getElementsByClassName(activeClass)[0];
+	const slideNext = slideActive.nextElementSibling;
+	const slideFirst = container.firstElementChild;
+	let positionSlider;
 		
-	slideVertActive.classList.remove('slider-vert-roll__slide-active_up');
+	slideActive.classList.remove('slider-vert-roll__slide-active_up');
 
 	if (slideNext){
-
 		slideNext.classList.add('slider-vert-roll__slide-active_up');
 		
-		positionSliderVert = indexElem(slideNext) * 100;
+		positionSlider = indexElem(slideNext) * -100;
 	} else {
 		
-		slideLast.classList.add('slider-vert-roll__slide-active_up');
+		slideFirst.classList.add('slider-vert-roll__slide-active_up');
 
-		positionSliderVert = indexElem(slideLast) * 100;
+		positionSlider = indexElem(slideFirst) * -100;
 	}
 
-	sliderContainerUp.style.top = positionSliderVert + '%';
+	container.style.top = positionSlider + '%';
 }
 
 export {sliderSmallDown, sliderSmallUp};
