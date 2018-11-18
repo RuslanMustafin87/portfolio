@@ -21,16 +21,16 @@ function sliderSmallDown(container, activeClass){
 	const slideFirst = container.firstElementChild;
 	let positionSlider;
 		
-	slideActive.classList.remove('slider-vert-roll__slide-active_down');
+	slideActive.classList.remove(activeClass);
 
 	if (slideNext){
 
-		slideNext.classList.add('slider-vert-roll__slide-active_down');
+		slideNext.classList.add(activeClass);
 		
 		positionSlider = indexElem(slideNext) * -100;
 	} else {
 		
-		slideFirst.classList.add('slider-vert-roll__slide-active_down');
+		slideFirst.classList.add(activeClass);
 
 		positionSlider = indexElem(slideFirst) * -100;
 	}
@@ -47,15 +47,15 @@ function sliderSmallUp(container, activeClass){
 	const slideFirst = container.firstElementChild;
 	let positionSlider;
 		
-	slideActive.classList.remove('slider-vert-roll__slide-active_up');
+	slideActive.classList.remove(activeClass);
 
 	if (slideNext){
-		slideNext.classList.add('slider-vert-roll__slide-active_up');
+		slideNext.classList.add(activeClass);
 		
 		positionSlider = indexElem(slideNext) * -100;
 	} else {
 		
-		slideFirst.classList.add('slider-vert-roll__slide-active_up');
+		slideFirst.classList.add(activeClass);
 
 		positionSlider = indexElem(slideFirst) * -100;
 	}

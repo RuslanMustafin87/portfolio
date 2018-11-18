@@ -24,6 +24,8 @@ export default function(){
 		sliderBigUp();
 		sliderSmallDown(sliderContainerUp, 'slider-vert-roll__slide-active_up');
 		sliderSmallUp(sliderContainerDown, 'slider-vert-roll__slide-active_down');
+		// sliderSmallDown(sliderContainerDown, 'slider-vert-roll__slide-active_down');
+		// sliderSmallUp(sliderContainerUp, 'slider-vert-roll__slide-active_up');
 		
 	});
 
