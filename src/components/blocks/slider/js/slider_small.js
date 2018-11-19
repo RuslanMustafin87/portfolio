@@ -43,21 +43,21 @@ function sliderSmallDown(container, activeClass){
 function sliderSmallUp(container, activeClass){
 		
 	const slideActive = document.getElementsByClassName(activeClass)[0];
-	const slideNext = slideActive.nextElementSibling;
-	const slideFirst = container.firstElementChild;
+	const slidePrev = slideActive.previousElementSibling;
+	const slideLast = container.lastElementChild;
 	let positionSlider;
 		
 	slideActive.classList.remove(activeClass);
 
-	if (slideNext){
-		slideNext.classList.add(activeClass);
+	if (slidePrev){
+		slidePrev.classList.add(activeClass);
 		
-		positionSlider = indexElem(slideNext) * -100;
+		positionSlider = indexElem(slidePrev) * -100;
 	} else {
 		
-		slideFirst.classList.add(activeClass);
+		slideLast.classList.add(activeClass);
 
-		positionSlider = indexElem(slideFirst) * -100;
+		positionSlider = indexElem(slideLast) * -100;
 	}
 
 	container.style.top = positionSlider + '%';
