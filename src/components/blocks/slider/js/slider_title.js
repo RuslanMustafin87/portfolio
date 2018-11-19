@@ -3,9 +3,23 @@ const slideFirst = sliderContainer.firstElementChild;
 const slideLast = sliderContainer.lastElementChild;
 
 const popUpTextShow = function(sliderActive){
-	var itemText = sliderActive.querySelector('.slider__text').querySelector('#popup-text').innerHTML;
-	console.log(itemText);
-	// console.log(sliderActive.querySelector('.slider__text').querySelector('#popup-text'));
+	const itemActive = sliderActive.querySelector('.title').querySelector('#popup-text');
+	let itemText = itemActive.innerHTML;
+
+	itemActive.innerHTML = '';
+
+	let arrText = [];
+
+	arrText = itemText.split('');
+
+	console.log(arrText.length);
+
+	for(var i = 0; i < arrText.length; i++){
+		setInterval(function(){
+			itemActive.innerHTML += arrText[i];
+		}, 100);
+	}
+
 };
 
 const sliderTitleDown = function(){
