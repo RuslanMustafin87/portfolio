@@ -1,5 +1,7 @@
 import {sliderBigDown, sliderBigUp} from './js/slider_big.js';
 import {sliderSmallDown, sliderSmallUp} from './js/slider_small.js';
+import {sliderTitleDown, sliderTitleUp} from './js/slider_title.js';
+
 
 export default function(){
 
@@ -15,6 +17,7 @@ export default function(){
 	slideDown.addEventListener('click', function(){
 		
 		sliderBigDown();
+		sliderTitleDown();
 		sliderSmallDown(sliderContainerDown, 'slider-vert-roll__slide-active_down');
 		sliderSmallUp(sliderContainerUp, 'slider-vert-roll__slide-active_up');
 	});
@@ -22,15 +25,9 @@ export default function(){
 	slideUp.addEventListener('click', function(){
 		
 		sliderBigUp();
+		sliderTitleUp();
 		sliderSmallDown(sliderContainerUp, 'slider-vert-roll__slide-active_up');
-		sliderSmallUp(sliderContainerDown, 'slider-vert-roll__slide-active_down');
-		// sliderSmallDown(sliderContainerDown, 'slider-vert-roll__slide-active_down');
-		// sliderSmallUp(sliderContainerUp, 'slider-vert-roll__slide-active_up');
-		
+		sliderSmallUp(sliderContainerDown, 'slider-vert-roll__slide-active_down');		
 	});
-
-	//маленкий левый слайдер
-        
-	
 
 }
