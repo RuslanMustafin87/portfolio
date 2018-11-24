@@ -2,25 +2,30 @@ const sliderContainer = document.querySelector('.slider-title-list');
 const slideFirst = sliderContainer.firstElementChild;
 const slideLast = sliderContainer.lastElementChild;
 
-const popUpTextShow = function(sliderActive){
-	const itemActive = sliderActive.querySelector('.title').querySelector('#popup-text');
-	let itemText = itemActive.innerHTML;
+const popUpTextShow = function(slideActive, slidePrevActive){
+	// console.log(slidePrevActive);
+	const itemPrevActive = slidePrevActive.querySelector('.title').querySelector('#popup-text');
+	const arrItemPrevChildren = Array.prototype.slice.call(itemPrevActive.children);
 
-	itemActive.innerHTML = '';
+	arrItemPrevChildren.forEach(function(item){
+		item.style.opacity = '0';
+	});
 
-	let arrText = [];
+	const itemActive = slideActive.querySelector('.title').querySelector('#popup-text');
+	const arrItemChildren = Array.prototype.slice.call(itemActive.children);
 
-	arrText = itemText.split('');
+	let countTransitionDelay = 0;
 
-	console.log(arrText.length);
-
-	for(var i = 0; i < arrText.length; i++){
-		setInterval(function(){
-			itemActive.innerHTML += arrText[i];
-		}, 100);
-	}
-
+	arrItemChildren.forEach(function(item){
+		item.style.opacity = '0';
+		item.style.opacity = '1';
+		countTransitionDelay += 0.15;
+		item.style.transition = `opacity .1s linear ${countTransitionDelay}s`;
+	});
+	
 };
+
+document.addEventListener('DOMContentLoaded', popUpTextShow(slideFirst, slideFirst));
 
 const sliderTitleDown = function(){
 
@@ -31,10 +36,10 @@ const sliderTitleDown = function(){
 
 	if (slideNext) {
 		slideNext.classList.add('slider-title-list__item_active');
-		popUpTextShow(slideNext);
+		popUpTextShow(slideNext, slideActive);
 	} else {
 		slideFirst.classList.add('slider-title-list__item_active');
-		popUpTextShow(slideFirst);
+		popUpTextShow(slideFirst, slideActive);
 	}
 };
 
@@ -47,10 +52,10 @@ const sliderTitleUp = function(){
     
 	if (slidePrev) {
 		slidePrev.classList.add('slider-title-list__item_active');
-		popUpTextShow(slidePrev);
+		popUpTextShow(slidePrev, slideActive);
 	} else {
 		slideLast.classList.add('slider-title-list__item_active');
-		popUpTextShow(slideLast);
+		popUpTextShow(slideLast, slideActive);
 	}	
 };
 
