@@ -5,7 +5,7 @@ import { sliderTitleDown, sliderTitleUp } from './js/slider_title.js';
 export default function(){
 	
 	const sliderBigContainer = document.querySelector('.slider__container');
-	const sliderTitleContainer = document.querySelector('.slider-title-list');
+	// const sliderTitleContainer = document.querySelector('.slider-title-list');
 
 	const slideDown = document.querySelector('.slider__slide-down');
 	const slideUp = document.querySelector('.slider__slide-up');
@@ -17,7 +17,7 @@ export default function(){
 		
 		sliderTitleDown();
 		sliderShow(sliderBigContainer, 'down', 'slide__active');
-		sliderShow(sliderTitleContainer, 'down', 'slider-title-list__item_active');
+		// sliderShow(sliderTitleContainer, 'down', 'slider-title-list__item_active');
 		sliderSmallDown(sliderContainerDown, 'slider-vert-roll__slide-active_down');
 		sliderSmallUp(sliderContainerUp, 'slider-vert-roll__slide-active_up');
 	});
@@ -26,7 +26,7 @@ export default function(){
 		
 		sliderTitleUp();
 		sliderShow(sliderBigContainer, 'up', 'slide__active');
-		sliderShow(sliderTitleContainer, 'up', 'slider-title-list__item_active');
+		// sliderShow(sliderTitleContainer, 'up', 'slider-title-list__item_active');
 		sliderSmallDown(sliderContainerUp, 'slider-vert-roll__slide-active_up');
 		sliderSmallUp(sliderContainerDown, 'slider-vert-roll__slide-active_down');		
 	});

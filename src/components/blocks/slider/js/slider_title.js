@@ -3,12 +3,12 @@ const slideFirst = sliderContainer.firstElementChild;
 const slideLast = sliderContainer.lastElementChild;
 
 const popUpTextShow = function(slideActive, slidePrevActive){
-	// console.log(slidePrevActive);
 	const itemPrevActive = slidePrevActive.querySelector('.title').querySelector('#popup-text');
 	const arrItemPrevChildren = Array.prototype.slice.call(itemPrevActive.children);
 
 	arrItemPrevChildren.forEach(function(item){
 		item.style.opacity = '0';
+		item.style.transition = 'none';
 	});
 
 	const itemActive = slideActive.querySelector('.title').querySelector('#popup-text');
@@ -17,10 +17,11 @@ const popUpTextShow = function(slideActive, slidePrevActive){
 	let countTransitionDelay = 0;
 
 	arrItemChildren.forEach(function(item){
-		item.style.opacity = '0';
+		
 		item.style.opacity = '1';
-		countTransitionDelay += 0.15;
-		item.style.transition = `opacity .1s linear ${countTransitionDelay}s`;
+		countTransitionDelay += 0.06;
+		item.style.transition = `opacity .7s linear ${countTransitionDelay}s`;
+		console.log(item);
 	});
 	
 };
