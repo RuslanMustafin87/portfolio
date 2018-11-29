@@ -20,8 +20,7 @@ const popUpTextShow = function(slideActive, slidePrevActive){
 		
 		item.style.opacity = '1';
 		countTransitionDelay += 0.06;
-		item.style.transition = `opacity .7s linear ${countTransitionDelay}s`;
-		console.log(item);
+		item.style.transition = `opacity .05s linear ${countTransitionDelay}s`;
 	});
 	
 };

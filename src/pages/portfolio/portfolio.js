@@ -4,9 +4,11 @@ import './portfolio.scss';
 
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 import slider from '../../components/blocks/slider/index.js';
+import arrow from '../../components/blocks/arrowMove/arrow.js';
 
 hamburger();
 slider();
+arrow('.hero__arrow', '.portfolio-content');
 
 // прокрутка при нажатии стрелки вниз .arrow__down
 
