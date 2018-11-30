@@ -9,24 +9,7 @@ import arrow from '../../components/blocks/arrowMove/arrow.js';
 hamburger();
 slider();
 arrow('.hero__arrow', '.portfolio-content');
-
-// прокрутка при нажатии стрелки вниз .arrow__down
-
-// const arrowDown = document.querySelector('.arrow__down');
-
-// arrowDown.addEventListener('click', () => {
-
-// 	var timerId = setInterval( () => {
-        
-// 		if (window.pageYOffset >= window.innerHeight) {
-// 			clearInterval(timerId);
-// 		} else {
-// 			window.scrollBy(0, 7);
-// 		}
-
-// 	}, 1);
-
-// });
+arrow('.arrow_direction-up', '.hero');
 
 // позиционирование фона для элемента с блюром
 

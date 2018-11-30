@@ -11,7 +11,7 @@ $color_text: #455a64;
 }
 
 .hero {
-    background: url('../../images/main_bg.png') 0 70% no-repeat;
+    background: url('../../images/main_bg.jpg') 0 70% no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -107,7 +107,7 @@ $color_text: #455a64;
 }
 
 .portfolio-contact {
-    background: url('../../images/beacon.png') no-repeat;
+    background: url('../../images/beacon.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 4.375rem;
@@ -181,11 +181,11 @@ $color_text: #455a64;
 }
 
 .portfolio-contact__photo_kovalchuk {
-    background-image: url('../../images/photo_1.png');
+    background-image: url('../../images/photo_1.jpg');
 }
 
 .portfolio-contact__photo_sabancev {
-    background-image: url('../../images/photo_2.png');
+    background-image: url('../../images/photo_2.jpg');
 }
 
 .portfolio-contact__features-text {
@@ -224,7 +224,7 @@ $color_text: #455a64;
     left: 0;
     size: 100%;
     filter: blur(2px);
-    background:  url('../../images/beacon.png') no-repeat;
+    background:  url('../../images/beacon.jpg') no-repeat;
 }
 
 .portfolio-contact__arrow{
