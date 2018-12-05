@@ -25,8 +25,11 @@ function toggleClass(activeItem){
 }
 
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
+import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 
 hamburger();
+hamburgerAnimation();
+
 
 // появление левого меню 
 

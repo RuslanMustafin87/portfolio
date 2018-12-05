@@ -33,6 +33,10 @@
     justify-content: space-between;
 }
 
+.hamburger-menu__item{
+    opacity: 0;
+}
+
 .hamburger-menu__link {
     font: 3.9375rem 'Sansus Webissimo';
     color: #fff;
