@@ -3,23 +3,23 @@ import '../main.scss';
 import './about.scss';
 
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
+import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
+import arrow from '../../components/blocks/arrowMove/arrow.js';
+
 
 hamburger();
+hamburgerAnimation();
+arrow('.hero__arrow', '.about-me');
 
-// прокрутка при нажатии стрелки вниз .arrow__down
+// function mySkill(skill, strokeDash, skillStrokeDash){
+// 	const strokeDashArray = `${strokeDash} ${strokeDash - skillStrokeDash}`;
+// 	skill.style.strokeDasharray = strokeDashArray;
 
-const arrowDown = document.querySelector('.arrow__down');
+// 	// switch () {
+// 	// 	case 
+// 	// }
+// }
 
-arrowDown.addEventListener('click', () => {
+// const skillsHtml = document.querySelector('.skills_html');
 
-	var timerId = setInterval( () => {
-        
-		if (window.pageYOffset >= window.innerHeight) {
-			clearInterval(timerId);
-		} else {
-			window.scrollBy(0, 7);
-		}
-
-	}, 1);
-
-});
+// mySkill(skillsHtml, 314.15, 282.735 );

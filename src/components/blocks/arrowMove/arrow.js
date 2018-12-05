@@ -24,7 +24,7 @@ export default  function(blockClick, toBlockMove){
 					window.scrollBy(0, toElementMove.getBoundingClientRect().top);
 					clearInterval(timerId);
 				} else {
-					window.scrollBy(0, -8);
+					window.scrollBy(0, -12);
 				}
     
 			}, 1);

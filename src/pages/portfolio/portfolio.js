@@ -3,9 +3,11 @@ import '../main.scss';
 import './portfolio.scss';
 
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
+import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 import slider from '../../components/blocks/slider/index.js';
 import arrow from '../../components/blocks/arrowMove/arrow.js';
 
+hamburgerAnimation();
 hamburger();
 slider();
 arrow('.hero__arrow', '.portfolio-content');
