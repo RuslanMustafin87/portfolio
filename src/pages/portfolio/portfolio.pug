@@ -12,22 +12,22 @@ block content
                 include ../../images/icons/hamburger.svg
             .hero__social
                 include ../../components/blocks/social/social
-            img.hero__img-stars-1(src=require('../../images/stars1.svg'), alt="")
+            img.hero__img-stars-1(src=('../../images/stars1.svg'), alt="")
             .hero__user
                 .author-title
                     include ../../components/blocks/author_title/author_title
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 180" preserveAspectRatio='none' class="hero__traingle")
                 polygon(class = "left" points="0,0   0,180   500,180   500,75" )
                 polygon(class = "right" points="1000,0   1000,180  500,180   500,75" )
-            img.hero__img-stars-2(src=require("../../images/stars2.svg") alt="")
+            img.hero__img-stars-2(src=("../../images/stars2.svg") alt="")
             h1.hero__title.title.title_text-transform-uppercase.title_font-size-63 Мои работы
-            img.hero__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
+            img.hero__arrow.arrow(src=('../../images/icons/arrow_down.svg'))
         section.section.portfolio-content
                 .portfolio-content__slider
                     include ../../components/blocks/slider/slider.pug
         section.portfolio-contact
             .portfolio-contact__top
-                img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')
+                img.portfolio-contact__img(src=('../../images/stars3.svg') alt='')
                 h1.portfolio-contact__title.title.title_font-size-63.title_text-transform-uppercase Что обо мне говорят
                 .portfolio-contact__features
                     .portfolio-contact__features-item.portfolio-contact__features-item_float-left
@@ -50,6 +50,6 @@ block content
                     .portfolio-contact__form-blur
                     include ../../components/blocks/form/form.pug
                 .portfolio-contact__arrow
-                    img.arrow.arrow_direction-up(src=require('../../images/icons/arrow_down.svg'))
+                    img.arrow.arrow_direction-up(src=('../../images/icons/arrow_down.svg'))
             .portfolio-contact__footer
                 include ../../components/blocks/footer/footer.pug

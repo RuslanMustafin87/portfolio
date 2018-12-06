@@ -6,6 +6,8 @@ const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pug = require('./webpack/pug');
 const css = require('./webpack/css');
+const svg = require('./webpack/svg');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 // const lintCSS = require('./webpack/sass.lint');
 const image = require('./webpack/image');
 const video = require('./webpack/video');
@@ -78,6 +80,7 @@ const config = merge([
 					'common'],
 				template: PATHS.source + '/pages/portfolio/portfolio.pug'
 			}),
+			new SpriteLoaderPlugin()
 		],
 	},
 	lintJS(PATHS.source),
@@ -85,6 +88,7 @@ const config = merge([
 	babel(),
 	pug(),
 	image(),
+	svg(),
 	video(),
 	css(devMode),
 	favicon(),

@@ -3,7 +3,7 @@ module.exports = function(){
 		module: {
 			rules: [
 				{
-					test: /\.(jpg|png|svg)$/,
+					test: /\.(jpg|png)$/,
 					use: [
 						{
 							loader: 'file-loader',
@@ -27,11 +27,11 @@ module.exports = function(){
 									quality: '65-90',
 									speed: 4
 								},
-								svgo: {
-									plugins: [
-										{cleanupIDs: false}
-									]
-								},
+								// svgo: {
+								// 	plugins: [
+								// 		{cleanupIDs: false}
+								// 	]
+								// },
 								// webp: {
 								// 	quality: 75
 								// }
