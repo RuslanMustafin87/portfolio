@@ -12,7 +12,7 @@ block content
                 include ../../images/icons/hamburger.svg
             .hero__social
                 include ../../components/blocks/social/social
-            img.hero__img(src=('../../images/stars1.svg'), alt="")
+            img.hero__img(src=require('../../images/stars1.svg') alt="")
             .hero__user
                 include ../../components/blocks/author_title/author_title
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="hero__traingle")
@@ -23,7 +23,7 @@ block content
         section.section.about-me.clearfix
             .about-me__left
                 .about-me__left-left
-                    img.about-me__img(src=("../../images/stars2.svg") alt="")
+                    img.about-me__img(src=require("../../images/stars2.svg") alt="")
                     h1.about-me__left-title.title.title_color-gray.title_font-size-63.title_text-transform-uppercase Обо мне
                 .about-me__left-right
                     //- img.about-me__pic(src=require("../../images/photo.jpg") srcset=require("../../images/photo_x0.5.jpg 480w") alt='Руслан Мустафин')
@@ -44,7 +44,7 @@ block content
                 ul.about-me__skills
                     li.about-me__skill-item()
                         h3.about-me__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
-                        img(src=('../../images/sprite_skills.svg') id='sprite__skills')
+                        img(src=require('../../images/sprite_skills.svg') id='sprite__skills')
                         .about-me__skills-container
                             svg.about-me_skill-img(viewBox='0 0 120 120')
                                 use(xlink:href="images/sprite_skills.svg#skill_bg" class="skill_bg")
@@ -97,7 +97,7 @@ block content
                 .map__contacts.contacts
                     .contacts-title.title.title_color-gray.title_text-transform-upprcase.title_font-size-35 Контакты
                     .contacts__line.line
-                    img(src=('../../images/sprite_contacts.svg') id='sprite_contacts')
+                    img(src=require('../../images/sprite_contacts.svg') id='sprite_contacts')
                     ul.contacts__list
                         li.contacts__item
                             svg.contacts__img

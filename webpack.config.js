@@ -1,13 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const babel = require('./webpack/babel');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pug = require('./webpack/pug');
 const css = require('./webpack/css');
-const svg = require('./webpack/svg');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+// const svg = require('./webpack/svg');
+// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 // const lintCSS = require('./webpack/sass.lint');
 const image = require('./webpack/image');
 const video = require('./webpack/video');
@@ -35,6 +36,11 @@ const config = merge([
 			filename: './js/[name].js'
 		},
 		optimization: {
+			// minimizer: [
+			// 	new UglifyJsPlugin({
+			// 		test: /\.js(\?.*)?$/i,
+			// 	}),
+			// ],
 			runtimeChunk: { name: 'common' },
 			splitChunks: {
 				cacheGroups: {
@@ -80,7 +86,7 @@ const config = merge([
 					'common'],
 				template: PATHS.source + '/pages/portfolio/portfolio.pug'
 			}),
-			new SpriteLoaderPlugin()
+			// new SpriteLoaderPlugin()
 		],
 	},
 	lintJS(PATHS.source),
@@ -88,7 +94,7 @@ const config = merge([
 	babel(),
 	pug(),
 	image(),
-	svg(),
+	// svg(),
 	video(),
 	css(devMode),
 	favicon(),
