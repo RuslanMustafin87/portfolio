@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const babel = require('./webpack/babel');
 const merge = require('webpack-merge');
@@ -15,6 +16,7 @@ const video = require('./webpack/video');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
 const favicon = require('./webpack/favicon');
+const extractCSS = require('./webpack/extractCSS');
 
 const devMode = process.env.NODE_ENV === 'development';
 
@@ -23,7 +25,7 @@ const PATHS = {
 	build: path.join(__dirname, 'dist')
 };
 
-const config = merge([
+const common = merge([
 	{
 		entry: {
 			'index': PATHS.source + '/pages/index/index.js',
@@ -87,6 +89,9 @@ const config = merge([
 				template: PATHS.source + '/pages/portfolio/portfolio.pug'
 			}),
 			// new SpriteLoaderPlugin()
+			new MiniCssExtractPlugin({
+				filename: '[name].css',
+			})
 		],
 	},
 	lintJS(PATHS.source),
@@ -96,7 +101,7 @@ const config = merge([
 	image(),
 	// svg(),
 	video(),
-	css(devMode),
+	// css(),
 	favicon(),
 	font(),
 	{
@@ -110,4 +115,17 @@ const config = merge([
 	}
 ]);
 
-module.exports = config;
+module.exports = function(env, argv) {
+	if (argv.mode === 'production') {
+		return merge([
+			common,
+			// extractCSS()
+	  ]);
+	};
+	if (argv.mode === 'development') {
+		return merge([
+			common,
+			css()
+	  ]);
+	}
+}
