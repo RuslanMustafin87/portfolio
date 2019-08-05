@@ -1,12 +1,14 @@
 import 'normalize.css';
 import '../main.scss';
-import './about.scss';
+// import './about.scss';
 
+import preloader from '../../components/blocks/preloader/preloader';
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 import arrow from '../../components/blocks/arrowMove/arrow.js';
 
 
+preloader();
 hamburger();
 hamburgerAnimation();
 arrow('.hero__arrow', '.about-me');

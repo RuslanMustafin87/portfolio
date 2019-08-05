@@ -1,0 +1,61 @@
+.preloader {
+	size: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $color_button;
+	z-index: 99;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.loader {
+	@util center;
+	size: 5.5rem;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg)
+	}
+
+	50% {
+		transform: rotate(180deg)
+	}
+
+	to {
+		transform: rotate(360deg)
+	}
+}
+
+.preloader-svg {
+	size: 100%;
+}
+
+.preloader-svg circle {
+	stroke: #fff;
+	stroke-width: 3px;
+	fill: none;
+	stroke-dasharray: 300px;
+	stroke-dashoffset: 0;
+	transform-origin: 50%;
+	transform: rotate(-90deg);
+	animation:  circle-full 2s infinite linear reverse;
+}
+
+@keyframes circle-full {
+	from {
+		stroke-dashoffset: 0;
+	}
+
+	to {
+		stroke-dashoffset: 300px;
+	}
+}
+
+.preloader__persents{
+    @util center;
+    color: #fff;
+    font: 1rem solid 'Roboto', sans-serif;
+}

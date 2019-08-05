@@ -168,13 +168,13 @@ $color_text: #455a64;
         width: 74.1667%;
         padding-left: 8.3333%;
         padding-right: 9.1666%;
-    };
+    }
     @include tablet{
         float: none;
         width: 100%;
         padding: 0 1.25rem;
         padding-top: 3.125rem;
-    };
+    }
 }
 
 .blog-content__container {
@@ -221,7 +221,7 @@ $color_text: #455a64;
     width: 100%;
     @include tablet{
         height: 17.6923rem;
-    };
+    }
     @include phone{
         height: initial;
     }

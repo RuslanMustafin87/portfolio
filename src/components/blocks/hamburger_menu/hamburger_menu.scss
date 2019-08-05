@@ -57,7 +57,7 @@
 }
 
 .hamburger-menu__link {
-    font: 3.9375rem 'Sansus Webissimo';
+    font: 3rem 'Sansus Webissimo';
     color: #fff;
     text-transform: uppercase;
     display: block;
@@ -71,7 +71,8 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -1.875rem;
+        // bottom: -1.125rem;
+        bottom: -18%;
     }
     &:hover::after {
         display: block;

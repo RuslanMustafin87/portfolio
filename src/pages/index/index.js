@@ -2,8 +2,10 @@ import 'normalize.css';
 import '../main.scss';
 import './index.scss';
 
+import preloader from '../../components/blocks/preloader/preloader';
 import {parallax} from '../../components/blocks/parallax/parallax.js';
 
+preloader();
 parallax();
 
 const welAutorize = document.querySelector('.autorize');
@@ -14,12 +16,12 @@ const toMain = document.querySelector('#toMain');
 // flip_index gorizont
 
 window.onload = () => {
-	welAuthor.style.transition = '.8s linear';
+	welAuthor.style.transition = '.8s linear 1s';
 	welAuthor.style.opacity = '1';
 	welAuthor.style.transform = 'perspective(600px) rotateX(0deg)';
 	setTimeout( () => {
 		welAuthor.style.transformOrigin = '50% 50%';
-	}, 800);
+	}, 1800);
 
 	// videoResize();
 };

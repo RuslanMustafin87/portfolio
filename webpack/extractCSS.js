@@ -15,7 +15,7 @@ module.exports = function(){
 				{
 					test: /\.scss$/,
 					use: [
-						 MiniCssExtractPlugin.loader,
+						MiniCssExtractPlugin.loader,
 						'css-loader',
 						'postcss-loader',
 						'sass-loader'
@@ -29,4 +29,4 @@ module.exports = function(){
 			})
 		],
 	};
-}
+};

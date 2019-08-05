@@ -12,7 +12,6 @@ $color_text: #455a64;
 
 //blocks
 @import '../components/blocks/author_title/author_title.scss';
-@import '../components/blocks/navigation/navigation.scss';
 @import '../components/blocks/footer/footer.scss';
 @import '../components/blocks/social/social.scss';
 @import '../components/blocks/hamburger_menu/hamburger_menu.scss';
@@ -20,6 +19,7 @@ $color_text: #455a64;
 @import '../components/blocks/slider/slider.scss';
 @import '../components/blocks/form/form.scss';
 @import '../components/blocks/parallax/parallax.scss';
+@import '../components/blocks/preloader/preloader.scss';
 
 // //pages
 // @import 'pages/index.scss';

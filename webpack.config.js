@@ -1,24 +1,24 @@
 const path = require('path');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserJS = require('./webpack/terserJS');
 const babel = require('./webpack/babel');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pug = require('./webpack/pug');
 const css = require('./webpack/css');
-// const svg = require('./webpack/svg');
-// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-// const lintCSS = require('./webpack/sass.lint');
 const image = require('./webpack/image');
 const video = require('./webpack/video');
 const font = require('./webpack/font');
 const lintJS = require('./webpack/js.lint');
 const favicon = require('./webpack/favicon');
 const extractCSS = require('./webpack/extractCSS');
-
-const devMode = process.env.NODE_ENV === 'development';
+const devServer = require('./webpack/devServer');
+const devtool = require('./webpack/devtool');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+// const CompressionPlugin = require('compression-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const PATHS = {
 	source: path.join(__dirname, 'src'),
@@ -38,17 +38,13 @@ const common = merge([
 			filename: './js/[name].js'
 		},
 		optimization: {
-			// minimizer: [
-			// 	new UglifyJsPlugin({
-			// 		test: /\.js(\?.*)?$/i,
-			// 	}),
-			// ],
-			runtimeChunk: { name: 'common' },
+			minimize: false,
+			runtimeChunk: false,
 			splitChunks: {
 				cacheGroups: {
 					default: false,
 					commons: {
-						test: /\.(js|css)$/,
+						test: /\.(js|css|scss)$/,
 						chunks: 'all',
 						minChunks: 2,
 						name: 'common',
@@ -58,17 +54,12 @@ const common = merge([
 			},
 		},
 		plugins: [
-			new webpack.ProvidePlugin({
-				$: 'jquery',
-				jQuery: 'jquery',
-				jquery: 'jquery'
-			}),
-			new CleanWebpackPlugin('dist'),
 			new HtmlWebpackPlugin({
 				filename: 'index.html',
 				chunks: ['index',
 					'common'],
-				template: PATHS.source + '/pages/index/index.pug'
+				template: PATHS.source + '/pages/index/index.pug',
+				minify: false
 			}),
 			new HtmlWebpackPlugin({
 				filename: 'blog.html',
@@ -88,44 +79,49 @@ const common = merge([
 					'common'],
 				template: PATHS.source + '/pages/portfolio/portfolio.pug'
 			}),
-			// new SpriteLoaderPlugin()
+			new webpack.ProvidePlugin({
+				$: 'jquery',
+				jQuery: 'jquery',
+				jquery: 'jquery'
+			}),
+			new FriendlyErrorsWebpackPlugin(),
 			new MiniCssExtractPlugin({
 				filename: '[name].css',
-			})
+			}),
+			new CleanWebpackPlugin(),
+			// new CompressionPlugin(
+			// 	{
+			// 		test: /\.(js|css|html|svg)$/,
+			// 		algorithm: 'gzip',
+			// 		include: /\/dist/
+			// 	}
+			// )
+			// new BundleAnalyzerPlugin(),
 		],
 	},
 	lintJS(PATHS.source),
-	// lintCSS(),
 	babel(),
 	pug(),
 	image(),
-	// svg(),
 	video(),
-	// css(),
 	favicon(),
-	font(),
-	{
-		devServer: {
-			stats: 'errors-only',
-			port: 9000
-		}
-	},
-	{
-		devtool: devMode ? 'eval-source-map': ''
-	}
+	font()
 ]);
 
 module.exports = function(env, argv) {
 	if (argv.mode === 'production') {
 		return merge([
 			common,
-			// extractCSS()
-	  ]);
-	};
+			extractCSS(),
+			TerserJS()
+		]);
+	}
 	if (argv.mode === 'development') {
 		return merge([
 			common,
-			css()
-	  ]);
+			css(),
+			devServer(),
+			devtool()
+		]);
 	}
-}
+};

@@ -4,6 +4,9 @@ import './blog.scss';
 
 // прокрутка статей в blog-content 
 
+import preloader from '../../components/blocks/preloader/preloader';
+preloader();
+
 var container = document.querySelector('.blog-content__articles');
 var accoMenuItems = document.querySelectorAll('.menu-acco__item');
 var blogContentPosition; 

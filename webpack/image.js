@@ -3,7 +3,7 @@ module.exports = function(){
 		module: {
 			rules: [
 				{
-					test: /\.(jpg|png|svg)$/,
+					test: /\.(jpg|png)$/,
 					use: [
 						{
 							loader: 'file-loader',
@@ -11,30 +11,25 @@ module.exports = function(){
 								name: '[name].[ext]',
 								outputPath: 'images/'
 							}
+						}
+					]
+				},
+				{
+					test: /\.svg$/,
+					use: [
+						{
+							loader: 'file-loader',
+							options: {
+								name: '[name].[ext]',
+								outputPath: 'images/icons/'
+							}
 						},
 						{
-							loader: 'image-webpack-loader',
+							loader: 'svgo-loader',
 							options: {
-								bypassOnDebug: true,
-								mozjpeg: {
-									progressive: true,
-									quality: 65
-								},
-								optipng: {
-									enabled: false,
-								},
-								pngquant: {
-									quality: '65-90',
-									speed: 4
-								},
-								svgo: {
-									plugins: [
-										{cleanupIDs: false}
-									]
-								},
-								webp: {
-									quality: 75
-								}
+								plugins: [
+									{cleanupIDs: false}
+								]
 							}
 						}
 					]
