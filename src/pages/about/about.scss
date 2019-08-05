@@ -71,6 +71,7 @@ $color_text: #455a64;
 	height: initial;
 	background-color: #f2f0e8;
 	line-height: 1.5rem;
+	@util clearfix;
 }
 
 .about-me__left {
@@ -231,7 +232,7 @@ $color_text: #455a64;
 
 .about-me__skills-container {
 	display: flex;
-	justify-content: start;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 
 	@include tablet {
