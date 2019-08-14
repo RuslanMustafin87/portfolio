@@ -24,8 +24,15 @@ window.onload = () => {
 	}, 1800);
 
 	// videoResize();
+	videoDisable();
 };
 
+function videoDisable() {
+	if (window.innerWidth >= 768) {
+		// eslint-disable-next-line quotes
+		document.getElementById('video__container').innerHTML = "<video class='video' autoplay loop muted> <source src='/assets/images/night.webm' type=`video/webm; codecs='vp8, vorbis'`> <source src= '/assets/images/night.mp4' type=`video/mp4; codecs='avc1.42E01E, mp4a.40.2'`>";
+	}
+}
 // window.addEventListener('resize', videoResize);
 
 // function videoResize(){
