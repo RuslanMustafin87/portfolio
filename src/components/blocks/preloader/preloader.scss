@@ -3,7 +3,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: $color_button;
+	background: url(../images/night_prel_bg.jpg) center / cover no-repeat;
 	z-index: 99;
     visibility: visible;
     opacity: 1;
@@ -15,17 +15,30 @@
 	size: 5.5rem;
 }
 
-@keyframes rotation {
-	from {
-		transform: rotate(0deg)
-	}
+.container__ball{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	size: 3.6rem;
+	transform: translate(-50%, -50%) rotate(45deg);
+	animation: rotate-ball 2s  cubic-bezier(0.835, 0.085, 0.170, 0.925) infinite;
+}
 
-	50% {
-		transform: rotate(180deg)
-	}
+.ball{
+	size: 6px;
+	border-radius: 100%;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0%;
+}
 
-	to {
-		transform: rotate(360deg)
+@keyframes rotate-ball{
+	form{
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	to{
+		transform: translate(-50%, -50%) rotate(765deg);
 	}
 }
 
@@ -37,11 +50,11 @@
 	stroke: #fff;
 	stroke-width: 3px;
 	fill: none;
-	stroke-dasharray: 300px;
+	stroke-dasharray: 177px;
 	stroke-dashoffset: 0;
 	transform-origin: 50%;
 	transform: rotate(-90deg);
-	animation:  circle-full 2s infinite linear reverse;
+	animation:  circle-full 2s infinite cubic-bezier(0.835, 0.085, 0.170, 0.925) reverse;
 }
 
 @keyframes circle-full {
@@ -50,7 +63,7 @@
 	}
 
 	to {
-		stroke-dashoffset: 300px;
+		stroke-dashoffset: 177px;
 	}
 }
 

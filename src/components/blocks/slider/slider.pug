@@ -2,11 +2,17 @@
                     .slider__right-top
                             ul.slider__container
                                 li.slider__item.slide__active
-                                    img.slider__img(src=require('../../../images/slide_1.png'))
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_1.webp'))
+                                        img(srcset=require('../../../images/slide_1.png'))
                                 li.slider__item
-                                    img.slider__img(src=require('../../../images/slide_2.png'))
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_2.webp'))
+                                        img(srcset=require('../../../images/slide_2.png'))
                                 li.slider__item
-                                    img.slider__img(src=require('../../../images/slide_3.png'))
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_3.webp'))
+                                        img(srcset=require('../../../images/slide_3.png'))
                     .slider__left
                         .slider__left-center
                             ul.slider__left-list.slider-title-list
@@ -43,19 +49,37 @@
                     .slider__right-bottom.clearfix
                         .slider__slide-down.slider-vert-roll
                             ul.slider__container-down
-                                li.slider__item-down.slider__item_backgroud-1
+                                li.slider__item-down
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_1.webp'))
+                                        img(srcset=require('../../../images/slide_1.png'))
                                     .slider__item-color
-                                li.slider__item-down.slider__item_backgroud-2.slider-vert-roll__slide-active_down
+                                li.slider__item-down.slider-vert-roll__slide-active_down
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_2.webp'))
+                                        img(srcset=require('../../../images/slide_2.png'))
                                     .slider__item-color
-                                li.slider__item-down.slider__item_backgroud-3
+                                li.slider__item-down
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_3.webp'))
+                                        img(srcset=require('../../../images/slide_3.png'))
                                     .slider__item-color
                             img.slider__arrow-down.arrow(src=('./images/icons/arrow_down.svg'))
                         .slider__slide-up.slider-vert-roll
                             ul.slider__container-up
-                                li.slider__item-up.slider__item_backgroud-3.slider-vert-roll__slide-active_up
+                                li.slider__item-up.slider-vert-roll__slide-active_up
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_3.webp'))
+                                        img(srcset=require('../../../images/slide_3.png'))
                                     .slider__item-color
-                                li.slider__item-up.slider__item_backgroud-2
+                                li.slider__item-up
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_2.webp'))
+                                        img(srcset=require('../../../images/slide_2.png'))
                                     .slider__item-color
-                                li.slider__item-up.slider__item_backgroud-1
+                                li.slider__item-up
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_1.webp'))
+                                        img(srcset=require('../../../images/slide_1.png'))
                                     .slider__item-color
                             img.slider__arrow-up.arrow(src=('./images/icons/arrow_down.svg'))
