@@ -1,0 +1,53 @@
+.modal{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(113, 111, 120, .5);
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // display:  none;
+}
+
+.modal__window{
+    color:black;
+    position: absolute;
+    top:50%;
+    left:50%;
+    // transform: translate(-50%, -50%) scale(0);
+    transition: all .5s;
+    width: 19rem;
+    height: 14rem;
+    background-color: #fff;
+    border-radius:5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet{
+        width: 60vmin;
+        height: 40vmax;
+    }
+    @include phone{
+        width: 80vmin;
+        height: 40vmax;
+    }
+}
+
+.modal__close-cross{
+    size:1rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    @include tablet{
+        size:2.5rem;
+    }
+    @include phone{
+        size:2rem;
+    }
+}
+
+.modal__text{
+    text-align: center;
+    width: 90%;
+}

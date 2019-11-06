@@ -5,13 +5,15 @@ export default function() {
 
 	button.addEventListener('click', function() {
 
+		let modal = require('../modal/modal'); 
+
 		if (form.name.value === '' || form.email.value === '') {
-			alert('Заполните все поля');
+			modal('Заполните все поля');
 			return;
 		}
 
-		if (form.age.value.indexOf('@') === -1) {
-			alert('Адрес электроной почты должен содержать символ "@"');
+		if (form.email.value.indexOf('@') === -1) {
+			modal('Адрес электроной почты должен содержать символ "@"');
 			return;
 		}
 
