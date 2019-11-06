@@ -38,7 +38,7 @@ const common = merge([
 			filename: './js/[name].js'
 		},
 		optimization: {
-			minimize: false,
+			minimize: true,
 			runtimeChunk: false,
 			splitChunks: {
 				cacheGroups: {

@@ -7,6 +7,7 @@ import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.j
 import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 import slider from '../../components/blocks/slider/index.js';
 import arrow from '../../components/blocks/arrowMove/arrow.js';
+import form from '../../components/blocks/form/form';
 
 preloader();
 hamburgerAnimation();
@@ -14,6 +15,7 @@ hamburger();
 slider();
 arrow('.hero__arrow', '.portfolio-content');
 arrow('.arrow_direction-up', '.hero');
+form();
 
 // позиционирование фона для элемента с блюром
 
@@ -57,3 +59,4 @@ function blur(){
 window.addEventListener('load', blur);
 
 window.addEventListener('resize', blur);
+
