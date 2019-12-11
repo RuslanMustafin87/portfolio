@@ -1,17 +1,21 @@
-export default function(message) {
+module.exports = function(message) {
 
-	let modal = document.querySelector('.modal__window');
 	let modalContainer = document.querySelector('.modal');
-	let cross = document.querySelector('.close__cross');
+	//let modalContainer = document.getElementById('modal__common');
+	let modal = modalContainer.querySelector('.modal__window');
+	let modalText = modalContainer.querySelector('.modal__text');
+	let cross = modalContainer.querySelector('.modal__close-cross');
 
-
+	modal.style.transition = '.3s linear ';
+	setTimeout(() => {
+		modal.style.transform = 'translate(-50%, -50%) scale(1)';
+	}, 100);
 	modalContainer.style.display = 'block';
-	modal.style.transform = 'translate(-50%, -50%) scale(1)';
-	modal.innerHTML = message;
+	modalText.innerHTML = message;
 
 	cross.addEventListener('click', function() {
 		modalContainer.style.display = 'none';
 		modal.style.transform = 'translate(-50%, -50%) scale(0)';
-		modal.innerHTML = '';
+		modalText.innerHTML = '';
 	});
-}
+};

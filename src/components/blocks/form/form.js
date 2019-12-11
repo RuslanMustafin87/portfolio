@@ -27,12 +27,6 @@ export default function() {
 		form.email.value = '';
 		form.message.value = '';
 
-		// xhr.open('POST', '/portfolio');
-
-		// xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-
-		// xhr.send(body);
-
 		fetch('/portfolio', {
 			method: 'POST',
 			headers: {

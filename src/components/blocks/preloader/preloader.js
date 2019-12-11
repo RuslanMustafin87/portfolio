@@ -13,6 +13,15 @@ export default function() {
 		imagesCount = 0,
 		percents = document.querySelector('.preloader__persents');
 
+	// console.log(images.length);
+	// console.log('hi');
+
+
+	// if (!images.length > 0) {
+	// 	console.log('hi');
+	// 	return;
+	// }
+
 	for (var i = 0; i < images.length; i++) {
 
 		var imageClone = new Image;

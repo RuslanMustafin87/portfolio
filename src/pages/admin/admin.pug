@@ -1,0 +1,86 @@
+extends ../base
+
+block  var
+    - var title = "Панель администратора"
+    - var authorDescription = 'Личный сайт веб-разработчика'
+    - var page = ''
+
+block content
+    main.main.main__admin
+        header.header-admin 
+            h1.header__title Панель администрирования
+            a.header-admin__link-back(href=-'/') Вернутся на сайт
+        section.panel-admin
+            ul.panel-admin__tabs.tabs
+                li.tabs__title.active__tab(for="tabs__tab-1") Обо мне
+                li.tabs__title(for="tabs__tab-2") Блог
+                li.tabs__title(for="tabs__tab-3") Мои работы
+                li.tabs__title(for="tabs__tab-4") TAB 4
+            ul.panel-admin__content
+                li.panel-admin__content-bg
+                li.panel-admin__item.panel-admin__about.active__panel-item
+                        h2.panel-admin__title Страница "Обо мне"
+                        .block__frontend 
+                            .frontend__caption Frontend
+                            .table__row
+                                .table__cell HTML
+                                .table__cell.table__col 90
+                                .table__cell %
+                            .table__row
+                                .table__cell CSS
+                                .table__cell.table__col 90
+                                .table__cell %
+                            .table__row
+                                .table__cell JavaScript
+                                .table__cell.table__col 80
+                                .table__cell %
+                        .block__frontend 
+                            .frontend__caption Workflow
+                            .table__row
+                                .table__cell Git
+                                .table__cell.table__col 90
+                                .table__cell %
+                            .table__row
+                                .table__cell Webpack
+                                .table__cell.table__col 80
+                                .table__cell %
+                            .table__row
+                                .table__cell Gulp
+                                .table__cell.table__col 50
+                                .table__cell %
+                        .block__frontend 
+                            .frontend__caption Backend
+                            .table__row
+                                .table__cell PHP
+                                .table__cell.table__col 50
+                                .table__cell %
+                            .table__row
+                                .table__cell Node.js
+                                .table__cell.table__col 60
+                                .table__cell %
+                            .table__row
+                                .table__cell Mongo.db
+                                .table__cell.table__col 50
+                                .table__cell %
+                        button.form-admin__button.button__about Сохранить
+                        include ../../components/blocks/modal/modal.pug
+                li.panel-admin__item.panel-admin__blog
+                    h2.panel-admin__title Страница "Блог"
+                    h3.panel-admin__title-2 Добавить запись
+                    form.panel-admin__blog-form.form-admin
+                        input(type='text' name='title' placeholder='Название')
+                        input(type='text' name='date' placeholder='Дата')
+                        textarea(type='text' name='' placeholder='Содержание')
+                        button.form-admin__button.button__blog Добавить
+                li.panel-admin__item
+                    h2.panel-admin__title Страница "Мои работы"
+                    h3.panel-admin__title-2 Добавить работу
+                    form.panel-admin__blog-form.form-admin
+                        input(type='text' name='title' placeholder='Название проекта')
+                        input(type='text' name='date' placeholder='Технологии')
+                        input.form-admin__file(type='file' name='image' id='image' placeholder='Загрузить картинку')
+                        .form-admin__file-download
+                            label.form-admin__file-label(for='image') 
+                            span.form-admin__file-discription Загрузить картинку
+                        button.form-admin__button.button__works Добавить
+                li.panel-admin__item

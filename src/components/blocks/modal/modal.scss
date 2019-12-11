@@ -6,7 +6,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // display:  none;
+    display:  none;
 }
 
 .modal__window{
@@ -14,40 +14,32 @@
     position: absolute;
     top:50%;
     left:50%;
-    // transform: translate(-50%, -50%) scale(0);
-    transition: all .5s;
+    transform: translate(-50%, -50%) scale(0);
     width: 19rem;
     height: 14rem;
     background-color: #fff;
-    border-radius:5%;
+    border-radius:.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include tablet{
-        width: 60vmin;
-        height: 40vmax;
-    }
-    @include phone{
-        width: 80vmin;
-        height: 40vmax;
-    }
 }
 
 .modal__close-cross{
-    size:1rem;
+    size:1.2rem;
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 1rem;
+    right: 1rem;
     cursor: pointer;
-    @include tablet{
-        size:2.5rem;
+    @include desktop{
+        size: 1.5rem;
     }
-    @include phone{
-        size:2rem;
+    @include tablet{
+        size: 1.8rem;
     }
 }
 
 .modal__text{
     text-align: center;
     width: 90%;
+    font-size: 1.4rem;
 }

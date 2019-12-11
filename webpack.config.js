@@ -11,7 +11,6 @@ const css = require('./webpack/css');
 const image = require('./webpack/image');
 const video = require('./webpack/video');
 const font = require('./webpack/font');
-const lintJS = require('./webpack/js.lint');
 const favicon = require('./webpack/favicon');
 const extractCSS = require('./webpack/extractCSS');
 const devServer = require('./webpack/devServer');
@@ -32,6 +31,7 @@ const common = merge([
 			'blog': PATHS.source + '/pages/blog/blog.js',
 			'about': PATHS.source + '/pages/about/about.js',
 			'portfolio': PATHS.source + '/pages/portfolio/portfolio.js',
+			'admin': PATHS.source + '/pages/admin/admin.js',			
 		},
 		output: {
 			path: PATHS.build,
@@ -79,6 +79,12 @@ const common = merge([
 					'common'],
 				template: PATHS.source + '/pages/portfolio/portfolio.pug'
 			}),
+			new HtmlWebpackPlugin({
+				filename: 'admin.html',
+				chunks: ['admin',
+					'common'],
+				template: PATHS.source + '/pages/admin/admin.pug'
+			}),
 			new webpack.ProvidePlugin({
 				$: 'jquery',
 				jQuery: 'jquery',
@@ -99,7 +105,6 @@ const common = merge([
 			// new BundleAnalyzerPlugin(),
 		],
 	},
-	lintJS(PATHS.source),
 	babel(),
 	pug(),
 	image(),

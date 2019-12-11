@@ -1,0 +1,444 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20191205.013304.2928.0.001.json",
+    "dumpEventTime": "2019-12-05T01:33:04Z",
+    "dumpEventTimeStamp": "1575491584861",
+    "processId": 2928,
+    "cwd": "/home/ruslan/development/portfolio",
+    "commandLine": [
+      "/home/ruslan/.nvm/versions/node/v12.13.1/bin/node",
+      "/home/ruslan/development/portfolio/node_modules/.bin/webpack-dev-server",
+      "--mode",
+      "development",
+      "--open",
+      "--hot",
+      "--inline"
+    ],
+    "nodejsVersion": "v12.13.1",
+    "glibcVersionRuntime": "2.30",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.13.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.13.1/node-v12.13.1.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.4.1-arch1-1",
+    "osVersion": "#1 SMP PREEMPT Fri, 29 Nov 2019 13:37:24 +0000",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz",
+        "speed": 2893,
+        "user": 25575800,
+        "nice": 21500,
+        "sys": 6387400,
+        "idle": 104690000,
+        "irq": 1178200
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz",
+        "speed": 2913,
+        "user": 25156600,
+        "nice": 24800,
+        "sys": 6981000,
+        "idle": 104407000,
+        "irq": 1542600
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz",
+        "speed": 2893,
+        "user": 25561900,
+        "nice": 23600,
+        "sys": 6329900,
+        "idle": 104717600,
+        "irq": 1196100
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz",
+        "speed": 2965,
+        "user": 25222600,
+        "nice": 23000,
+        "sys": 6568900,
+        "idle": 104214100,
+        "irq": 1742700
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wlp2s0",
+        "internal": false,
+        "mac": "dc:a9:71:94:e9:ea",
+        "address": "192.168.1.2",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlp2s0",
+        "internal": false,
+        "mac": "dc:a9:71:94:e9:ea",
+        "address": "fe80::dea9:71ff:fe94:e9ea",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 3
+      }
+    ],
+    "host": "ruslan-pc"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b04935",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x00000000009db9e3",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b39f1e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b3a299",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ce5635",
+      "symbol": " [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ce5cc6",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf1b5a",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf2a65",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf5478",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cbbda7",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ff1e0b",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000001374fd9",
+      "symbol": " [/home/ruslan/.nvm/versions/node/v12.13.1/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2165030912,
+    "totalCommittedMemory": 2157903816,
+    "usedMemory": 2122024760,
+    "availableMemory": 46453816,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 32568,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 13107200,
+        "committedMemory": 6584496,
+        "capacity": 6546800,
+        "used": 318784,
+        "available": 6228016
+      },
+      "old_space": {
+        "memorySize": 670412800,
+        "committedMemory": 670205888,
+        "capacity": 651372448,
+        "used": 650707408,
+        "available": 665040
+      },
+      "code_space": {
+        "memorySize": 4620288,
+        "committedMemory": 4453568,
+        "capacity": 3874400,
+        "used": 3874400,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 9179136,
+        "committedMemory": 9177952,
+        "capacity": 3850800,
+        "used": 3850800,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 1466826752,
+        "committedMemory": 1466826752,
+        "capacity": 1462690416,
+        "used": 1462690416,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550656,
+        "used": 550656,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 6546800,
+        "used": 0,
+        "available": 6546800
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 270.382,
+    "kernelCpuSeconds": 41.5879,
+    "cpuConsumptionPercent": 2.24811,
+    "maxRss": 2411347968,
+    "pageFaults": {
+      "IORequired": 90,
+      "IONotRequired": 7898053
+    },
+    "fsActivity": {
+      "reads": 157048,
+      "writes": 570152
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 147.197,
+    "kernelCpuSeconds": 33.6452,
+    "cpuConsumptionPercent": 1.30318,
+    "fsActivity": {
+      "reads": 94104,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "SHELL": "/bin/bash",
+    "SESSION_MANAGER": "local/ruslan-pc:@/tmp/.ICE-unix/808,unix/ruslan-pc:/tmp/.ICE-unix/808",
+    "COLORTERM": "truecolor",
+    "npm_package_main": "index.js",
+    "TERM_PROGRAM_VERSION": "1.40.2",
+    "npm_package_devDependencies__babel_preset_env": "^7.3.4",
+    "npm_package_devDependencies_node_sass": "^4.11.0",
+    "LANGUAGE": "ru",
+    "NODE": "/home/ruslan/.nvm/versions/node/v12.13.1/bin/node",
+    "npm_config_ignore_scripts": "",
+    "npm_package_devDependencies_autoprefixer": "^9.4.10",
+    "npm_package_devDependencies_style_loader": "^0.23.1",
+    "npm_package_devDependencies_html_cli": "^1.0.0",
+    "npm_package_devDependencies_svgo": "^1.2.0",
+    "npm_package_devDependencies_svgo_loader": "^2.2.0",
+    "npm_package_devDependencies_chai": "^4.2.0",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
+    "npm_config_bin_links": "true",
+    "npm_package_devDependencies_favicons_webpack_plugin": "^0.0.9",
+    "NO_AT_BRIDGE": "1",
+    "npm_package_devDependencies_postcss_short": "^5.0.0",
+    "GTK_MODULES": "canberra-gtk-module",
+    "XDG_SEAT": "seat0",
+    "PWD": "/home/ruslan/development/portfolio",
+    "npm_config_save_prefix": "^",
+    "LOGNAME": "ruslan",
+    "npm_package_devDependencies_file_loader": "^4.1.0",
+    "XDG_SESSION_TYPE": "tty",
+    "npm_package_devDependencies_compression_webpack_plugin": "^3.0.0",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_devDependencies__babel_core": "^7.3.4",
+    "npm_package_scripts_build": "webpack --mode production",
+    "npm_package_devDependencies_terser_webpack_plugin": "^1.2.3",
+    "_": "/home/ruslan/development/portfolio/node_modules/.bin/webpack-dev-server",
+    "XAUTHORITY": "/home/ruslan/.Xauthority",
+    "npm_package_devDependencies_babel_loader": "^8.0.5",
+    "WINDOWPATH": "1",
+    "npm_package_devDependencies_css_loader": "^3.1.0",
+    "npm_package_scripts_eslint": "eslint . --cache . --fix",
+    "HOME": "/home/ruslan",
+    "npm_config_version_git_tag": "true",
+    "LANG": "ru_RU.UTF-8",
+    "npm_package_devDependencies_webpack": "^4.29.6",
+    "XDG_CURRENT_DESKTOP": "KDE",
+    "npm_config_init_license": "MIT",
+    "npm_package_version": "1.0.0",
+    "npm_package_dependencies_normalize_css": "^8.0.1",
+    "npm_package_devDependencies_html_webpack_plugin": "^3.2.0",
+    "npm_config_version_commit_hooks": "true",
+    "npm_package_devDependencies_mini_css_extract_plugin": "^0.8.0",
+    "npm_package_devDependencies_webpack_bundle_analyzer": "^3.1.0",
+    "INVOCATION_ID": "6302ddfbeeb449a2b42618fe4e734a9c",
+    "npm_package_devDependencies_cssnano": "^4.1.10",
+    "INIT_CWD": "/home/ruslan/development/portfolio",
+    "CHROME_DESKTOP": "code-url-handler.desktop",
+    "KDE_SESSION_UID": "1000",
+    "npm_package_devDependencies_mocha": "^6.2.2",
+    "npm_lifecycle_script": " webpack-dev-server --mode development --open --hot --inline",
+    "npm_package_description": "",
+    "NVM_DIR": "/home/ruslan/.nvm",
+    "npm_config_version_tag_prefix": "v",
+    "YARN_WRAP_OUTPUT": "false",
+    "XDG_SESSION_CLASS": "user",
+    "TERM": "xterm-256color",
+    "npm_package_name": "portfolio",
+    "USER": "ruslan",
+    "npm_package_devDependencies_webpack_merge": "^4.2.1",
+    "npm_package_devDependencies_webpack_cli": "^3.2.3",
+    "KDE_SESSION_VERSION": "5",
+    "npm_package_devDependencies_webpack_dev_server": "^3.2.1",
+    "DISPLAY": ":0",
+    "npm_lifecycle_event": "start",
+    "SHLVL": "2",
+    "npm_config_version_git_sign": "",
+    "NVM_CD_FLAGS": "",
+    "npm_package_devDependencies_pug": "^2.0.0-rc.4",
+    "npm_package_devDependencies_postcss_utilities": "^0.8.0",
+    "npm_config_version_git_message": "v%s",
+    "npm_package_devDependencies_eslint": "^6.1.0",
+    "npm_package_devDependencies_copy_webpack_plugin": "^5.0.4",
+    "npm_package_devDependencies_pug_loader": "^2.3.0",
+    "XDG_VTNR": "1",
+    "XDG_SESSION_ID": "1",
+    "npm_package_devDependencies_sass_loader": "^7.1.0",
+    "npm_config_user_agent": "yarn/1.21.0 npm/? node/v12.13.1 linux x64",
+    "npm_execpath": "/usr/lib/node_modules/yarn/bin/yarn.js",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "npm_config_strict_ssl": "true",
+    "npm_package_dependencies_jquery": "^3.2.1",
+    "npm_package_scripts_dev": "webpack --mode development && html dist/*.html --indent-size 2",
+    "QT_AUTO_SCREEN_SCALE_FACTOR": "0",
+    "JOURNAL_STREAM": "9:21942",
+    "XCURSOR_THEME": "breeze_cursors",
+    "XDG_DATA_DIRS": "/usr/share:/usr/share:/usr/local/share",
+    "KDE_FULL_SESSION": "true",
+    "npm_package_scripts_start": " webpack-dev-server --mode development --open --hot --inline",
+    "PATH": "/tmp/yarn--1575477707270-0.5976479172735316:/home/ruslan/development/portfolio/node_modules/.bin:/home/ruslan/.config/yarn/link/node_modules/.bin:/home/ruslan/.yarn/bin:/home/ruslan/.nvm/versions/node/v12.13.1/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/ruslan/.nvm/versions/node/v12.13.1/lib/node_modules/npm/bin/node-gyp-bin:/home/ruslan/.nvm/versions/node/v12.13.1/bin/node_modules/npm/bin/node-gyp-bin:/home/ruslan/.nvm/versions/node/v12.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "npm_package_license": "ISC",
+    "npm_package_devDependencies_clean_webpack_plugin": "^3.0.0",
+    "MAIL": "/var/spool/mail/ruslan",
+    "NVM_BIN": "/home/ruslan/.nvm/versions/node/v12.13.1/bin",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_ignore_optional": "",
+    "npm_node_execpath": "/home/ruslan/.nvm/versions/node/v12.13.1/bin/node",
+    "npm_package_devDependencies_postcss_loader": "^3.0.0",
+    "TERM_PROGRAM": "vscode",
+    "npm_package_devDependencies_friendly_errors_webpack_plugin": "^1.7.0",
+    "npm_config_init_version": "1.0.0",
+    "WEBPACK_DEV_SERVER": "true",
+    "NODE_ENV": "development"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 524288,
+      "hard": 524288
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 31435,
+      "hard": 31435
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/usr/lib/libdl.so.2",
+    "/usr/lib/libstdc++.so.6",
+    "/usr/lib/libm.so.6",
+    "/usr/lib/libgcc_s.so.1",
+    "/usr/lib/libpthread.so.0",
+    "/usr/lib/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/usr/lib/libnss_files.so.2",
+    "/home/ruslan/development/portfolio/node_modules/node-sass/vendor/linux-x64-72/binding.node"
+  ]
+}
