@@ -2,18 +2,22 @@
 export default function() {
 	const button = document.querySelector('.form__submit');
 	const form = document.forms.feedback;
+	let Modal = require('../modal/modal');
+
+	let modalContainer = document.getElementById('modal__common');
+
+	const modalPortfolio = new Modal(modalContainer);
+
 
 	button.addEventListener('click', function() {
 
-		let modal = require('../modal/modal'); 
-
 		if (form.name.value === '' || form.email.value === '') {
-			modal('Заполните все поля');
+			modalPortfolio.start('Заполните все поля');
 			return;
 		}
 
 		if (form.email.value.indexOf('@') === -1) {
-			modal('Адрес электроной почты должен содержать символ "@"');
+			modalPortfolio.start('Адрес электроной почты должен содержать символ "@"');
 			return;
 		}
 
