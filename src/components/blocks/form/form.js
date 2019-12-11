@@ -4,20 +4,20 @@ export default function() {
 	const form = document.forms.feedback;
 	let Modal = require('../modal/modal');
 
-	let modalContainer = document.getElementById('modal__common');
+	let modalPortfolio = document.getElementById('modal__portfolio');
 
-	const modalPortfolio = new Modal(modalContainer);
+	const showModalPortfolio = new Modal(modalPortfolio);
 
 
 	button.addEventListener('click', function() {
 
 		if (form.name.value === '' || form.email.value === '') {
-			modalPortfolio.start('Заполните все поля');
+			showModalPortfolio.start('Заполните все поля');
 			return;
 		}
 
 		if (form.email.value.indexOf('@') === -1) {
-			modalPortfolio.start('Адрес электроной почты должен содержать символ "@"');
+			showModalPortfolio.start('Адрес электроной почты должен содержать символ "@"');
 			return;
 		}
 

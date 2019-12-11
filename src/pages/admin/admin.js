@@ -4,8 +4,12 @@ import './admin.scss';
 
 
 import preloader from '../../components/blocks/preloader/preloader';
-import modal from '../../components/blocks/modal/modal.js';
+import Modal from '../../components/blocks/modal/modal.js';
 preloader();
+
+
+const modalAdmin = document.getElementById('modal__admin');
+const showModalAdmin = new Modal(modalAdmin);
 
 
 //переключение табов
@@ -34,5 +38,5 @@ let buttonAdmin = document.querySelector('.button__about');
 
 buttonAdmin.addEventListener('click', function(){
 
-	modal('Собщение отправлено');
+	showModalAdmin.start('Сообщение отправлено');
 });

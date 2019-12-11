@@ -35,10 +35,11 @@ module.exports = function(modalContainer) {
 		modalContainer.style.display = 'block';
 		this.modalText.innerHTML = message;
 
-		this.modalClose.addEventListener('click', function() {
-			modalContainer.style.display = 'none';
-			this.modal.style.transform = 'translate(-50%, -50%) scale(0)';
-			this.modalText.innerHTML = '';
-		});
 	};
+
+	this.modalClose.addEventListener('click', () => {
+		modalContainer.style.display = 'none';
+		this.modal.style.transform = 'translate(-50%, -50%) scale(0)';
+		this.modalText.innerHTML = '';
+	});
 };
