@@ -1,4 +1,3 @@
-// let xhr = new XMLHttpRequest();
 export default function() {
 	const button = document.querySelector('.form__submit');
 	const form = document.forms.feedback;
@@ -31,12 +30,26 @@ export default function() {
 		form.email.value = '';
 		form.message.value = '';
 
-		fetch('/portfolio', {
+		console.log(body);
+
+		fetch('http://127.0.0.1:3001/portfolio', {
 			method: 'POST',
+			mode: 'cors',
 			headers: {
-				'Content-Type': 'application/json; charset=utf-8'
+				'Content-Type': 'application/json; charset=utf-8',
 			},
 			body: body
-		});
+		}).then(
+			res => {
+				if (res.ok) {
+					showModalPortfolio.start('Сообщение отправлено');
+				} else {
+					showModalPortfolio.start('Ошибка ' + res.status);
+				}
+			},
+			err => {
+				showModalPortfolio.start('Ошибка! Сообщение не отправлено. ');
+			}
+		);
 	});
 }

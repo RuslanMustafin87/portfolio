@@ -3,13 +3,13 @@ extends ../base
 block  var
     - var title = "Панель администратора"
     - var authorDescription = 'Личный сайт веб-разработчика'
-    - var page = ''
+    - var page = 'admin'
 
 block content
     main.main.main__admin
         header.header-admin 
             h1.header__title Панель администрирования
-            a.header-admin__link-back(href=-'/') Вернутся на сайт
+            a.header-admin__link-back(href='/') Вернутся на сайт
         section.panel-admin
             ul.panel-admin__tabs.tabs
                 li.tabs__title.active__tab(for="tabs__tab-1") Обо мне
@@ -24,15 +24,18 @@ block content
                             .frontend__caption Frontend
                             .table__row
                                 .table__cell HTML
-                                .table__cell.table__col 90
+                                .table__cell.table__col 
+                                    input.panel-admin__about-input(value=`80` id='admin-input-html')
                                 .table__cell %
                             .table__row
                                 .table__cell CSS
-                                .table__cell.table__col 90
+                                .table__cell.table__col 
+                                    input.panel-admin__about-input(value=`80` id='admin-input-css')
                                 .table__cell %
                             .table__row
                                 .table__cell JavaScript
-                                .table__cell.table__col 80
+                                .table__cell.table__col 
+                                    input.panel-admin__about-input(value=`80` id='admin-input-js')
                                 .table__cell %
                         .block__frontend 
                             .frontend__caption Workflow

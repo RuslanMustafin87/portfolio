@@ -3,21 +3,32 @@ $color_hover: #083c96;
 $color_title: #474b57;
 $color_text: #455a64;
 
+@import '../../common/mixin.scss';
+
+
 .main__admin {
 	height: 100vh;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	letter-spacing: .05rem;
+	@include phone{
+		height: auto;
+	}
 }
 
 .header-admin {
-	height: 5rem;
+	height: 80px;
 	background-color: $color_button;
 	color: #f0efe9;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 1.875rem;
+	@include phone{
+		flex-direction: column-reverse;
+		justify-content: space-evenly;
+		padding: 0;
+	}
 }
 
 
@@ -29,18 +40,26 @@ $color_text: #455a64;
 
 .header__title {
 	font-size: 1.75rem;
+	@include phone{
+		text-align: center;
+		font-size: 21px;
+	}
 }
 
 .panel-admin {
-	height: calc(100% - 5rem);
+	height: calc(100% - 80px);
 	color: #474b57;
 }
 
 .tabs {
-	height: 3.75rem;
+	height: 60px;
 	background-color: #f0efe9;
 	display: flex;
 	justify-content: flex-start;
+	@include phone{
+		flex-direction: column;
+		height: 185px;
+	}
 }
 
 .tabs__tab {
@@ -53,7 +72,17 @@ $color_text: #455a64;
 	height: 100%;
 	width: 11.25rem;
 	text-align: center;
-	line-height: 3.75rem;
+	line-height: 60px;
+	@include tablet{
+		flex-grow: 1;
+	}
+	@include phone{
+		height: 47px;
+		line-height: 47px;
+		width: 100%;
+		border-right: none;
+		border-bottom: 2px solid #fff;
+	}
 }
 
 .active__tab {
@@ -64,9 +93,15 @@ $color_text: #455a64;
 .panel-admin__content {
 	position: relative;
 	height: calc(100% - 3.75rem);
-	background: url('../../images/main_bg.jpg') center no-repeat;
+	background: url('../../images/main_bg.jpg')  no-repeat;
+	background-position: center;
 	background-size: cover;
 	padding-left: 1.875rem;
+	padding-right: 1.875rem;
+	@include phone{
+		background-position: center bottom;
+		height: 125vh;
+	}
 }
 
 .panel-admin__content-bg {
@@ -102,9 +137,22 @@ $color_text: #455a64;
 	border-spacing: 9px;
 	margin-top: 2.8125rem;
 	margin-right: 1.875rem;
-
-	&:nth-child(2) {
+	
+	&:nth-of-type(1){
 		float: left;
+		@include tablet{
+			float: none;
+		}
+	}
+	&:nth-of-type(2) {
+		
+		
+	}
+	&:nth-of-type(3){
+		margin-top: 1.8125rem;
+		@include tablet{
+			margin-top: 2.8125rem;	
+		}
 	}
 }
 
@@ -118,24 +166,20 @@ $color_text: #455a64;
 
 .table__cell {
 	display: table-cell;
-	padding: 0.4375rem;
 	font-weight: 400;
-
+	vertical-align: middle;
+	overflow: hidden;
 	&:nth-child(1) {
-		padding-right: 1.25rem;
+		width: 115px;
+		padding-left: 0.9375rem;
 	}
 
 	&:nth-child(2) {
 		text-align: center;
 		background-color: #fff;
 		border-radius: 4px;
-	}
-
-	;
-
-	&:nth-child(3) {
-		text-align: left;
-	}
+		size: 45px 35px;
+	}	
 }
 
 .admin__button {
@@ -159,7 +203,15 @@ $color_text: #455a64;
 }
 
 .button__about{
-	margin-top: 2.05rem;
+	margin-top: 1.9375rem;
+	margin-bottom: 10px;
+}
+
+.panel-admin__about-input{
+	size: 100%;
+	text-align: center;
+	border: none;
+	outline: none;
 }
 
 .panel-admin__blog-form {
@@ -190,11 +242,19 @@ $color_text: #455a64;
 		border-radius: 5px;
 		margin-top: 1.25rem;
 		padding: 1rem 1.25rem;
+		@include tablet{
+			size: 500px 300px;
+		}
+		@include phone{
+			size: 100% 250px;
+		}
 	}
 }
 
 .button__blog {
 	margin-top: 2.5rem;
+	margin-bottom: 10px;
+
 }
 
 .form-admin__file {
@@ -227,6 +287,9 @@ $color_text: #455a64;
 
 .button__works {
 	margin-top: 10.9375rem;
+	@include tablet{
+		margin-top: 2.1875rem;
+	}
 }
 
 .modal-admin{
@@ -254,10 +317,6 @@ $color_text: #455a64;
     justify-content: space-evenly;
 	align-items: center;
 	flex-direction: column;
-}
-
-.modal-admin__text{
-
 }
 
 .modal-admin__close{
