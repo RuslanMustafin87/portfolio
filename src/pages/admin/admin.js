@@ -5,6 +5,7 @@ import './admin.scss';
 
 import preloader from '../../components/blocks/preloader/preloader';
 import Modal from '../../components/blocks/modal/modal.js';
+import { get } from 'https';
 preloader();
 
 
@@ -28,6 +29,8 @@ tabsTitles.forEach(function(item, index) {
 		item.classList.add('active__tab');
 		panelAdminItems[index].classList.add('active__panel-item');
 
+		setItemPanelHeight(panelAdminItems[index]);
+
 	});
 
 });
@@ -36,40 +39,25 @@ tabsTitles.forEach(function(item, index) {
 
 let buttonAdminAbout = document.querySelector('.button__about');
 
-let dataInputHTML = document.getElementById('admin-input-html');
-let dataInputCSS = document.getElementById('admin-input-css');
-let dataInputJS = document.getElementById('admin-input-js');
+let skillsList = ['html', 'css', 'js', 'python', 'mysql', 'node', 'mongo', 'git', 'webpack', 'linux'];
 
-//document.addEventListener('DOMContentLoaded', function() {
-//
-//	fetch('http://127.0.0.1:3001/admin', {
-//		method: 'GET',
-//		mode: 'cors'
-//	}).then(
-//		res => {
-//
-//			return res.text();
-//
-//		}
-//	).then(
-//		text => {
-//			let data  = JSON.parse(text);
-//			dataInputHTML.value = data.html;
-//			dataInputCSS.value = data.css;
-//			dataInputJS.value = data.js;
-//		}
-//	);
-//});
 
-buttonAdminAbout.addEventListener('click', function() {
+function getSkills(skillsList){ // функция создания объекта с скилами и их значениями
 
-	const body = JSON.stringify({
-		html: dataInputHTML.value,
-		css: dataInputCSS.value,
-		js: dataInputJS.value,
+	let skills = {};
+
+	skillsList.forEach( function(item){
+		skills[item] = document.getElementById(`admin-input-${item}`).value;   
 	});
 
+	return skills;
+}
 
+
+buttonAdminAbout.addEventListener('click', function() {
+	
+	const body = JSON.stringify(getSkills(skillsList));
+	
 	fetch('http://127.0.0.1:3001/adminAbout', {
 		method: 'POST',
 		mode: 'cors',
@@ -79,15 +67,45 @@ buttonAdminAbout.addEventListener('click', function() {
 		body: body
 	}).then(
 		res => {
-			if (res.ok) {
-				showModalAdmin.start('Сообщение отправлено');
+			co
+			if (200 <= res.status && res.status <= 299) {
+				return res.json();
 			} else {
 				showModalAdmin.start('Ошибка ' + res.status);
 			}
 		},
 		err => {
-			showModalAdmin.start('Ошибка! Сообщение не отправлено. ');
+			showModalAdmin.start('Ошибка! Сообщение не отправлено.');
+		}
+	).then(
+		body => {
+			showModalAdmin.start(body.status);
 		}
 	);
+});
+
+// адаптивность, рстягиваем блоки с констентом до конца страницы
+
+function setItemPanelHeight(item){
+	
+	let headerAdmin = document.querySelector('.header-admin');
+	let panelAdminTabs = document.querySelector('.panel-admin__tabs');
+
+	let headerAdminHeight = parseInt(window.getComputedStyle(headerAdmin).height);
+	let panelAdminTabsHeight= parseInt(window.getComputedStyle(panelAdminTabs).height);
+	let panelAdminItemHeight = parseInt(window.getComputedStyle(item).height);
+
+	let sumHeight = headerAdminHeight + panelAdminTabsHeight + panelAdminItemHeight;
+	
+	if (window.innerHeight > sumHeight) {
+		item.style.height = `${window.innerHeight - headerAdminHeight - panelAdminTabsHeight}px`;
+	}
+}
+
+window.addEventListener('resize', function(){
+
+	let activeItem = document.querySelector('.active__panel-item');
+
+	setItemPanelHeight(activeItem);
 
 });

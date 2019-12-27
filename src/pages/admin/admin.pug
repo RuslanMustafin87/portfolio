@@ -4,6 +4,7 @@ block  var
     - var title = "Панель администратора"
     - var authorDescription = 'Личный сайт веб-разработчика'
     - var page = 'admin'
+    - var data = {}
 
 block content
     main.main.main__admin
@@ -25,45 +26,56 @@ block content
                             .table__row
                                 .table__cell HTML
                                 .table__cell.table__col 
-                                    input.panel-admin__about-input(value=`80` id='admin-input-html')
+                                    input.panel-admin__about-input(value=`${data.html}` id='admin-input-html')
                                 .table__cell %
                             .table__row
                                 .table__cell CSS
                                 .table__cell.table__col 
-                                    input.panel-admin__about-input(value=`80` id='admin-input-css')
+                                    input.panel-admin__about-input(value=`${data.css}` id='admin-input-css')
                                 .table__cell %
                             .table__row
                                 .table__cell JavaScript
                                 .table__cell.table__col 
-                                    input.panel-admin__about-input(value=`80` id='admin-input-js')
+                                    input.panel-admin__about-input(value=`${data.js}` id='admin-input-js')
                                 .table__cell %
                         .block__frontend 
                             .frontend__caption Workflow
                             .table__row
                                 .table__cell Git
-                                .table__cell.table__col 90
+                                .table__cell.table__col
+                                    input.panel-admin__about-input(value=`${data.git}` id='admin-input-git')
                                 .table__cell %
                             .table__row
                                 .table__cell Webpack
-                                .table__cell.table__col 80
+                                .table__cell.table__col
+                                    input.panel-admin__about-input(value=`${data.webpack}` id='admin-input-webpack')
                                 .table__cell %
                             .table__row
-                                .table__cell Gulp
-                                .table__cell.table__col 50
+                                .table__cell Linux
+                                .table__cell.table__col
+                                    input.panel-admin__about-input(value=`${data.linux}` id='admin-input-linux')
                                 .table__cell %
                         .block__frontend 
                             .frontend__caption Backend
                             .table__row
-                                .table__cell PHP
-                                .table__cell.table__col 50
+                                .table__cell Python
+                                .table__cell.table__col
+                                    input.panel-admin__about-input(value=`${data.python}` id='admin-input-python')
                                 .table__cell %
                             .table__row
                                 .table__cell Node.js
-                                .table__cell.table__col 60
+                                .table__cell.table__col
+                                    input.panel-admin__about-input(value=`${data.node}` id='admin-input-node')
+                                .table__cell %
+                            .table__row
+                                .table__cell MySQL
+                                .table__cell.table__col
+                                    input.panel-admin__about-input(value=`${data.mysql}` id='admin-input-mysql')
                                 .table__cell %
                             .table__row
                                 .table__cell Mongo.db
-                                .table__cell.table__col 50
+                                .table__cell.table__col
+                                    input.panel-admin__about-input(value=`${data.mongo}` id='admin-input-mongo')
                                 .table__cell %
                         button.admin__button.button__about Сохранить
                 li.panel-admin__item.panel-admin__blog

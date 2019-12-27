@@ -30,8 +30,6 @@ export default function() {
 		form.email.value = '';
 		form.message.value = '';
 
-		console.log(body);
-
 		fetch('http://127.0.0.1:3001/portfolio', {
 			method: 'POST',
 			mode: 'cors',
@@ -42,14 +40,19 @@ export default function() {
 		}).then(
 			res => {
 				if (res.ok) {
-					showModalPortfolio.start('Сообщение отправлено');
+					//showModalPortfolio.start('Сообщение отправлено');
+					return res.json();
 				} else {
 					showModalPortfolio.start('Ошибка ' + res.status);
 				}
 			},
 			err => {
-				showModalPortfolio.start('Ошибка! Сообщение не отправлено. ');
+				showModalPortfolio.start('Ошибка! Сообщение не отправлено.');
 			}
+		).then(
+			body => {
+				showModalPortfolio.start(body.status);
+			},
 		);
 	});
 }

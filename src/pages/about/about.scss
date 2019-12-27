@@ -87,7 +87,7 @@ $color_text: #455a64;
 		padding-top: 0;
 	}
 
-	
+
 
 	@include tablet {
 		float: none;
@@ -96,7 +96,7 @@ $color_text: #455a64;
 		padding-left: 19.53%;
 	}
 
-	
+
 
 	@include phone {
 		padding-left: 3.125%;
@@ -200,7 +200,7 @@ $color_text: #455a64;
 		padding-left: 19.53%;
 	}
 
-	
+
 
 	@include phone {
 		padding-left: 3.125%;
@@ -209,11 +209,9 @@ $color_text: #455a64;
 }
 
 
-.about-me__skill-item {
+.skills__item {
 	text-align: left;
 	margin-top: 2.5rem;
-	font-size: 0;
-
 	@include tablet {
 		text-align: center;
 		padding: 0 2.5rem;
@@ -224,35 +222,48 @@ $color_text: #455a64;
 	}
 }
 
-.about-me__title-h3 {
+.skills__title-h3 {
 	@include tablet {
 		text-align: center;
 	}
 }
 
-.about-me__skills-container {
+.skills__skills-container {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-
 	@include tablet {
 		justify-content: space-around;
 	}
 }
 
-.about-me_skill-img {
+.skills__skills-item {
 	width: 120px;
 	height: 120px;
 	margin-top: 3.4375rem;
 	margin-right: 2.5rem;
-
+	position: relative;
 	&:last-child {
 		margin-right: 0;
 	}
-
 	@include tablet {
 		margin-right: 0;
 	}
+}
+
+.skills__skills-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	color: #243994;
+	font-weight: 500;
+}
+
+.skills__skill-img {
+	width: 100%;
+	height: 100%;	
 }
 
 #sprite__skills,
@@ -291,7 +302,8 @@ $skill_bower_stroke_dash: 204.1975;
 }
 
 .skills_html {
-	stroke-dasharray: $skill_html_stroke_dash $skill_stroke_dash - $skill_html_stroke_dash;
+	stroke-dasharray: 0 314;
+	transition: stroke-dasharray .5s linear;
 	@include case($skill_html_stroke_dash);
 }
 
@@ -305,12 +317,12 @@ $skill_bower_stroke_dash: 204.1975;
 	@include case($skill_js_stroke_dash);
 }
 
-.skills_php {
+.skills_python {
 	stroke-dasharray: $skill_php_stroke_dash $skill_stroke_dash - $skill_php_stroke_dash;
 	@include case($skill_php_stroke_dash);
 }
 
-.skills_mySQL {
+.skills_mysql {
 	stroke-dasharray: $skill_mySQL_stroke_dash $skill_stroke_dash - $skill_mySQL_stroke_dash;
 	@include case($skill_mySQL_stroke_dash);
 }
@@ -330,12 +342,12 @@ $skill_bower_stroke_dash: 204.1975;
 	@include case($skill_git_stroke_dash);
 }
 
-.skills_gulp {
+.skills_webpack {
 	stroke-dasharray: $skill_gulp_stroke_dash $skill_stroke_dash - $skill_gulp_stroke_dash;
 	@include case($skill_gulp_stroke_dash);
 }
 
-.skills_bower {
+.skills_linux {
 	stroke-dasharray: $skill_bower_stroke_dash $skill_stroke_dash - $skill_bower_stroke_dash;
 	@include case($skill_bower_stroke_dash);
 }
@@ -363,7 +375,7 @@ $skill_bower_stroke_dash: 204.1975;
 		height: 17.6923rem;
 	}
 
-	
+
 
 	@include phone {
 		height: initial;

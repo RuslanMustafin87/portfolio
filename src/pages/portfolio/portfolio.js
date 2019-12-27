@@ -6,7 +6,7 @@ import preloader from '../../components/blocks/preloader/preloader';
 import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 import slider from '../../components/blocks/slider/index.js';
-import arrow from '../../components/blocks/arrowMove/arrow.js';
+import arrow from '../../components/blocks/arrowMove/arrowMove.js';
 import form from '../../components/blocks/form/form';
 
 preloader();

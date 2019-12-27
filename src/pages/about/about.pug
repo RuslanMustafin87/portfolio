@@ -13,7 +13,7 @@ block content
                 include ../../images/icons/hamburger.svg
             .hero__social
                 include ../../components/blocks/social/social
-            img.hero__img(src=require('../../images/stars1.svg') alt="")
+            img.hero__img(src=require('../../images/icons/stars1.svg') alt="")
             .hero__user
                 include ../../components/blocks/author_title/author_title
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="hero__traingle")
@@ -24,7 +24,7 @@ block content
         section.section.about-me
             .about-me__left
                 .about-me__left-left
-                    img.about-me__img(src=require("../../images/stars2.svg") alt="")
+                    img.about-me__img(src=require('../../images/icons/stars2.svg') alt="")
                     h1.about-me__left-title.title.title_color-gray.title_font-size-63.title_text-transform-uppercase Обо мне
                 .about-me__left-right
                     //- img.about-me__pic(src=require("../../images/photo.jpg") srcset=require("../../images/photo_x0.5.jpg 480w") alt='Руслан Мустафин')
@@ -42,63 +42,83 @@ block content
                 .about-me__line.line
                 .about-me__text.about-me__text-right
                     p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-                ul.about-me__skills
-                    li.about-me__skill-item()
-                        h3.about-me__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
-                        img(src=require('../../images/sprite_skills.svg') id='sprite__skills')
-                        .about-me__skills-container
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_html")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_html" class="text_html")
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg" )
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_css")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_css" class="text_css")
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_js")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_js" class="text_js")
-                    li.about-me__skill-item()
-                        h3.about-me__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Backend
-                        .about-me__skills-container
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_php")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_php" class="text_php")
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_mySQL")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_mySQL" class="text_mySQL")
-                            svg.about-me_skill-img.about-me_skill-img-previous-2(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_node")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_node" class="text_node")
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_mongo")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_mongo" class="text_mongo")
-                    li.about-me__skill-item()
-                        h3.about-me__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
-                        .about-me__skills-container
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_git")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_git" class="text_git")
-                            svg.about-me_skill-img.about-me_skill-img-previous-1(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_gulp")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_gulp" class="text_gulp")
-                            svg.about-me_skill-img(viewBox='0 0 120 120')
-                                use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
-                                use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_bower")
-                                use(xlink:href="images/icons/sprite_skills.svg#text_bower" class="text_bower")
+                ul.about-me__skills.skills
+                    li.skills__item
+                        img(src=require('../../images/icons/sprite_skills.svg') id='sprite__skills')
+                        h3.skills__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
+                        .skills__skills-container
+                            .skills__skills-item
+                                .skills__skills-text HTML
+                                svg.skills__skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_html skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_html" class="text_html")
+                            .skills__skills-item
+                                .skills__skills-text CSS
+                                svg.skills__skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg" )
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_css skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_css" class="text_css")
+                            .skills__skills-item
+                                .skills__skills-text JavaScript
+                                svg.skills__skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_js skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_js" class="text_js")
+                    li.skills__item
+                        h3.skills__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Backend
+                        .skills__skills-container
+                            .skills__skills-item
+                                .skills__skills-text Python
+                                svg.about-me_skill-img(viewBox='0 0 120 120' preserveAspectRatio="xMidYmid meet")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_php skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_python" class="text_python")
+                            .skills__skills-item
+                                .skills__skills-text MySQL
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_mySQL skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_mysql" class="text_mysql")
+                            .skills__skills-item
+                                .skills__skills-text Node.js
+                                svg.about-me_skill-img.about-me_skill-img-previous-2(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_node skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_node" class="text_node")
+                            .skills__skills-item
+                                .skills__skills-text Mongo.db
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_mongo skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_mongo" class="text_mongo")
+                    li.skills__item
+                        h3.skills__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
+                        .skills__skills-container
+                            .skills__skills-item
+                                .skills__skills-text Git
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_git skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_git" class="text_git")
+                            .skills__skills-item
+                                .skills__skills-text Webpack
+                                svg.about-me_skill-img.about-me_skill-img-previous-1(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_webpack skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_webpack" class="skill text_webpack")
+                            .skills__skills-item
+                                .skills__skills-text Linux
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_bower skill" data-skill='50')
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_linux" class="text_linux")
         section.section.map
             .map__top
                 .map__contacts.contacts
                     .contacts-title.title.title_color-gray.title_text-transform-upprcase.title_font-size-35 Контакты
                     .contacts__line.line
-                    img(src=require('../../images/sprite_contacts.svg') id='sprite_contacts')
+                    img(src=require('../../images/icons/sprite_contacts.svg') id='sprite_contacts')
                     ul.contacts__list
                         li.contacts__item
                             svg.contacts__img

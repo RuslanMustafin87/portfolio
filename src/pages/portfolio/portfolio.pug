@@ -13,14 +13,14 @@ block content
                 include ../../images/icons/hamburger.svg
             .hero__social
                 include ../../components/blocks/social/social
-            img.hero__img-stars-1(src=require('../../images/stars1.svg'), alt="")
+            img.hero__img-stars-1(src=require('../../images/icons/stars1.svg'), alt="")
             .hero__user
                 .author-title
                     include ../../components/blocks/author_title/author_title
             svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 180" preserveAspectRatio='none' class="hero__traingle")
                 polygon(class = "left" points="0,0   0,180   500,180   500,75" )
                 polygon(class = "right" points="1000,0   1000,180  500,180   500,75" )
-            img.hero__img-stars-2(src=require("../../images/stars2.svg") alt="")
+            img.hero__img-stars-2(src=require('../../images/icons/stars2.svg') alt="")
             h1.hero__title.title.title_text-transform-uppercase.title_font-size-63 Мои работы
             img.hero__arrow.arrow(src=require('../../images/icons/arrow_down.svg'))
         section.section.portfolio-content
@@ -28,7 +28,7 @@ block content
                     include ../../components/blocks/slider/slider.pug
         section.portfolio-contact
             .portfolio-contact__top
-                img.portfolio-contact__img(src=require('../../images/stars3.svg') alt='')
+                img.portfolio-contact__img(src=require('../../images/icons/stars3.svg') alt='')
                 h1.portfolio-contact__title.title.title_font-size-63.title_text-transform-uppercase Что обо мне говорят
                 .portfolio-contact__features
                     .portfolio-contact__features-item.portfolio-contact__features-item_float-left

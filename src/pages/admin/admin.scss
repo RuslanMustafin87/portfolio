@@ -14,6 +14,9 @@ $color_text: #455a64;
 	@include phone{
 		height: auto;
 	}
+	@include device_landscape{
+		height: auto;
+	}
 }
 
 .header-admin {
@@ -49,6 +52,7 @@ $color_text: #455a64;
 .panel-admin {
 	height: calc(100% - 80px);
 	color: #474b57;
+	
 }
 
 .tabs {
@@ -100,7 +104,7 @@ $color_text: #455a64;
 	padding-right: 1.875rem;
 	@include phone{
 		background-position: center bottom;
-		height: 125vh;
+		height: auto;
 	}
 }
 
@@ -140,7 +144,7 @@ $color_text: #455a64;
 	
 	&:nth-of-type(1){
 		float: left;
-		@include tablet{
+		@include phone{
 			float: none;
 		}
 	}
@@ -150,7 +154,7 @@ $color_text: #455a64;
 	}
 	&:nth-of-type(3){
 		margin-top: 1.8125rem;
-		@include tablet{
+		@include phone{
 			margin-top: 2.8125rem;	
 		}
 	}
@@ -252,9 +256,8 @@ $color_text: #455a64;
 }
 
 .button__blog {
-	margin-top: 2.5rem;
+	margin-top: 5.25rem;
 	margin-bottom: 10px;
-
 }
 
 .form-admin__file {
@@ -286,7 +289,8 @@ $color_text: #455a64;
 }
 
 .button__works {
-	margin-top: 10.9375rem;
+	margin-top: 13.7rem;
+	margin-bottom: 10px;
 	@include tablet{
 		margin-top: 2.1875rem;
 	}
