@@ -17,6 +17,14 @@ $color_text: #455a64;
     position: relative;
 }
 
+.hero-portfolio__vertical-paralax{
+    size: 100%;
+    position: relative;
+    .vertical-paralax{
+        height: 100%;
+    }
+}
+
 .hero__hamburger {
     top: 1.875rem;
     right: 1.875rem;

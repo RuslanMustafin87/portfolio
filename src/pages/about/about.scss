@@ -11,8 +11,8 @@ $color_text: #455a64;
 }
 
 .hero {
-	background: url('../../images/main_bg.jpg') 0 70% no-repeat;
-	background-size: cover;
+	//background: url('../../images/main_bg.jpg') 0 70% no-repeat;
+	//background-size: cover;
 	position: relative;
 }
 
@@ -64,6 +64,11 @@ $color_text: #455a64;
 	@include tablet {
 		fill: #f2f0e8;
 	}
+}
+
+.hero-about__vertical-paralax{
+	size: 100%;
+	position: relative;
 }
 
 .about-me {
@@ -209,148 +214,6 @@ $color_text: #455a64;
 }
 
 
-.skills__item {
-	text-align: left;
-	margin-top: 2.5rem;
-	@include tablet {
-		text-align: center;
-		padding: 0 2.5rem;
-	}
-
-	@include phone {
-		padding: 0 3.125%;
-	}
-}
-
-.skills__title-h3 {
-	@include tablet {
-		text-align: center;
-	}
-}
-
-.skills__skills-container {
-	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-	@include tablet {
-		justify-content: space-around;
-	}
-}
-
-.skills__skills-item {
-	width: 120px;
-	height: 120px;
-	margin-top: 3.4375rem;
-	margin-right: 2.5rem;
-	position: relative;
-	&:last-child {
-		margin-right: 0;
-	}
-	@include tablet {
-		margin-right: 0;
-	}
-}
-
-.skills__skills-text {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 14px;
-	color: #243994;
-	font-weight: 500;
-}
-
-.skills__skill-img {
-	width: 100%;
-	height: 100%;	
-}
-
-#sprite__skills,
-#sprite_contacts {
-	display: none;
-}
-
-$skill_stroke_dash: 314.15;
-$skill_html_stroke_dash: 282.735;
-$skill_css_stroke_dash: 267.0275;
-$skill_js_stroke_dash: 267.0275;
-$skill_php_stroke_dash: 125.66;
-$skill_mySQL_stroke_dash: 172.7825;
-$skill_node_stroke_dash: 109.9525;
-$skill_mongo_stroke_dash: 204.1975;
-$skill_git_stroke_dash: 267.0275;
-$skill_gulp_stroke_dash: 219.905;
-$skill_bower_stroke_dash: 204.1975;
-
-@mixin case($stroke-dasharray) {
-	@if ($stroke-dasharray < ($skill_stroke_dash*0.2)) {
-		opacity: .2;
-	}
-
-	@else if ($stroke-dasharray < ($skill_stroke_dash*0.4)) {
-		opacity: .4;
-	}
-
-	@else if ($stroke-dasharray < ($skill_stroke_dash*0.6)) {
-		opacity: .6;
-	}
-
-	@else if ($stroke-dasharray < ($skill_stroke_dash*0.8)) {
-		opacity: .8;
-	}
-}
-
-.skills_html {
-	stroke-dasharray: 0 314;
-	transition: stroke-dasharray .5s linear;
-	@include case($skill_html_stroke_dash);
-}
-
-.skills_css {
-	stroke-dasharray: $skill_css_stroke_dash $skill_stroke_dash - $skill_css_stroke_dash;
-	@include case($skill_css_stroke_dash);
-}
-
-.skills_js {
-	stroke-dasharray: $skill_js_stroke_dash $skill_stroke_dash - $skill_js_stroke_dash;
-	@include case($skill_js_stroke_dash);
-}
-
-.skills_python {
-	stroke-dasharray: $skill_php_stroke_dash $skill_stroke_dash - $skill_php_stroke_dash;
-	@include case($skill_php_stroke_dash);
-}
-
-.skills_mysql {
-	stroke-dasharray: $skill_mySQL_stroke_dash $skill_stroke_dash - $skill_mySQL_stroke_dash;
-	@include case($skill_mySQL_stroke_dash);
-}
-
-.skills_node {
-	stroke-dasharray: $skill_node_stroke_dash $skill_stroke_dash - $skill_node_stroke_dash;
-	@include case($skill_node_stroke_dash);
-}
-
-.skills_mongo {
-	stroke-dasharray: $skill_mongo_stroke_dash $skill_stroke_dash - $skill_mongo_stroke_dash;
-	@include case($skill_mongo_stroke_dash);
-}
-
-.skills_git {
-	stroke-dasharray: $skill_git_stroke_dash $skill_stroke_dash - $skill_git_stroke_dash;
-	@include case($skill_git_stroke_dash);
-}
-
-.skills_webpack {
-	stroke-dasharray: $skill_gulp_stroke_dash $skill_stroke_dash - $skill_gulp_stroke_dash;
-	@include case($skill_gulp_stroke_dash);
-}
-
-.skills_linux {
-	stroke-dasharray: $skill_bower_stroke_dash $skill_stroke_dash - $skill_bower_stroke_dash;
-	@include case($skill_bower_stroke_dash);
-}
 
 .map {
 	background: url('../../images/map_bg.png') center no-repeat;
@@ -370,23 +233,24 @@ $skill_bower_stroke_dash: 204.1975;
 
 .map__bottom {
 	height: 11.5625rem;
-
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 	@include tablet {
 		height: 17.6923rem;
 	}
-
-
-
 	@include phone {
 		height: initial;
 	}
 }
 
 .map__contacts {
-	@include align-center;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
 	width: 36.25rem;
 	height: 17.5rem;
-
 	@include tablet {
 		width: 26.923rem;
 		height: 28.8461rem;
@@ -441,4 +305,18 @@ $skill_bower_stroke_dash: 204.1975;
 	top: 50%;
 	transform: translateY(-50%);
 	line-height: 1rem;
+}
+
+#map{
+	position: absolute;
+	top:0;
+	left:0;
+	//size:100%;
+}
+
+.google-map{
+	position: absolute;
+	top:0;
+	left:0;
+	size:100%;
 }

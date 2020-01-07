@@ -5,7 +5,11 @@ import './blog.scss';
 // прокрутка статей в blog-content 
 
 import preloader from '../../components/blocks/preloader/preloader';
+import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertical-paralax';
+
 preloader();
+verticalParalax(document.querySelector('.main__blog'));
+
 
 var container = document.querySelector('.blog-content__articles');
 var accoMenuItems = document.querySelectorAll('.menu-acco__item');

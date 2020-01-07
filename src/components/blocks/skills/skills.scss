@@ -1,0 +1,97 @@
+.skills__item {
+	text-align: left;
+	margin-top: 2.5rem;
+	@include tablet {
+		text-align: center;
+		padding: 0 2.5rem;
+	}
+
+	@include phone {
+		padding: 0 3.125%;
+	}
+}
+
+.skills__title-h3 {
+	@include tablet {
+		text-align: center;
+	}
+}
+
+.skills__skills-container {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	@include tablet {
+		justify-content: space-around;
+	}
+}
+
+.skills__skills-item {
+	width: 120px;
+	height: 120px;
+	margin-top: 3.4375rem;
+	margin-right: 2.5rem;
+	position: relative;
+	&:last-child {
+		margin-right: 0;
+	}
+	@include tablet {
+		margin-right: 0;
+	}
+}
+
+.skills__skills-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 14px;
+	color: #243994;
+	font-weight: 500;
+}
+
+.skills__skill-img {
+	width: 100%;
+	height: 100%;	
+}
+
+#sprite__skills,
+#sprite_contacts {
+	display: none;
+}
+
+$skill_stroke_dash: 314.15;
+$skill_html_stroke_dash: 282.735;
+$skill_css_stroke_dash: 267.0275;
+$skill_js_stroke_dash: 267.0275;
+$skill_php_stroke_dash: 125.66;
+$skill_mySQL_stroke_dash: 172.7825;
+$skill_node_stroke_dash: 109.9525;
+$skill_mongo_stroke_dash: 204.1975;
+$skill_git_stroke_dash: 267.0275;
+$skill_gulp_stroke_dash: 219.905;
+$skill_bower_stroke_dash: 204.1975;
+
+@mixin case($stroke-dasharray) {
+	@if ($stroke-dasharray < ($skill_stroke_dash*0.2)) {
+		opacity: .2;
+	}
+
+	@else if ($stroke-dasharray < ($skill_stroke_dash*0.4)) {
+		opacity: .4;
+	}
+
+	@else if ($stroke-dasharray < ($skill_stroke_dash*0.6)) {
+		opacity: .6;
+	}
+
+	@else if ($stroke-dasharray < ($skill_stroke_dash*0.8)) {
+		opacity: .8;
+	}
+}
+
+.skill{
+    stroke-dasharray: 0 314;
+    transition: stroke-dasharray .5s linear;
+}
+

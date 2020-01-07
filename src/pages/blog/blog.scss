@@ -10,6 +10,16 @@ $color_text: #455a64;
     font-family: "Roboto", sans-serif;
 }
 
+.hero-blog__vertical-paralax{
+    size: 100%;
+    position: relative;
+    .vertical-paralax{
+        height: 100%;
+        background: url('../../images/main_bg.jpg') 50% 70% no-repeat;
+        background-size: cover;
+    }
+}
+
 .hero-blog {
     height: 25rem;
     background: url('../../images/main_bg.jpg') 0 70% no-repeat;
@@ -37,6 +47,8 @@ $color_text: #455a64;
     position: absolute;
     bottom: 0;
 }
+
+
 
 .blog-content {
     background-color: #f2f0e8;

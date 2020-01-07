@@ -3,26 +3,35 @@ import '../main.scss';
 import './about.scss';
 
 import preloader from '../../components/blocks/preloader/preloader';
-import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
+import {
+	hamburger
+} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 import arrow from '../../components/blocks/arrowMove/arrowMove.js';
-import skills from '../../components/blocks/skills/skills'
+import skills from '../../components/blocks/skills/skills.js';
+import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertical-paralax';
 
-let skills = document.querySelectorAll('.skill');
+let skillsAbout = document.querySelectorAll('.skill');
 
-skills(skills);
+skills(skillsAbout);
 preloader();
 hamburger();
 hamburgerAnimation();
 arrow('.hero__arrow', '.about-me');
+verticalParalax(document.querySelector('.main-about'));
 
-let x = document.querySelector('.skills__skills-item');
 
-x.addEventListener('click', function() {
-    let percent = circle.dataset.skill;
-    let percentSkill = percent/100*314;
+// eslint-disable-next-line no-unused-vars
+var map;
 
-    circle.style.strokeDasharray = `${percentSkill} ${314 - percentSkill}`;
-	//circle.setAttribute('stroke-dasharray', '280 34');
-	//circle.style.animation = `dash 2s linear`;
-});
+// eslint-disable-next-line no-unused-vars
+function initMap() {
+	// eslint-disable-next-line no-undef
+	map = new google.maps.Map(document.getElementById('map'), {
+		center: {
+			lat: -34.397,
+			lng: 150.644
+		},
+		zoom: 8
+	});
+}

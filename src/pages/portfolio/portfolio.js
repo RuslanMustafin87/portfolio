@@ -8,6 +8,7 @@ import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger
 import slider from '../../components/blocks/slider/index.js';
 import arrow from '../../components/blocks/arrowMove/arrowMove.js';
 import form from '../../components/blocks/form/form';
+import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertical-paralax';
 
 preloader();
 hamburgerAnimation();
@@ -16,6 +17,7 @@ slider();
 arrow('.hero__arrow', '.portfolio-content');
 arrow('.arrow_direction-up', '.hero');
 form();
+verticalParalax(document.querySelector('.main-portfolio'));
 
 // позиционирование фона для элемента с блюром
 

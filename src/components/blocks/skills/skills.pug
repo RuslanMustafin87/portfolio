@@ -1,0 +1,73 @@
+- var data = {}
+
+ul.skills
+                    li.skills__item
+                        img(src=require('../../../images/icons/sprite_skills.svg') id='sprite__skills')
+                        h3.skills__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Frontend
+                        .skills__skills-container
+                            .skills__skills-item
+                                .skills__skills-text HTML
+                                svg.skills__skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_html skill" data-skill=`${data.html}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_html" class="text_html")
+                            .skills__skills-item
+                                .skills__skills-text CSS
+                                svg.skills__skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg" )
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_css skill" data-skill=`${data.css}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_css" class="text_css")
+                            .skills__skills-item
+                                .skills__skills-text JavaScript
+                                svg.skills__skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_js skill" data-skill=`${data.js}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_js" class="text_js")
+                    li.skills__item
+                        h3.skills__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left Backend
+                        .skills__skills-container
+                            .skills__skills-item
+                                .skills__skills-text Python
+                                svg.about-me_skill-img(viewBox='0 0 120 120' preserveAspectRatio="xMidYmid meet")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_php skill" data-skill=`${data.python}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_python" class="text_python")
+                            .skills__skills-item
+                                .skills__skills-text MySQL
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_mySQL skill" data-skill=`${data.mysql}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_mysql" class="text_mysql")
+                            .skills__skills-item
+                                .skills__skills-text Node.js
+                                svg.about-me_skill-img.about-me_skill-img-previous-2(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_node skill" data-skill=`${data.node}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_node" class="text_node")
+                            .skills__skills-item
+                                .skills__skills-text Mongo.db
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_mongo skill" data-skill=`${data.mongo}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_mongo" class="text_mongo")
+                    li.skills__item
+                        h3.skills__title-h3.title.title_color-gray.title_font-size-28.title_text-align-left WorkFlow
+                        .skills__skills-container
+                            .skills__skills-item
+                                .skills__skills-text Git
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_git skill" data-skill=`${data.git}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_git" class="text_git")
+                            .skills__skills-item
+                                .skills__skills-text Webpack
+                                svg.about-me_skill-img.about-me_skill-img-previous-1(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_webpack skill" data-skill=`${data.webpack}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_webpack" class="skill text_webpack")
+                            .skills__skills-item
+                                .skills__skills-text Linux
+                                svg.about-me_skill-img(viewBox='0 0 120 120')
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill_bg" class="skill_bg")
+                                    use(xlink:href="images/icons/sprite_skills.svg#skill" class="skills_bower skill" data-skill=`${data.linux}`)
+                                    //use(xlink:href="images/icons/sprite_skills.svg#text_linux" class="text_linux")

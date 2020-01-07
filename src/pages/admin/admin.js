@@ -67,7 +67,6 @@ buttonAdminAbout.addEventListener('click', function() {
 		body: body
 	}).then(
 		res => {
-			co
 			if (200 <= res.status && res.status <= 299) {
 				return res.json();
 			} else {
@@ -84,7 +83,7 @@ buttonAdminAbout.addEventListener('click', function() {
 	);
 });
 
-// адаптивность, рстягиваем блоки с констентом до конца страницы
+// адаптивность, растягиваем блоки с контентом до конца страницы
 
 function setItemPanelHeight(item){
 	
