@@ -149,14 +149,14 @@
 }
 
 .slider__container-down, .slider__container-up{
-    height: 300%;
+    height: 400%;
 }
 
 .slider__container-down{
     position: absolute;
     width: 100%;
     left: 0;
-    top: -100%;
+    top: -200%;
     transition: top .5s linear;
 }
 
@@ -164,12 +164,12 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 0;
-    transition: top .5s linear;
+    top: -100%;
+    transition: bottom .5s linear;
 }
 
 .slider__item-down, .slider__item-up{
-    height: 33.3333%;
+    height: 25%;
     position: relative;
 }
 

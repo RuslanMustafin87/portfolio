@@ -2,10 +2,12 @@ const sliderContainer = document.querySelector('.slider-title-list');
 const slideFirst = sliderContainer.firstElementChild;
 const slideLast = sliderContainer.lastElementChild;
 
-const popUpTextShow = function(slideActive, slidePrevActive){
+// функция поочередной отрисовки букв заголовка 
+const popUpTextShow = function(slideActive, slidePrevActive){                                    
 	const itemPrevActive = slidePrevActive.querySelector('.title').querySelector('#popup-text');
 	const arrItemPrevChildren = Array.prototype.slice.call(itemPrevActive.children);
 
+	// удаляем буквы из заголовка преидущего слайда
 	arrItemPrevChildren.forEach(function(item){
 		item.style.opacity = '0';
 		item.style.transition = 'none';
@@ -16,6 +18,7 @@ const popUpTextShow = function(slideActive, slidePrevActive){
 
 	let countTransitionDelay = 0;
 
+	// отрисовываем буквы заголовка нового слайда
 	arrItemChildren.forEach(function(item){
 		
 		item.style.opacity = '1';

@@ -49,6 +49,11 @@
                     .slider__right-bottom.clearfix
                         .slider__slide-down.slider-vert-roll
                             ul.slider__container-down
+                                li.slider__item-down#slide__extrem
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_3.webp'))
+                                        img(srcset=require('../../../images/slide_3.png'))
+                                    .slider__item-color
                                 li.slider__item-down
                                     picture.slider__img()
                                         source(srcset=require('../../../images/slide_1.webp'))
@@ -64,9 +69,19 @@
                                         source(srcset=require('../../../images/slide_3.webp'))
                                         img(srcset=require('../../../images/slide_3.png'))
                                     .slider__item-color
+                                li.slider__item-down#slide__extrem
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_1.webp'))
+                                        img(srcset=require('../../../images/slide_1.png'))
+                                    .slider__item-color
                             img.slider__arrow-down.arrow(src=require('../../../images/icons/arrow_down.svg'))
                         .slider__slide-up.slider-vert-roll
                             ul.slider__container-up
+                                li.slider__item-up#slide__extrem
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_1.webp'))
+                                        img(srcset=require('../../../images/slide_1.png'))
+                                    .slider__item-color
                                 li.slider__item-up.slider-vert-roll__slide-active_up
                                     picture.slider__img()
                                         source(srcset=require('../../../images/slide_3.webp'))
@@ -81,5 +96,10 @@
                                     picture.slider__img()
                                         source(srcset=require('../../../images/slide_1.webp'))
                                         img(srcset=require('../../../images/slide_1.png'))
+                                    .slider__item-color
+                                li.slider__item-up#slide__extrem
+                                    picture.slider__img()
+                                        source(srcset=require('../../../images/slide_3.webp'))
+                                        img(srcset=require('../../../images/slide_3.png'))
                                     .slider__item-color
                             img.slider__arrow-up.arrow(src=require('../../../images/icons/arrow_down.svg'))
