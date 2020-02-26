@@ -1,10 +1,4 @@
-$color_button: #0548be;
-$color_hover: #083c96;
-$color_title: #474b57;
-$color_text: #455a64;
-
 @import '../../common/mixin.scss';
-
 
 .main__admin {
 	height: 100vh;
@@ -21,7 +15,7 @@ $color_text: #455a64;
 
 .header-admin {
 	height: 80px;
-	background-color: $color_button;
+	background-color: var(--color-button);
 	color: #f0efe9;
 	display: flex;
 	justify-content: space-between;
@@ -90,7 +84,7 @@ $color_text: #455a64;
 }
 
 .active__tab {
-	color: $color_button;
+	color: var(--color-button);
 	background-color: #fff;
 }
 
@@ -188,7 +182,7 @@ $color_text: #455a64;
 
 .admin__button {
 	size: 7.5rem 2.8125rem;
-	background-color: $color_button;
+	background-color: var(--color-button);
 	color: #fff;
 	text-align: center;
 	line-height: 2.8125rem;
@@ -197,7 +191,7 @@ $color_text: #455a64;
 	outline: 0;
 	cursor: pointer;
 	&:hover {
-		background-color: $color_hover;
+		background-color: var(--color-hover);
 	}
 }
 
@@ -221,11 +215,7 @@ $color_text: #455a64;
 .panel-admin__blog-form {
 	display: flex;
 	flex-direction: column;
-}
-
-.panel-admin__blog-form {
 	color: #acafb0;
-
 	& input {
 		width: 18.75rem;
 		height: 2.8125rem;
@@ -260,6 +250,23 @@ $color_text: #455a64;
 	margin-bottom: 10px;
 }
 
+.panel-admin__portfolio-form{
+	display: flex;
+	flex-direction: column;
+	color: #acafb0;
+	& input {
+		width: 18.75rem;
+		height: 2.8125rem;
+		border: none;
+		outline: none;
+		border-radius: 5px;
+		margin-top: 1.25rem;
+		padding-right: 1.25rem;
+		padding-left: 1.25rem;
+
+	}
+}
+
 .form-admin__file {
 	display: none;
 }
@@ -285,11 +292,40 @@ $color_text: #455a64;
 }
 
 .form-admin__file-discription{	
-	color: $color_button;
+	color: var(--color-button);
 }
 
 .button__works {
 	margin-top: 13.7rem;
+	margin-bottom: 10px;
+	@include tablet{
+		margin-top: 2.1875rem;
+	}
+}
+
+.panel-admin__avatar-form{
+	display: flex;
+	flex-direction: column;
+	color: #acafb0;
+	& input {
+		width: 18.75rem;
+		height: 2.8125rem;
+		border: none;
+		outline: none;
+		border-radius: 5px;
+		margin-top: 1.25rem;
+		padding-right: 1.25rem;
+		padding-left: 1.25rem;
+
+	}
+}
+
+.file-download-avatar{
+	margin-top: 2.8125rem;
+}
+
+.button__avatar {
+	margin-top: 24.2rem;
 	margin-bottom: 10px;
 	@include tablet{
 		margin-top: 2.1875rem;
@@ -325,7 +361,7 @@ $color_text: #455a64;
 
 .modal-admin__close{
 	size: 7.5rem 2.8125rem;
-	background-color: $color_button;
+	background-color: var(--color-button);
 	color: #fff;
 	text-align: center;
 	line-height: 2.8125rem;
@@ -335,6 +371,6 @@ $color_text: #455a64;
 	cursor: pointer;
 	margin-top: 2.05rem;
 	&:hover {
-		background-color: $color_hover;
+		background-color: var(--color-hover);
 	}
 }

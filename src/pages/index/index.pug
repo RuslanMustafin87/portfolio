@@ -9,7 +9,7 @@ block  var
 block content
     section.section.welcome
         .welcome__video(id='video__container')
-        video(class='welcome__video' id='video__container' autoplay loop muted)
+        video(class='welcome__video' id='video' autoplay loop muted)
             source(src=require('../../images/night.webm') type='video/webm; codecs="vp8, vorbis"')
             source(src=require('../../images/night.mp4') type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
         include ../../components/blocks/parallax/parallax

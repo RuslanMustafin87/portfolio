@@ -51,9 +51,9 @@
     border: none;
     cursor: pointer;
     color: #fff;
-    background-color: $color_button;
+    background-color: var(--color-button);
     &:hover {
-        background-color: $color_hover;
+        background-color: var(--color-hover);
     }
 }
 

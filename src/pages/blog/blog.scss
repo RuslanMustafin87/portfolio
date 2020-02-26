@@ -1,10 +1,5 @@
 @import '../../common/mixin.scss';
 
-$color_button: #0548be;
-$color_hover: #083c96;
-$color_title: #474b57;
-$color_text: #455a64;
-
 .main__blog {
     color: #fff;
     font-family: "Roboto", sans-serif;
@@ -88,7 +83,7 @@ $color_text: #455a64;
         position: fixed;
         z-index: 2;
         transform: translateX(-100%);
-        background-color: $color_button;
+        background-color: var(--color-button);
     }
     @include phone{
         width: 50%;
@@ -108,7 +103,7 @@ $color_text: #455a64;
     top: 50%;
     right: 0;
     transform: translate(40%, -50%);
-    background-color: $color_button;
+    background-color: var(--color-button);
     @include tablet{
         display: block;
     }
@@ -127,7 +122,7 @@ $color_text: #455a64;
     display: table;
     width: 100%;
     text-align: right;
-    color: $color_text;
+    color: var(--color-text);
     margin-bottom: 1.25rem;
     min-height: 2.5rem;
     padding-right: 1.25rem;
@@ -135,8 +130,8 @@ $color_text: #455a64;
     cursor: pointer;
     &:hover {
         padding-right: 1.125rem;
-        color: $color_hover;
-        border-right: 2px solid $color_hover;
+        color: var(--color-hover);
+        border-right: 2px solid var(--color-hover);
         font-weight: bold;
     }
     @include tablet{
@@ -158,8 +153,8 @@ $color_text: #455a64;
 
 .acco__item-active  {
     padding-right: 1.125rem;
-    color: $color_hover;
-    border-right: 2px solid $color_hover;
+    color: var(--color-hover);
+    border-right: 2px solid var(--color-hover);
     font-weight: bold;
     @include tablet{
         border: none;
@@ -211,7 +206,7 @@ $color_text: #455a64;
 
 .blog-content__text {
     margin-top: 1.5625rem;
-    color: $color_text;
+    color: var(--color-text);
     margin-bottom: 1.5625rem;
 }
 

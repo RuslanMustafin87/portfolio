@@ -16,7 +16,7 @@ block content
                 li.tabs__title.active__tab(for="tabs__tab-1") Обо мне
                 li.tabs__title(for="tabs__tab-2") Блог
                 li.tabs__title(for="tabs__tab-3") Мои работы
-                li.tabs__title(for="tabs__tab-4") TAB 4
+                li.tabs__title(for="tabs__tab-4") Аватар
             ul.panel-admin__content
                 li.panel-admin__content-bg
                 li.panel-admin__item.panel-admin__about.active__panel-item
@@ -86,10 +86,10 @@ block content
                         input(type='text' name='date' placeholder='Дата')
                         textarea(type='text' name='' placeholder='Содержание')
                         button.admin__button.button__blog Добавить
-                li.panel-admin__item
+                li.panel-admin__item.panel-admin__portfolio
                     h2.panel-admin__title Страница "Мои работы"
                     h3.panel-admin__title-2 Добавить работу
-                    form.panel-admin__blog-form.form-admin
+                    form.panel-admin__portfolio-form.form-admin
                         input(type='text' name='title' placeholder='Название проекта')
                         input(type='text' name='date' placeholder='Технологии')
                         input.form-admin__file(type='file' name='image' id='image' placeholder='Загрузить картинку')
@@ -97,8 +97,12 @@ block content
                             label.form-admin__file-label(for='image') 
                             span.form-admin__file-discription Загрузить картинку
                         button.admin__button.button__works Добавить
-                li.panel-admin__item
-                li.modal-admin#modal__admin
-                        .modal-admin__window.modal__window
-                            p.modal-admin__text.modal__text
-                            button.admin__button.modal-admin__button.modal__close Закрыть
+                li.panel-admin__item.panel-admin__avatar
+                    h2.panel-admin__title Страница смены аватара
+                    form.panel-admin__avatar-form.form-admin(id='admin_avatar' method='POST' action='/admin/adminAvatar' enctype="multipart/form-data")
+                        input.form-admin__file(type='file' name='avatar' id='avatar' accept='image/*')
+                        .form-admin__file-download.file-download-avatar
+                            label.form-admin__file-label(for='avatar') 
+                            span.form-admin__file-discription Загрузить фото
+                        button.admin__button.button__avatar(type='submit') Добавить
+    include ../../components/blocks/modal/modal.pug

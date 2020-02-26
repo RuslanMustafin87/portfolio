@@ -1,8 +1,10 @@
 //color
-$color_button: #0548be;
-$color_hover: #083c96;
-$color_title: #474b57;
-$color_text: #455a64;
+:root {
+	--color-button: #0548be;
+	--color-hover: #083c96;
+	--color-title: #474b57;
+	--color-text: #455a64;
+}
 
 //common
 @import '../common/mixin.scss';
@@ -28,4 +30,3 @@ $color_text: #455a64;
 // @import 'pages/index.scss';
 // @import 'pages/about.scss';
 // @import 'pages/blog.scss';
-

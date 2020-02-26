@@ -1,18 +1,12 @@
 @import '../../common/mixin.scss';
 
-$color_button: #0548be;
-$color_hover: #083c96;
-$color_title: #474b57;
-$color_text: #455a64;
-
 .main-about {
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
+	font-display: fallback;
 }
 
 .hero {
-	//background: url('../../images/main_bg.jpg') 0 70% no-repeat;
-	//background-size: cover;
 	position: relative;
 }
 
@@ -72,7 +66,7 @@ $color_text: #455a64;
 }
 
 .about-me {
-	color: $color_text;
+	color: var(--color-text);
 	height: initial;
 	background-color: #f2f0e8;
 	line-height: 1.5rem;

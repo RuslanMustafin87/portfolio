@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import 'normalize.css';
 import '../main.scss';
 import './portfolio.scss';
@@ -13,7 +14,6 @@ import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertica
 preloader();
 hamburgerAnimation();
 hamburger();
-slider();
 arrow('.hero__arrow', '.portfolio-content');
 arrow('.arrow_direction-up', '.hero');
 form();

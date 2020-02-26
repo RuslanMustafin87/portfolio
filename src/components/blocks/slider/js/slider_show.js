@@ -1,32 +1,33 @@
-export default function(sliderContainer, direction, slideActiveClass){
+
+export default (function() {
 	
-	const slideFirst = sliderContainer.firstElementChild;
-	const slideLast = sliderContainer.lastElementChild;
-	const slideActive = sliderContainer.querySelector('.' + slideActiveClass);
-
-	if (direction === 'down'){
-
-		const slideNext = slideActive.nextElementSibling;
-    
-		slideActive.classList.remove(slideActiveClass);
-
-		if (slideNext) {
-			slideNext.classList.add(slideActiveClass);
-		} else {
-			slideFirst.classList.add(slideActiveClass);
-		}
-
-	}else{
+	return {
+		slideShowDown(sliderContainer, slideActiveClass) {
+			const slideActive = sliderContainer.querySelector('.' + slideActiveClass);
+			const slideNext = slideActive.nextElementSibling;
+			const slideFirst = sliderContainer.firstElementChild;
+			
+			slideActive.classList.remove(slideActiveClass);
+			
+			if (slideNext) {
+				slideNext.classList.add(slideActiveClass);
+			} else {
+				slideFirst.classList.add(slideActiveClass);
+			}
+		},
 		
-		const slidePrev = slideActive.previousElementSibling;
-    
-		slideActive.classList.remove(slideActiveClass);
-    
-		if (slidePrev) {
-			slidePrev.classList.add(slideActiveClass);
-		} else {
-			slideLast.classList.add(slideActiveClass);
-		}	
-	}
-
-}
+		slideShowUp(sliderContainer, slideActiveClass) {
+			const slideActive = sliderContainer.querySelector('.' + slideActiveClass);
+			const slidePrev = slideActive.previousElementSibling;
+			const slideLast = sliderContainer.lastElementChild;
+			
+			slideActive.classList.remove(slideActiveClass);
+			
+			if (slidePrev) {
+				slidePrev.classList.add(slideActiveClass);
+			} else {
+				slideLast.classList.add(slideActiveClass);
+			}
+		}
+	};
+})();
