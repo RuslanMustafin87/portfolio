@@ -5,9 +5,9 @@ import './admin.scss';
 
 import preloader from '../../components/blocks/preloader/preloader';
 import Modal from '../../components/blocks/modal/modal.js';
-preloader();
 
 const showModalAdmin = new Modal();
+preloader();
 
 //переключение табов
 
@@ -68,14 +68,15 @@ buttonAdminAbout.addEventListener('click', function() {
 			} else {
 				showModalAdmin.start('Ошибка ' + res.status);
 			}
-		},
-		// eslint-disable-next-line no-unused-vars
-		err => {
-			showModalAdmin.start('Ошибка! Сообщение не отправлено.');
 		}
 	).then(
 		body => {
 			showModalAdmin.start(body.status);
+		}
+	).catch(
+		// eslint-disable-next-line no-unused-vars
+		err => {
+			showModalAdmin.start('Ошибка! Сообщение не отправлено.');
 		}
 	);
 });
@@ -83,7 +84,7 @@ buttonAdminAbout.addEventListener('click', function() {
 //отправляем картинку на сервер
 
 let adminAvatar = document.forms.admin_avatar;
-adminAvatar.onsubmit =  (event) => {
+adminAvatar.onsubmit = (event) => {
 	event.preventDefault();
 
 	fetch('http://127.0.0.1:3001/admin/adminAvatar', {
@@ -96,7 +97,8 @@ adminAvatar.onsubmit =  (event) => {
 			} else {
 				showModalAdmin.start('Ошибка ' + res.status);
 			}
-		},
+		}
+	).catch(
 		// eslint-disable-next-line no-unused-vars
 		err => {
 			showModalAdmin.start('Ошибка! Аватар не отправлен');
@@ -128,4 +130,11 @@ window.addEventListener('resize', function() {
 
 	setItemPanelHeight(activeItem);
 
+});
+
+
+window.addEventListener('unhandledrejection', function(event) {
+	// объект события имеет два специальных свойства:
+	alert(event.promise); // [object Promise] - промис, который сгенерировал ошибку
+	alert(event.reason); // Error: Ошибка! - объект ошибки, которая не была обработана
 });

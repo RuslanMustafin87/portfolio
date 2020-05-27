@@ -1,6 +1,7 @@
 export default function() {
 	window.addEventListener('load', function() {
 		var preloader = document.querySelector('.preloader');
+		console.log(preloader);
 		setTimeout(function() {
 			preloader.style.visibility = 'hidden';
 			preloader.style.opacity = '0';
@@ -13,15 +14,6 @@ export default function() {
 		imagesCount = 0,
 		percents = document.querySelector('.preloader__persents');
 
-	// console.log(images.length);
-	// console.log('hi');
-
-
-	// if (!images.length > 0) {
-	// 	console.log('hi');
-	// 	return;
-	// }
-
 	for (var i = 0; i < images.length; i++) {
 
 		var imageClone = new Image;
@@ -33,7 +25,7 @@ export default function() {
 	function imageLoader() {
 
 		imagesCount++;
-
+		
 		percents.innerHTML = ((100 / imagesTotalCount * imagesCount) << 0) + '%';
 	}
 

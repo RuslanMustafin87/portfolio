@@ -1,4 +1,4 @@
-export const hamburger = () => {
+export default (function (){
 
 	var hamburger = document.querySelector('.hamburger-icon');
 	var hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -12,4 +12,4 @@ export const hamburger = () => {
 		hamburgerLayer2.classList.toggle('hamburger__cross-layer-2');
 		hamburgerLayer3.classList.toggle('hamburger__cross-layer-3');
 	});
-};
+})();

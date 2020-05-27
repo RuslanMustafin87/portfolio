@@ -7,11 +7,10 @@ export default function() {
 
 	const showModalPortfolio = new Modal(modalPortfolio);
 
-
 	button.addEventListener('click', function() {
 
 		if (form.name.value === '' || form.email.value === '') {
-			showModalPortfolio.start('Заполните все поля');
+			showModalPortfolio.start('Заполните поля имя и email');
 			return;
 		}
 

@@ -3,9 +3,7 @@ import '../main.scss';
 import './about.scss';
 
 import preloader from '../../components/blocks/preloader/preloader';
-import {
-	hamburger
-} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
+import 	hamburger from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 import arrow from '../../components/blocks/arrowMove/arrowMove.js';
 import skills from '../../components/blocks/skills/skills.js';
@@ -14,11 +12,10 @@ import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertica
 let skillsAbout = document.querySelectorAll('.skill');
 
 skills(skillsAbout);
-preloader();
-hamburger();
 hamburgerAnimation();
 arrow('.hero__arrow', '.about-me');
 verticalParalax(document.querySelector('.main-about'));
+preloader();
 
 
 // eslint-disable-next-line no-unused-vars

@@ -7,49 +7,56 @@ block  var
     - var page = 'index'
     
 block content
-    section.section.welcome
-        .welcome__video(id='video__container')
-        video(class='welcome__video' id='video' autoplay loop muted)
-            source(src=require('../../images/night.webm') type='video/webm; codecs="vp8, vorbis"')
-            source(src=require('../../images/night.mp4') type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
-        include ../../components/blocks/parallax/parallax
-        .welcome__autorize.autorize Авторизироватся
-        .welcome__center.welcome__center_author
-            .welcome__center-top
-                .welcome__user
-                    include ../../components/blocks/author_title/author_title
-                    .welcome__social
-                        include ../../components/blocks/social/social
-            ul.welcome__buttons.navigation
-                li.navigation__button: a(href='portfolio.html' class='navigation__link') Мои работы
-                li.navigation__button: a(href='about.html' class='navigation__link') Обо мне
-                li.navigation__button: a(href='blog.html' class='navigation__link') Блог
-        .welcome__center.welcome__center_login
-            .welcome__center-top
-                form.form-autorize(action="http://localhost:3000/admin.html" id='authorize' method='POST')
-                    h1.form__title.title Авторизуйтесь
-                    .form__login
-                        input.form__login-input(type="text" name='login' required)
-                        .form__login-pic
-                    .form__password
-                        input.form__password-input(type="password" name='password' required)
-                        .form__password-pic
-                    label.form__block-check
-                        input.form__check-input(type="checkbox" name='capcha')
-                        .form__check
-                        span.form__check-span Я человек
-                    div.form__radio-question Вы точно не робот?
-                    label.form__radio-human 
-                        input.form__radio-input(type="radio" name='human')
-                        .form__radio
-                        | Да
-                    label.form__radio-human
-                        input.form__radio-input(type="radio" name='human')
-                        .form__radio
-                        | Не уверен
-            ul.welcome__buttons.navigation
-                li.navigation__button: a(href='#' class='navigation__link' id='toMain') На главную
-                li.navigation__button
-                    //- input(type='submit' form='authorize' class='navigation__link' value='Войти')
-                    a.navigation__link(href='admin.html') Войти
-        .welcome__copyright &#9400; Руслан Мустафин | Создано с любовью в Loftscool | 2017
+    main.main.main-index
+        section.section.welcome
+            .welcome__video(id='video__container')
+            video(class='welcome__video' id='video' autoplay loop muted)
+                source(src=require('../../images/night.webm') type='video/webm; codecs="vp8, vorbis"')
+                source(src=require('../../images/night.mp4') type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+            include ../../components/blocks/parallax/parallax
+            .welcome__autorize.autorize Авторизироватся
+            .welcome__center.welcome__center_author
+                .welcome__center-top
+                    .welcome__user
+                        include ../../components/blocks/author_title/author_title
+                        .welcome__social
+                            include ../../components/blocks/social/social
+                ul.welcome__buttons.navigation
+                    li.navigation__button: a(href='portfolio.html' class='navigation__link') Мои работы
+                    li.navigation__button: a(href='about.html' class='navigation__link') Обо мне
+                    li.navigation__button: a(href='blog.html' class='navigation__link') Блог
+            .welcome__center.welcome__center_login
+                .welcome__center-top
+                    form.form-authorize(action="/admin" id='authorize' method='POST')
+                        h1.form__title.title Авторизуйтесь
+                        .form__login
+                            input.form__login-input(type="text" name='login' )
+                            .form__login-pic
+                            .form__login-warning Введите логин
+                        .form__password
+                            input.form__password-input(type="password" name='password' )
+                            .form__password-pic
+                            .form__password-warning Введите пароль
+                        label.form__block-check
+                            input.form__check-input(type="checkbox" name='capcha' )
+                            .form__check
+                            span.form__check-span Я человек
+                            .form__capcha-warning Вы человек?
+                        .form__radio-question Вы точно не робот?
+                        .form_radio-container
+                            label.form__radio-human 
+                                input.form__radio-input(type="radio" name='human' id='radio1')
+                                .form__radio
+                                | Да
+                                .form__radio-warning Выберете один из вариантов
+                            label.form__radio-human
+                                input.form__radio-input(type="radio" name='human' id='radio2')
+                                .form__radio
+                                | Не уверен
+                ul.welcome__buttons.navigation
+                    li.navigation__button: a(href='#' class='navigation__link' id='toMain') На главную
+                    li.navigation__button
+                        //- input(type='submit' form='authorize' class='navigation__link' value='Войти')
+                        button.button__submit(type='submit' form='authorize') Войти
+            .welcome__copyright &#9400; Руслан Мустафин | Создано с любовью в Loftscool | 2017
+        include ../../components/blocks/modal/modal.pug

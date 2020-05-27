@@ -2,18 +2,22 @@ import 'normalize.css';
 import '../main.scss';
 import './blog.scss';
 
-// прокрутка статей в blog-content 
 
 import preloader from '../../components/blocks/preloader/preloader';
 import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertical-paralax';
+import hamburger from '../../components/blocks/hamburger_icon/hamburger_icon.js';
+import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
 
-preloader();
 verticalParalax(document.querySelector('.main__blog'));
+hamburgerAnimation();
+preloader();
 
 
 var container = document.querySelector('.blog-content__articles');
 var accoMenuItems = document.querySelectorAll('.menu-acco__item');
 var blogContentPosition; 
+
+// прокрутка статей в blog-content
 
 $(accoMenuItems).on('click', function(){
 	var indexAccoMenuItems = $(this).index();
@@ -30,12 +34,6 @@ function toggleClass(activeItem){
 	$(accoMenuItems).removeClass('acco__item-active');
 	$(activeItem).addClass('acco__item-active');
 }
-
-import {hamburger} from '../../components/blocks/hamburger_icon/hamburger_icon.js';
-import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
-
-hamburger();
-hamburgerAnimation();
 
 
 // появление левого меню 

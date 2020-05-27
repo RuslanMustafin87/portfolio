@@ -268,7 +268,12 @@
 }
 
 .form-admin__file {
-	display: none;
+	//display: none;
+	//size: 0.1px;
+	//opacity: 0;
+	//overflow: hidden;
+	//position: absolute;
+	//z-index: -1;
 }
 
 .form-admin__file-download{
@@ -324,53 +329,18 @@
 	margin-top: 2.8125rem;
 }
 
+.file-admin__input-test{
+	margin-top: 1.2rem;
+	padding-left: 1.2rem;
+	size: 18rem 2rem;
+	line-height: 2rem;
+	vertical-align: middle;
+}
+
 .button__avatar {
 	margin-top: 24.2rem;
 	margin-bottom: 10px;
 	@include tablet{
 		margin-top: 2.1875rem;
-	}
-}
-
-.modal-admin{
-	size: 100%;
-    background-color: rgba(113, 111, 120, .5);
-	position:absolute;
-	z-index: 3;
-    top: 0;
-    left: 0;
-    // transform: translate(-50%, -50%);
-    display:  none;
-}
-
-.modal-admin__window{
-    color:black;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: 17.5rem;
-    height: 6.875rem;
-    background-color: #fff;
-    border-radius:.5rem;
-    display: flex;
-    justify-content: space-evenly;
-	align-items: center;
-	flex-direction: column;
-}
-
-.modal-admin__close{
-	size: 7.5rem 2.8125rem;
-	background-color: var(--color-button);
-	color: #fff;
-	text-align: center;
-	line-height: 2.8125rem;
-	border-radius: 5px;
-	border: 0;
-	outline: 0;
-	cursor: pointer;
-	margin-top: 2.05rem;
-	&:hover {
-		background-color: var(--color-hover);
 	}
 }
