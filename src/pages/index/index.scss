@@ -1,8 +1,11 @@
 @import '../../common/mixin.scss';
 
+.main-index{
+    font-family: 'Roboto', sans-serif;
+}
+
 .welcome {
     color: #fff;
-    font-family: 'Roboto', sans-serif;
     overflow: hidden;
     position: relative;
     @include tablet{
@@ -112,7 +115,7 @@
     }
 }
 
-.form-autorize {
+.form-authorize {
     width: 100%;
     height: 100%;
 }
@@ -186,6 +189,7 @@
     margin: 1.25rem auto;
     text-align: center;
     line-height: 1.25rem;
+    position: relative;
 }
 
 .form__check {
@@ -216,8 +220,13 @@
     text-align: center;
 }
 
+.form_radio-container{
+    display: flex;
+    justify-content: center;
+}
+
 .form__radio-human {
-    display: inline-block;
+    position: relative;
     width: 6.875rem;
     text-align: left;
 }
@@ -238,6 +247,7 @@
     vertical-align: middle;
     margin-right: 0.625rem;
     box-sizing: content-box;
+    position: relative;
 }
 
 #triangle_left {
@@ -257,9 +267,10 @@
     border-right: 2px solid #fff;
 }
 
-.navigation__link {
+.navigation__link, .button__submit {
     cursor: pointer;
-    background-color: var(--color-button);
+    //background-color: var(--color-button);
+    background:  var(--color-button);
     color: #fff;
     display: block;
     width: 100%;
@@ -268,6 +279,7 @@
     border: none;
     outline: none;
     &:hover {
-        background-color: var(--color-hover);
+        background: var(--color-hover);
     }
 }
+

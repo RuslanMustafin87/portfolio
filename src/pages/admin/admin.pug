@@ -100,9 +100,15 @@ block content
                 li.panel-admin__item.panel-admin__avatar
                     h2.panel-admin__title Страница смены аватара
                     form.panel-admin__avatar-form.form-admin(id='admin_avatar' method='POST' action='/admin/adminAvatar' enctype="multipart/form-data")
-                        input.form-admin__file(type='file' name='avatar' id='avatar' accept='image/*')
+                        input.form-admin__file(type='file' name='avatar' id='avatar' accept='image/*,image/jpeg,image/jpg,image/png' onchange='handle()')
                         .form-admin__file-download.file-download-avatar
                             label.form-admin__file-label(for='avatar') 
                             span.form-admin__file-discription Загрузить фото
+                        .file-admin__input-test Файл не выбран
                         button.admin__button.button__avatar(type='submit') Добавить
-    include ../../components/blocks/modal/modal.pug
+        include ../../components/blocks/modal/modal.pug
+        script
+            | function handle(){
+            |   const inputTest = document.querySelector('.file-admin__input-test');
+            |   inputTest.innerHTML = 'Файл выбран';
+            | }

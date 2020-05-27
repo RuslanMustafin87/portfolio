@@ -1,4 +1,4 @@
-export default function() {
+export default (function() {
 	window.addEventListener('load', function() {
 		var preloader = document.querySelector('.preloader');
 		setTimeout(function() {
@@ -37,4 +37,4 @@ export default function() {
 		percents.innerHTML = ((100 / imagesTotalCount * imagesCount) << 0) + '%';
 	}
 
-}
+})();

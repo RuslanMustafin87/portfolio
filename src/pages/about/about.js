@@ -14,7 +14,6 @@ import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertica
 let skillsAbout = document.querySelectorAll('.skill');
 
 skills(skillsAbout);
-preloader();
 hamburger();
 hamburgerAnimation();
 arrow('.hero__arrow', '.about-me');

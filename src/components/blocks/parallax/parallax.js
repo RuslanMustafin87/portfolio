@@ -1,4 +1,4 @@
-export const parallax = () => {
+export default (function() {
 	const welcome = document.querySelector('.welcome');
 	welcome.addEventListener('mousemove', event => {
 		// var parallaxContainer = document.querySelector('.parallax');
@@ -8,4 +8,4 @@ export const parallax = () => {
 		
 		layer.style.transform = `translate(${coordX / 40}px, ${coordY / 40}px)`;
 	});
-};
+})();

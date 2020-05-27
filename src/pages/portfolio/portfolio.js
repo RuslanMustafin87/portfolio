@@ -11,7 +11,6 @@ import arrow from '../../components/blocks/arrowMove/arrowMove.js';
 import form from '../../components/blocks/form/form';
 import {verticalParalax} from  '../../components/blocks/vertical-paralax/vertical-paralax';
 
-preloader();
 hamburgerAnimation();
 hamburger();
 arrow('.hero__arrow', '.portfolio-content');
@@ -25,10 +24,7 @@ function blur(){
 	const heightToWidth = 0.7506;
 	const widthToHeight = 1.3323; // соотношение ширины к высоте у картинки для фона
 
-	const section = document.querySelector('.portfolio-contact'); // секция родитель
-	const blurElem = document.querySelector('.portfolio-contact__form-blur'); // форма
-	const form = document.querySelector('.portfolio-contact__form'); // элемент с блюром
-
+dqwert
 	const sectionHeight = section.clientHeight; // высота секции родителя
 	const sectionWidth = section.clientWidth;
 	const formWidth = form.clientWidth; // ширина формы
