@@ -1,7 +1,7 @@
 export default function() {
 	window.addEventListener('load', function() {
 		var preloader = document.querySelector('.preloader');
-		console.log(preloader);
+		
 		setTimeout(function() {
 			preloader.style.visibility = 'hidden';
 			preloader.style.opacity = '0';

@@ -111,5 +111,4 @@ formAuthorize.onsubmit = (e) => {
 		},
 		body: null
 	});
-	console.log('hi');
 };
