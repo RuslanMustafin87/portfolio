@@ -19,9 +19,9 @@ block content
                 li.tabs__title(for="tabs__tab-4") Аватар
             ul.panel-admin__content
                 li.panel-admin__content-bg
-                li.panel-admin__item.panel-admin__about.active__panel-item
+                li.panel-admin__about.panel-admin__item.active__panel-item
                         h2.panel-admin__title Страница "Обо мне"
-                        .block__frontend 
+                        .block__skills 
                             .frontend__caption Frontend
                             .table__row
                                 .table__cell HTML
@@ -38,7 +38,7 @@ block content
                                 .table__cell.table__col 
                                     input.panel-admin__about-input(value=`${data.js}` id='admin-input-js')
                                 .table__cell %
-                        .block__frontend 
+                        .block__skills 
                             .frontend__caption Workflow
                             .table__row
                                 .table__cell Git
@@ -55,7 +55,7 @@ block content
                                 .table__cell.table__col
                                     input.panel-admin__about-input(value=`${data.linux}` id='admin-input-linux')
                                 .table__cell %
-                        .block__frontend 
+                        .block__skills 
                             .frontend__caption Backend
                             .table__row
                                 .table__cell Python
@@ -77,35 +77,39 @@ block content
                                 .table__cell.table__col
                                     input.panel-admin__about-input(value=`${data.mongo}` id='admin-input-mongo')
                                 .table__cell %
-                        button.admin__button.button__about Сохранить
-                li.panel-admin__item.panel-admin__blog
+                        button.button__about Сохранить
+                li.admin-blog.panel-admin__item
                     h2.panel-admin__title Страница "Блог"
-                    h3.panel-admin__title-2 Добавить запись
-                    form.panel-admin__blog-form.form-admin(id='blog-form' method='POST' action='/admin/adminBlog' enctype="multipart/form-data")
-                        input(type='text' name='title' placeholder='Название')
-                        input(type='text' name='date' placeholder='Дата')
-                        textarea(type='text' name='' placeholder='Содержание')
-                        button.admin__button.button__blog Добавить
+                    .admin-blog__left
+                        h3.panel-admin__title-2 Добавить запись
+                        form.admin-blog__form.form-admin(id='formBlog' method='POST' action='/admin/adminBlog')
+                            input.form-admin__input.panel-admin__input(type='text' name='title' placeholder='Название')
+                            input.form-admin__input.panel-admin__input(type='text' name='date' placeholder='Дата')
+                            textarea(type='text' name='article' placeholder='Содержание')
+                            button.button__blog Добавить
+                    .admin-blog__right
+                        h3.panel-admin__title-2 Список статей
+                        ul.admin-blog__list-articles.list-articles     
                 li.panel-admin__item.panel-admin__portfolio
                     h2.panel-admin__title Страница "Мои работы"
                     h3.panel-admin__title-2 Добавить работу
                     form.panel-admin__portfolio-form.form-admin
-                        input(type='text' name='title' placeholder='Название проекта')
-                        input(type='text' name='date' placeholder='Технологии')
-                        input.form-admin__file(type='file' name='image' id='image' placeholder='Загрузить картинку')
+                        input.panel-admin__input(type='text' name='title' placeholder='Название проекта')
+                        input.panel-admin__input(type='text' name='date' placeholder='Технологии')
+                        input.panel-admin__input.form-admin__file(type='file' name='image' id='image' placeholder='Загрузить картинку')
                         .form-admin__file-download
                             label.form-admin__file-label(for='image') 
                             span.form-admin__file-discription Загрузить картинку
-                        button.admin__button.button__works Добавить
+                        button.panel-admin__button.button__works Добавить
                 li.panel-admin__item.panel-admin__avatar
                     h2.panel-admin__title Страница смены аватара
-                    form.panel-admin__avatar-form.form-admin(id='admin_avatar' method='POST' action='/admin/adminAvatar' enctype="multipart/form-data")
-                        input.form-admin__file(type='file' name='avatar' id='avatar' accept='image/*,image/jpeg,image/jpg,image/png' onchange='handle()')
+                    form.panel-admin__avatar-form.form-admin(id='formAvatar' method='POST' action='/admin/adminAvatar')
+                        input.panel-admin__input.form-admin__file(type='file' name='avatar' id='avatar' accept='image/*,image/jpeg,image/jpg,image/png' onchange='handle()')
                         .form-admin__file-download.file-download-avatar
                             label.form-admin__file-label(for='avatar') 
                             span.form-admin__file-discription Загрузить фото
                         .file-admin__input-test Файл не выбран
-                        button.admin__button.button__avatar(type='submit') Добавить
+                        button.panel-admin__button.button__avatar(type='submit') Добавить
         include ../../components/blocks/modal/modal.pug
         script
             | function handle(){

@@ -8,6 +8,7 @@ import {
 } from '../../components/blocks/vertical-paralax/vertical-paralax';
 import hamburger from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
+import { data } from 'jquery';
 
 verticalParalax(document.querySelector('.main__blog'));
 hamburgerAnimation();
@@ -103,7 +104,7 @@ function toggleClass(activeItem) {
 
 // преключение классов в меню акордеон при прокрутке блока статей
 
-function switchItem(){
+function switchItem() {
 	const articlesList = document.querySelector('.articles-list');
 	const articlesListContainer = articlesList.parentElement;
 	const items = Array.from(articlesList.children);
@@ -133,26 +134,26 @@ function switchItem(){
 
 // получение данных с сервера
 
-fetch('http://127.0.0.1:3001/blogArticles', {
-	method: 'POST',
-	headers: {
-		'Content-Type': 'application/json; charset=utf-8',
-	},
-}).then(
-	res => {
-		return res.json();
-	},
-	err => {
-		console.log(new Error('Сервер не доступен'));
+(async function foo() {
+	let data = null;
+	try {
+		let result = await fetch('http://127.0.0.1:3001/api/getArticles', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json; charset=utf-8',
+			},
+		});
+
+		data = await result.json();
+	} catch (err) {
+		console.log(err);
 	}
-).then(
-	data => {
-		createArticles(data);
-		createMenuAcco(data);
-		scrollArticlesWheel(150);
-		switchItem();
-	}
-);
+
+	createArticles(data);
+	createMenuAcco(data);
+	scrollArticlesWheel(120);
+	switchItem();
+})();
 
 // появление левого меню 
 
@@ -192,3 +193,4 @@ function scrollArticlesWheel(step) {
 		articlesList.style.top = `${articlesTop}px`;
 	});
 }
+

@@ -21,13 +21,13 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 1.875rem;
-	@include phone{
+
+	@include phone {
 		flex-direction: column-reverse;
 		justify-content: space-evenly;
 		padding: 0;
 	}
 }
-
 
 .header-admin__link-back {
 	text-decoration: underline;
@@ -37,7 +37,8 @@
 
 .header__title {
 	font-size: 1.75rem;
-	@include phone{
+
+	@include phone {
 		text-align: center;
 		font-size: 21px;
 	}
@@ -46,7 +47,6 @@
 .panel-admin {
 	height: calc(100% - 80px);
 	color: #474b57;
-	
 }
 
 .tabs {
@@ -54,7 +54,8 @@
 	background-color: #f0efe9;
 	display: flex;
 	justify-content: flex-start;
-	@include phone{
+
+	@include phone {
 		flex-direction: column;
 		height: 185px;
 	}
@@ -71,10 +72,12 @@
 	width: 11.25rem;
 	text-align: center;
 	line-height: 60px;
-	@include tablet{
+
+	@include tablet {
 		flex-grow: 1;
 	}
-	@include phone{
+
+	@include phone {
 		height: 47px;
 		line-height: 47px;
 		width: 100%;
@@ -91,12 +94,13 @@
 .panel-admin__content {
 	position: relative;
 	height: calc(100% - 3.75rem);
-	background: url('../../images/main_bg.jpg')  no-repeat;
+	background: url('../../images/main_bg.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
 	padding-left: 1.875rem;
 	padding-right: 1.875rem;
-	@include phone{
+
+	@include phone {
 		background-position: center bottom;
 		height: auto;
 	}
@@ -126,61 +130,15 @@
 
 .panel-admin__title {
 	font-size: 21px;
-	//margin-top: 3.125rem;
+	margin-bottom: 2.8125rem;
 }
 
-.block__frontend {
-	display: table;
-	border-collapse: separate;
-	border-spacing: 9px;
-	margin-top: 2.8125rem;
-	margin-right: 1.875rem;
-	
-	&:nth-of-type(1){
-		float: left;
-		@include phone{
-			float: none;
-		}
-	}
-	&:nth-of-type(2) {
-		
-		
-	}
-	&:nth-of-type(3){
-		margin-top: 1.8125rem;
-		@include phone{
-			margin-top: 2.8125rem;	
-		}
-	}
+.panel-admin__title-2 {
+	font-size: 1rem;
+	margin-bottom: 1.25rem;
 }
 
-.frontend__caption {
-	display: table-caption;
-}
-
-.table__row {
-	display: table-row;
-}
-
-.table__cell {
-	display: table-cell;
-	font-weight: 400;
-	vertical-align: middle;
-	overflow: hidden;
-	&:nth-child(1) {
-		width: 115px;
-		padding-left: 0.9375rem;
-	}
-
-	&:nth-child(2) {
-		text-align: center;
-		background-color: #fff;
-		border-radius: 4px;
-		size: 45px 35px;
-	}	
-}
-
-.admin__button {
+.panel-admin__button {
 	size: 7.5rem 2.8125rem;
 	background-color: var(--color-button);
 	color: #fff;
@@ -190,81 +148,27 @@
 	border: 0;
 	outline: 0;
 	cursor: pointer;
+
 	&:hover {
 		background-color: var(--color-hover);
 	}
 }
 
-.panel-admin__title-2 {
-	font-size: 1rem;
-	margin-top: 2.8125rem;
-}
-
-.button__about{
-	margin-top: 1.9375rem;
-	margin-bottom: 10px;
-}
-
-.panel-admin__about-input{
-	size: 100%;
-	text-align: center;
+.panel-admin__input {
+	width: 18.75rem;
+	height: 2.8125rem;
 	border: none;
 	outline: none;
+	border-radius: 5px;
+	margin-bottom: 1.25rem;
+	padding-right: 1.25rem;
+	padding-left: 1.25rem;
 }
 
-.panel-admin__blog-form {
+.panel-admin__portfolio-form {
 	display: flex;
 	flex-direction: column;
 	color: #acafb0;
-	& input {
-		width: 18.75rem;
-		height: 2.8125rem;
-		border: none;
-		outline: none;
-		border-radius: 5px;
-		margin-top: 1.25rem;
-		padding-right: 1.25rem;
-		padding-left: 1.25rem;
-
-	}
-
-	& textarea {
-		width: 31.25rem;
-		height: 10.625rem;
-		border: none;
-		outline: none;
-		border-radius: 5px;
-		margin-top: 1.25rem;
-		padding: 1rem 1.25rem;
-		@include tablet{
-			size: 500px 300px;
-		}
-		@include phone{
-			size: 100% 250px;
-		}
-	}
-}
-
-.button__blog {
-	margin-top: 5.25rem;
-	margin-bottom: 10px;
-}
-
-.panel-admin__portfolio-form{
-	display: flex;
-	flex-direction: column;
-	color: #acafb0;
-	& input {
-		width: 18.75rem;
-		height: 2.8125rem;
-		border: none;
-		outline: none;
-		border-radius: 5px;
-		margin-top: 1.25rem;
-		padding-right: 1.25rem;
-		padding-left: 1.25rem;
-
-	}
 }
 
 .form-admin__file {
@@ -276,9 +180,8 @@
 	//z-index: -1;
 }
 
-.form-admin__file-download{
-	margin-top: 1.25rem;
-	size:  18.75rem 2.1875rem;
+.form-admin__file-download {
+	size: 18.75rem 2.1875rem;
 	position: relative;
 	line-height: 2.1875rem;
 	padding-left: 2.8125rem;
@@ -291,45 +194,35 @@
 	cursor: pointer;
 	height: 100%;
 	width: 2.1875rem;
-	background: url(../../images//icons/image_donload.svg)   no-repeat;
+	background: url(../../images//icons/image_donload.svg) no-repeat;
 	background-position: 0% 0%;
 	background-size: 100% 100%;
 }
 
-.form-admin__file-discription{	
+.form-admin__file-discription {
 	color: var(--color-button);
 }
 
 .button__works {
 	margin-top: 13.7rem;
 	margin-bottom: 10px;
-	@include tablet{
+
+	@include tablet {
 		margin-top: 2.1875rem;
 	}
 }
 
-.panel-admin__avatar-form{
+.panel-admin__avatar-form {
 	display: flex;
 	flex-direction: column;
 	color: #acafb0;
-	& input {
-		width: 18.75rem;
-		height: 2.8125rem;
-		border: none;
-		outline: none;
-		border-radius: 5px;
-		margin-top: 1.25rem;
-		padding-right: 1.25rem;
-		padding-left: 1.25rem;
-
-	}
 }
 
-.file-download-avatar{
+.file-download-avatar {
 	margin-top: 2.8125rem;
 }
 
-.file-admin__input-test{
+.file-admin__input-test {
 	margin-top: 1.2rem;
 	padding-left: 1.2rem;
 	size: 18rem 2rem;
@@ -340,7 +233,11 @@
 .button__avatar {
 	margin-top: 24.2rem;
 	margin-bottom: 10px;
-	@include tablet{
+
+	@include tablet {
 		margin-top: 2.1875rem;
 	}
 }
+
+@import './admin-about/adminAbout.scss';
+@import './admin-blog/adminBlog.scss';

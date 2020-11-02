@@ -1,11 +1,9 @@
-
-
 module.exports = function() {
 
 	let modalContainer = document.querySelector('.modal');
 	let modal = modalContainer.querySelector('.modal__window');
 	let modalText = modalContainer.querySelector('.modal__text');
-	this.modalClose = modalContainer.querySelector('.modal__cross');
+	let modalClose = modalContainer.querySelector('.modal__cross');
 
 	this.start = (message) => {
 
@@ -18,7 +16,7 @@ module.exports = function() {
 
 	};
 
-	this.modalClose.addEventListener('click', () => {
+	modalClose.addEventListener('click', () => {
 		modalContainer.style.display = 'none';
 		modal.style.transform = 'translate(-50%, -50%) scale(0)';
 		modalText.innerHTML = '';

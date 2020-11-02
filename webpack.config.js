@@ -105,7 +105,7 @@ const common = merge([
 			// new BundleAnalyzerPlugin(),
 		],
 	},
-	babel(),
+	//babel(),
 	pug(),
 	image(),
 	video(),
