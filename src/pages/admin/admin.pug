@@ -19,100 +19,100 @@ block content
                 li.tabs__title(for="tabs__tab-4") Аватар
             ul.panel-admin__content
                 li.panel-admin__content-bg
-                li.panel-admin__about.panel-admin__item.active__panel-item
-                        h2.panel-admin__title Страница "Обо мне"
-                        .block__skills 
-                            .frontend__caption Frontend
-                            .table__row
-                                .table__cell HTML
-                                .table__cell.table__col 
-                                    input.panel-admin__about-input(value=`${data.html}` id='admin-input-html')
-                                .table__cell %
-                            .table__row
-                                .table__cell CSS
-                                .table__cell.table__col 
-                                    input.panel-admin__about-input(value=`${data.css}` id='admin-input-css')
-                                .table__cell %
-                            .table__row
-                                .table__cell JavaScript
-                                .table__cell.table__col 
-                                    input.panel-admin__about-input(value=`${data.js}` id='admin-input-js')
-                                .table__cell %
-                        .block__skills 
-                            .frontend__caption Workflow
-                            .table__row
-                                .table__cell Git
-                                .table__cell.table__col
-                                    input.panel-admin__about-input(value=`${data.git}` id='admin-input-git')
-                                .table__cell %
-                            .table__row
-                                .table__cell Webpack
-                                .table__cell.table__col
-                                    input.panel-admin__about-input(value=`${data.webpack}` id='admin-input-webpack')
-                                .table__cell %
-                            .table__row
-                                .table__cell Linux
-                                .table__cell.table__col
-                                    input.panel-admin__about-input(value=`${data.linux}` id='admin-input-linux')
-                                .table__cell %
-                        .block__skills 
-                            .frontend__caption Backend
-                            .table__row
-                                .table__cell Python
-                                .table__cell.table__col
-                                    input.panel-admin__about-input(value=`${data.python}` id='admin-input-python')
-                                .table__cell %
-                            .table__row
-                                .table__cell Node.js
-                                .table__cell.table__col
-                                    input.panel-admin__about-input(value=`${data.node}` id='admin-input-node')
-                                .table__cell %
-                            .table__row
-                                .table__cell MySQL
-                                .table__cell.table__col
-                                    input.panel-admin__about-input(value=`${data.mysql}` id='admin-input-mysql')
-                                .table__cell %
-                            .table__row
-                                .table__cell Mongo.db
-                                .table__cell.table__col
-                                    input.panel-admin__about-input(value=`${data.mongo}` id='admin-input-mongo')
-                                .table__cell %
-                        button.button__about Сохранить
+                li.admin-about.panel-admin__item.panel-admin__item_active
+                        h2.admin-about__title Страница "Обо мне"
+                        .skills-table.admin-about__skills 
+                            .skills-table__title Frontend
+                            .skills-table__row
+                                .skills-table__cell HTML
+                                .skills-table__cell.skills-table__col 
+                                    input.skills-table__input(value=`${data.html}` id='admin-input-html')
+                                .skills-table__cell %
+                            .skills-table__row
+                                .skills-table__cell CSS
+                                .skills-table__cell.skills-table__col 
+                                    input.skills-table__input(value=`${data.css}` id='admin-input-css')
+                                .skills-table__cell %
+                            .skills-table__row
+                                .skills-table__cell JavaScript
+                                .skills-table__cell.skills-table__col 
+                                    input.skills-table__input(value=`${data.js}` id='admin-input-js')
+                                .skills-table__cell %
+                        .skills-table.admin-about__skills 
+                            .skills-table__title Workflow
+                            .skills-table__row
+                                .skills-table__cell Git
+                                .skills-table__cell.skills-table__col
+                                    input.skills-table__input(value=`${data.git}` id='admin-input-git')
+                                .skills-table__cell %
+                            .skills-table__row
+                                .skills-table__cell Webpack
+                                .skills-table__cell.skills-table__col
+                                    input.skills-table__input(value=`${data.webpack}` id='admin-input-webpack')
+                                .skills-table__cell %
+                            .skills-table__row
+                                .skills-table__cell Linux
+                                .skills-table__cell.skills-table__col
+                                    input.skills-table__input(value=`${data.linux}` id='admin-input-linux')
+                                .skills-table__cell %
+                        .skills-table.admin-about__skills 
+                            .skills-table__title Backend
+                            .skills-table__row
+                                .skills-table__cell Python
+                                .skills-table__cell.skills-table__col
+                                    input.skills-table__input(value=`${data.python}` id='admin-input-python')
+                                .skills-table__cell %
+                            .skills-table__row
+                                .skills-table__cell Node.js
+                                .skills-table__cell.skills-table__col
+                                    input.skills-table__input(value=`${data.node}` id='admin-input-node')
+                                .skills-table__cell %
+                            .skills-table__row
+                                .skills-table__cell MySQL
+                                .skills-table__cell.skills-table__col
+                                    input.skills-table__input(value=`${data.mysql}` id='admin-input-mysql')
+                                .skills-table__cell %
+                            .skills-table__row
+                                .skills-table__cell Mongo.db
+                                .skills-table__cell.skills-table__col
+                                    input.skills-table__input(value=`${data.mongo}` id='admin-input-mongo')
+                                .skills-table__cell %
+                        button.admin-about__button Сохранить
                 li.admin-blog.panel-admin__item
-                    h2.panel-admin__title Страница "Блог"
+                    h2.admin-blog__title Страница "Блог"
                     .admin-blog__left
-                        h3.panel-admin__title-2 Добавить запись
-                        form.admin-blog__form.form-admin(id='formBlog' method='POST' action='/admin/adminBlog')
-                            input.form-admin__input.panel-admin__input(type='text' name='title' placeholder='Название')
-                            input.form-admin__input.panel-admin__input(type='text' name='date' placeholder='Дата')
-                            textarea(type='text' name='article' placeholder='Содержание')
-                            button.button__blog Добавить
+                        h3.admin-blog__title-2 Добавить запись
+                        form.form-blog(id='formBlog' method='POST' action='/admin/adminBlog')
+                            input.form-blog__input(type='text' name='title' placeholder='Название')
+                            input.form-blog__input(type='text' name='date' placeholder='Дата')
+                            textarea.form-blog__textarea(type='text' name='article' placeholder='Содержание')
+                            button.form-blog__button-submit Добавить
                     .admin-blog__right
-                        h3.panel-admin__title-2 Список статей
-                        ul.admin-blog__list-articles.list-articles     
-                li.panel-admin__item.panel-admin__portfolio
-                    h2.panel-admin__title Страница "Мои работы"
-                    h3.panel-admin__title-2 Добавить работу
-                    form.panel-admin__portfolio-form.form-admin
-                        input.panel-admin__input(type='text' name='title' placeholder='Название проекта')
-                        input.panel-admin__input(type='text' name='date' placeholder='Технологии')
-                        input.panel-admin__input.form-admin__file(type='file' name='image' id='image' placeholder='Загрузить картинку')
-                        .form-admin__file-download
-                            label.form-admin__file-label(for='image') 
-                            span.form-admin__file-discription Загрузить картинку
-                        button.panel-admin__button.button__works Добавить
-                li.panel-admin__item.panel-admin__avatar
-                    h2.panel-admin__title Страница смены аватара
-                    form.panel-admin__avatar-form.form-admin(id='formAvatar' method='POST' action='/admin/adminAvatar')
-                        input.panel-admin__input.form-admin__file(type='file' name='avatar' id='avatar' accept='image/*,image/jpeg,image/jpg,image/png' onchange='handle()')
-                        .form-admin__file-download.file-download-avatar
-                            label.form-admin__file-label(for='avatar') 
-                            span.form-admin__file-discription Загрузить фото
-                        .file-admin__input-test Файл не выбран
-                        button.panel-admin__button.button__avatar(type='submit') Добавить
+                        h3.admin-blog__title-2 Список статей
+                        ul.list-articles.admin-blog__list-articles    
+                li.admin-portfolio.panel-admin__item
+                    h2.admin-portfolio__title Страница "Мои работы"
+                    h3.admin-portfolio__title-2 Добавить работу
+                    form.form-portfolio
+                        input.form-portfolio__input(type='text' name='title' placeholder='Название проекта')
+                        input.form-portfolio__input(type='text' name='date' placeholder='Технологии')
+                        input.form-portfolio__input.form-portfolio__input_disabled(type='file' name='image' id='image' placeholder='Загрузить картинку')
+                        .file-download-image.form-portfolio__file-download
+                            label.file-download-image__label(for='image') 
+                            span.file-download-image__discription Загрузить картинку
+                        button.form-portfolio__button-submit Добавить
+                li.admin__avatar.panel-admin__item
+                    h2.admin__avatar__title Страница смены аватара
+                    form.form-avatar(id='formAvatar' method='POST' action='/admin/adminAvatar')
+                        input.form-avatar__input.form-avatar__input_disabled(type='file' name='avatar' id='avatar' accept='image/*,image/jpeg,image/jpg,image/png' onchange='handle()')
+                        .file-download-image.form-admin__file-download
+                            label.file-download-image__label(for='avatar') 
+                            span.file-download-image__discription Загрузить фото
+                        .form-avatar__input-test Файл не выбран
+                        button.form-avatar__button-submit(type='submit') Добавить
         include ../../components/blocks/modal/modal.pug
         script
             | function handle(){
-            |   const inputTest = document.querySelector('.file-admin__input-test');
+            |   const inputTest = document.querySelector('.form-avatar__input-test');
             |   inputTest.innerHTML = 'Файл выбран';
             | }

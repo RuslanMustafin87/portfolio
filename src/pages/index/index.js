@@ -11,7 +11,6 @@ import Modal from '../../components/blocks/modal/modal';
 const showModalAuthorize = new Modal();
 preloader();
 
-
 const welAutorize = document.querySelector('.autorize');
 const welLogin = document.querySelector('.welcome__center_login');
 const welAuthor = document.querySelector('.welcome__center_author');
@@ -27,14 +26,17 @@ window.onload = () => {
 		welAuthor.style.transformOrigin = '50% 50%';
 	}, 1800);
 
-	// videoResize();
-	videoDisable();
+	//videoDisable();
 };
 
-function videoDisable() {
-	if (window.innerWidth >= 768) {
+document.addEventListener('DOMContentLoaded', () => {
+	videoEnable();
+});
+
+function videoEnable() {
+	if (window.innerWidth >= 1024) {
 		// eslint-disable-next-line quotes
-		document.getElementById('video__container').innerHTML = "<video class='video' autoplay loop muted> <source src='/assets/images/night.webm' type=`video/webm; codecs='vp8, vorbis'`> <source src= '/assets/images/night.mp4' type=`video/mp4; codecs='avc1.42E01E, mp4a.40.2'`>";
+		document.getElementById('video-container').innerHTML = "<video class='welcome__video' autoplay loop muted> <source src='/assets/images/night.webm' type='video/webm; codecs=\"vp8, vorbis\"'> <source src='/assets/images/night.mp4' type='video/mp4'></video>";
 	}
 }
 

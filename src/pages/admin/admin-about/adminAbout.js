@@ -3,7 +3,7 @@ const showModalAdmin = new Modal();
 
 //отправка данных на сервер для страницы about
 
-let buttonAdminAbout = document.querySelector('.button__about');
+let buttonAdminAbout = document.querySelector('.admin-about__button');
 
 let skillsList = ['html', 'css', 'js', 'python', 'mysql', 'node', 'mongo', 'git', 'webpack', 'linux'];
 

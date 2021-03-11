@@ -124,7 +124,7 @@
 	z-index: 2;
 }
 
-.active__panel-item {
+.panel-admin__item_active {
 	display: block;
 }
 
@@ -136,6 +136,12 @@
 .panel-admin__title-2 {
 	font-size: 1rem;
 	margin-bottom: 1.25rem;
+}
+
+.panel-admin__form {
+	display: flex;
+	flex-direction: column;
+	color: #acafb0;
 }
 
 .panel-admin__button {
@@ -163,81 +169,12 @@
 	margin-bottom: 1.25rem;
 	padding-right: 1.25rem;
 	padding-left: 1.25rem;
-}
-
-.panel-admin__portfolio-form {
-	display: flex;
-	flex-direction: column;
-	color: #acafb0;
-}
-
-.form-admin__file {
-	display: none;
-	//size: 0.1px;
-	//opacity: 0;
-	//overflow: hidden;
-	//position: absolute;
-	//z-index: -1;
-}
-
-.form-admin__file-download {
-	size: 18.75rem 2.1875rem;
-	position: relative;
-	line-height: 2.1875rem;
-	padding-left: 2.8125rem;
-}
-
-.form-admin__file-label {
-	position: absolute;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-	height: 100%;
-	width: 2.1875rem;
-	background: url(../../images//icons/image_donload.svg) no-repeat;
-	background-position: 0% 0%;
-	background-size: 100% 100%;
-}
-
-.form-admin__file-discription {
-	color: var(--color-button);
-}
-
-.button__works {
-	margin-top: 13.7rem;
-	margin-bottom: 10px;
-
-	@include tablet {
-		margin-top: 2.1875rem;
-	}
-}
-
-.panel-admin__avatar-form {
-	display: flex;
-	flex-direction: column;
-	color: #acafb0;
-}
-
-.file-download-avatar {
-	margin-top: 2.8125rem;
-}
-
-.file-admin__input-test {
-	margin-top: 1.2rem;
-	padding-left: 1.2rem;
-	size: 18rem 2rem;
-	line-height: 2rem;
-	vertical-align: middle;
-}
-
-.button__avatar {
-	margin-top: 24.2rem;
-	margin-bottom: 10px;
-
-	@include tablet {
-		margin-top: 2.1875rem;
+	@include phone {
+		size: 100% 2.8125rem;
 	}
 }
 
 @import './admin-about/adminAbout.scss';
 @import './admin-blog/adminBlog.scss';
+@import './admin-portfolio/adminPortfolio.scss';
+@import './admin-avatar/adminAvatar.scss';

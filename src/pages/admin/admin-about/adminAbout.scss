@@ -1,56 +1,74 @@
-.block__skills {
+.admin-about {
+	&__button-submit {
+		margin-bottom: 10px;
+		@extend .panel-admin__button;
+	}
+	&__skills {
+		margin-right: 1.875rem;
+		margin-bottom: 2.8125rem;
+	}
+
+	&__title {
+		@extend .panel-admin__title;
+	}
+
+	&__button {
+		margin-bottom: 10px;
+		@extend .panel-admin__button;
+	}
+}
+
+.skills-table {
 	display: table;
 	border-collapse: separate;
 	border-spacing: 9px;
-	margin-right: 1.875rem;
-	margin-bottom: 2.8125rem;
-	&:nth-of-type(1){
+
+	&:nth-of-type(1) {
 		float: left;
-		@include phone{
+
+		@include phone {
 			float: none;
 		}
 	}
-	&:nth-of-type(3){
-		@include phone{
-			margin-top: 2.8125rem;	
+
+	&:nth-of-type(3) {
+		@include phone {
+			margin-top: 2.8125rem;
 		}
 	}
-}
 
-.frontend__caption {
-	display: table-caption;
-}
-
-.table__row {
-	display: table-row;
-}
-
-.table__cell {
-	display: table-cell;
-	font-weight: 400;
-	vertical-align: middle;
-	overflow: hidden;
-	&:nth-child(1) {
-		width: 115px;
-		padding-left: 0.9375rem;
+	&__input {
+		size: 100%;
+		text-align: center;
+		border: none;
+		outline: none;
+		border-radius: 5px;
 	}
 
-	&:nth-child(2) {
-		text-align: center;
-		background-color: #fff;
-		border-radius: 4px;
-		size: 45px 35px;
-	}	
-}
+	&__title {
+		display: table-caption;
+	}
 
-.panel-admin__about-input {
-	size: 100%;
-	text-align: center;
-	border: none;
-	outline: none;
-}
+	&__row {
+		display: table-row;
+	}
 
-.button__about{
-	margin-bottom: 10px;
-	@extend .panel-admin__button;
+	&__cell {
+		display: table-cell;
+		font-weight: 400;
+		vertical-align: middle;
+		overflow: hidden;
+
+		&:nth-child(1) {
+			width: 115px;
+			padding-left: 0.9375rem;
+		}
+
+		&:nth-child(2) {
+			text-align: center;
+			background-color: #fff;
+			border-radius: 4px;
+			size: 45px 35px;
+		}
+	}
 }

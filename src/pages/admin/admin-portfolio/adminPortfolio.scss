@@ -1,0 +1,53 @@
+.admin-portfolio {
+	&__title {
+		@extend .panel-admin__title;
+	}
+
+	&__title-2 {
+		@extend .panel-admin__title-2;
+	}
+}
+
+.form-portfolio {
+	@extend .panel-admin__form;
+
+	&__input {
+		@extend .panel-admin__input;
+
+		&_disabled {
+			display: none;
+		}
+	}
+
+	&__button-submit {
+		margin-bottom: 10px;
+		@extend .panel-admin__button;
+	}
+
+	&__file-download {
+		margin-bottom: 2.8125rem;
+	}
+}
+
+.file-download-image {
+	size: 18.75rem 2.1875rem;
+	position: relative;
+	line-height: 2.1875rem;
+	padding-left: 2.8125rem;
+
+	&__label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		height: 100%;
+		width: 2.1875rem;
+		background: url(../../images//icons/image_donload.svg) no-repeat;
+		background-position: 0% 0%;
+		background-size: 100% 100%;
+	}
+
+	&__discription {
+		color: var(--color-button);
+	}
+}

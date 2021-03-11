@@ -8,7 +8,9 @@ import {
 } from '../../components/blocks/vertical-paralax/vertical-paralax';
 import hamburger from '../../components/blocks/hamburger_icon/hamburger_icon.js';
 import hamburgerAnimation from '../../components/blocks/hamburger_menu/hamburger_menu.js';
-import { data } from 'jquery';
+import {
+	data
+} from 'jquery';
 
 verticalParalax(document.querySelector('.main__blog'));
 hamburgerAnimation();
@@ -45,35 +47,36 @@ function createMenuAcco(data) {
 function createArticles(data) {
 	let articles = document.querySelector('.articles-list');
 
+	let articlesItem = document.createElement('li');
+	let articlesTitle = document.createElement('h1');
+	let articlesTime = document.createElement('time');
+	let articlesText = document.createElement('div');
+	let articlesParagraph = document.createElement('p');
+	let articlesLine = document.createElement('div');
+
+	articlesItem.classList.add('articles-list__item');
+	articlesTitle.classList.add('articles-list__title', 'title', 'title_color-gray', 'title_text-align-left', 'title_font-size-35');
+	articlesTime.classList.add('articles-list__time');
+	articlesText.classList.add('articles-list__text');
+	articlesLine.classList.add('articles-list__line');
+
+	articlesText.append(articlesParagraph);
+	articlesItem.append(articlesTitle, articlesTime, articlesText, articlesLine);
+
 	for (let i = 0; i < data.length; i++) {
-		let articlesItem = document.createElement('li');
-		let articlesTitle = document.createElement('h1');
-		let articlesTime = document.createElement('time');
-		let articlesText = document.createElement('div');
-		let articlesParagraph = document.createElement('p');
-		let articlesLine = document.createElement('div');
 
-		articlesItem.classList.add('articles-list__item');
-		articlesTitle.classList.add('articles-list__title', 'title', 'title_color-gray', 'title_text-align-left', 'title_font-size-35');
-		articlesTime.classList.add('articles-list__time');
-		articlesText.classList.add('articles-list__text');
-		articlesLine.classList.add('articles-list__line');
+		let item = articlesItem.cloneNode(true);
+		let itemElems = item.children;
 
-		articlesTitle.innerText = data[i].title;
-		articlesTime.innerText = (new Date(data[i].date).toLocaleDateString('ru', {
+		itemElems[0].innerText = data[i].title;
+		itemElems[1].innerText = (new Date(data[i].date).toLocaleDateString('ru', {
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
 		})).slice(0, -3);
-		articlesParagraph.innerText = data[i].body;
+		itemElems[2].innerText = data[i].body;
 
-		articlesText.appendChild(articlesParagraph);
-		articlesItem.appendChild(articlesTitle);
-		articlesItem.appendChild(articlesTime);
-		articlesItem.appendChild(articlesText);
-		articlesItem.appendChild(articlesLine);
-
-		articles.appendChild(articlesItem);
+		articles.append(item);
 	}
 
 	articles.lastChild.lastChild.remove();
@@ -179,7 +182,7 @@ function scrollArticlesWheel(step) {
 
 		const dir = -Math.sign(e.deltaY);
 		console.log(e.deltaY);
-		articlesTop = articlesTop + step * dir;
+		articlesTop += step * dir;
 
 		if (articlesTop > 0) {
 			articlesList.style.top = '0px';
@@ -190,7 +193,9 @@ function scrollArticlesWheel(step) {
 			return;
 		}
 
-		articlesList.style.top = `${articlesTop}px`;
+		//articlesList.style.top = `${articlesTop}px`;
+		articlesList.scrollTop = 100;
+		console.log(articlesList.scrollTop);
+		
 	});
 }
-

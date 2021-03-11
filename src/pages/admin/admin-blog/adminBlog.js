@@ -41,15 +41,14 @@ async function addArticle(title, id) {
 	let articleText = document.createElement('p');
 	let articleDelete = document.createElement('button');
 
-	articleItem.classList.add('list-articles__item');
-	articleText.classList.add('list-articles__text');
-	articleDelete.classList.add('list-articles__button');
+	articleItem.className = 'list-articles__item';
+	articleText.className = 'list-articles__text';
+	articleDelete.className = 'list-articles__button';
 
 	articleText.innerText = title;
 	articleDelete.innerText = 'Удалить';
 
-	articleItem.appendChild(articleText);
-	articleItem.appendChild(articleDelete);
+	articleItem.append(articleText, articleDelete);
 	listArticles.appendChild(articleItem);
 
 	// вешаем событие для удаления статей на кнопку "удалить"

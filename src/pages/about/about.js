@@ -17,7 +17,6 @@ arrow('.hero__arrow', '.about-me');
 verticalParalax(document.querySelector('.main-about'));
 preloader();
 
-
 // eslint-disable-next-line no-unused-vars
 var map;
 
