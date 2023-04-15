@@ -4,7 +4,7 @@ block  var
     - var title = "Добро пожаловать!"
     - var authorDescription = 'Личный сайт веб-разработчика'
     - var page = 'portfolio'
-    
+
 block content
     main.main.main-portfolio
         include ../../components/blocks/hamburger_menu/hamburger_menu.pug
@@ -35,7 +35,7 @@ block content
                 .portfolio-contact__features
                     .portfolio-contact__features-item.portfolio-contact__features-item_float-left
                         .portfolio-contact__photo.portfolio-contact__photo_kovalchuk
-                        blockquote.portfolio-contact__features-text 
+                        blockquote.portfolio-contact__features-text
                             | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                         cite.portfolio-content__quote-writer
                             | Ковальчук Дмитрий
@@ -50,7 +50,7 @@ block content
                         cite.portfolio-content__quote-writer-profesion
                             | - преподователь
                 .portfolio-contact__form
-                    .portfolio-contact__form-blur
+                    //- .portfolio-contact__form-blur
                     include ../../components/blocks/form/form.pug
                 .portfolio-contact__arrow
                     img.arrow.arrow_direction-up(src=require('../../images/icons/arrow_down.svg'))

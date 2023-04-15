@@ -19,42 +19,42 @@ verticalParalax(document.querySelector('.main-portfolio'));
 preloader();
 // позиционирование фона для элемента с блюром
 
-function blur(section, formElem, blurElem){
-	const heightToWidth = 0.7506;
-	const widthToHeight = 1.3323; // соотношение ширины к высоте у картинки для фона
+// function blur(section, formElem, blurElem){
+// 	const heightToWidth = 0.7506;
+// 	const widthToHeight = 1.3323; // соотношение ширины к высоте у картинки для фона
 
-	//const section = document.querySelector('.portfolio-contact'); // секция родитель
-	//const blurElem = document.querySelector('.portfolio-contact__form-blur'); // форма
-	//const form = document.querySelector('.portfolio-contact__form'); // элемент с блюром
+// 	//const section = document.querySelector('.portfolio-contact'); // секция родитель
+// 	//const blurElem = document.querySelector('.portfolio-contact__form-blur'); // форма
+// 	//const form = document.querySelector('.portfolio-contact__form'); // элемент с блюром
 
-	const sectionHeight = section.clientHeight; // высота секции родителя
-	const sectionWidth = section.clientWidth;
-	const formWidth = formElem.clientWidth; // ширина формы
-	// const formHeight= form.clientHeight; // выстота формы 
-	
-	function heightPositioning(){ // функция позиционирования фона по высоте
-		const sectionBackgroundWidth = sectionHeight * widthToHeight; // ширина фона родителя 
+// 	const sectionHeight = section.clientHeight; // высота секции родителя
+// 	const sectionWidth = section.clientWidth;
+// 	const formWidth = formElem.clientWidth; // ширина формы
+// 	// const formHeight= form.clientHeight; // выстота формы
 
-		const posTop = -formElem.offsetTop; // позиционирование по высоте
-		const posLeft = -(sectionBackgroundWidth / 2 - formWidth / 2); // позиционирование по высоте
+// 	function heightPositioning(){ // функция позиционирования фона по высоте
+// 		const sectionBackgroundWidth = sectionHeight * widthToHeight; // ширина фона родителя
 
-		
-		blurElem.style.backgroundSize = `auto ${sectionHeight}px`; // размеры фона элемета блюра
-		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
-	}
+// 		const posTop = -formElem.offsetTop; // позиционирование по высоте
+// 		const posLeft = -(sectionBackgroundWidth / 2 - formWidth / 2); // позиционирование по высоте
 
-	function widthPositioning(){ // функция позиционирования фона по ширине
-		const sectionBackgroundHeight = sectionWidth * heightToWidth;
 
-		const posTop = -((sectionBackgroundHeight - sectionHeight) / 2 + formElem.offsetTop);
-		const posLeft = -formElem.offsetLeft;
+// 		blurElem.style.backgroundSize = `auto ${sectionHeight}px`; // размеры фона элемета блюра
+// 		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
+// 	}
 
-		blurElem.style.backgroundSize = `${sectionWidth}px auto`; // размеры фона элемета блюра
-		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
-	}
+// 	function widthPositioning(){ // функция позиционирования фона по ширине
+// 		const sectionBackgroundHeight = sectionWidth * heightToWidth;
 
-	widthToHeight > sectionWidth / sectionHeight ? heightPositioning(): widthPositioning();
-}
+// 		const posTop = -((sectionBackgroundHeight - sectionHeight) / 2 + formElem.offsetTop);
+// 		const posLeft = -formElem.offsetLeft;
+
+// 		blurElem.style.backgroundSize = `${sectionWidth}px auto`; // размеры фона элемета блюра
+// 		blurElem.style.backgroundPosition = `${posLeft}px ${posTop}px`; // позиционирование фона
+// 	}
+
+// 	widthToHeight > sectionWidth / sectionHeight ? heightPositioning(): widthPositioning();
+// }
 
 const section = document.querySelector('.portfolio-contact'); // секция родитель
 const blurElem = document.querySelector('.portfolio-contact__form-blur'); // форма

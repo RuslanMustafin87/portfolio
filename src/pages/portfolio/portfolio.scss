@@ -148,7 +148,7 @@ $color_text: #455a64;
 }
 
 .portfolio-contact__features {
-    @util clearfix; 
+    @util clearfix;
     width: 47.5rem;
     margin: auto;
     margin-top: 4.375rem;
@@ -225,16 +225,17 @@ $color_text: #455a64;
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+    backdrop-filter: blur(1.5px);
 }
 
-.portfolio-contact__form-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    size: 100%;
-    filter: blur(1.5px);
-    background:  url('../../images/beacon.jpg') no-repeat;
-}
+// .portfolio-contact__form-blur {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     size: 100%;
+//     filter: blur(1.5px);
+//     background:  url('../../images/beacon.jpg') no-repeat;
+// }
 
 .portfolio-contact__arrow{
     margin: 4.375rem auto 0 auto;
